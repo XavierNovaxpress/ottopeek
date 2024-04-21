@@ -1,0 +1,18 @@
+# Ignore les dépendances Node.js installées localement
+node_modules
+
+# Ignore les dépendances PHP installées localement
+/vendor
+
+# Ignore les fichiers générés par Webpack
+ /public/js/bundle.js
+ /public/css/style.css
+
+# Ignore les fichiers de configuration générés
+/.env
+
+# Ignore les fichiers de log
+/log/*.log
+
+# Ignore les fichiers de sauvegarde
+*.bak

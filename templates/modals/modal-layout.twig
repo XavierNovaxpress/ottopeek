@@ -1,0 +1,28 @@
+<div class="modal fade" id="{% block modalID %}{{ modalIds.modal1 }}{% endblock %}"  data-bs-backdrop="static" data-bs-keyboard="false"  tabindex="-1" aria-labelledby="{% block modalLabel %}modalLabel{% endblock %}" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                {% block modalHeader %}
+                    {% include 'modals/partials/modal-header.twig' with {'id': '{{ modalIds.modal1 }}', 'title': 'modalTitle'} %}
+                {% endblock %}
+            </div>
+            <!-- Modal Header -->
+
+            <!-- Modal Body -->
+            <div class="modal-body">
+                {% block modalBody %}
+                {% endblock %}
+            </div>
+            <!-- Modal Body -->
+
+            <!-- Modal Footer -->
+            <div class="modal-footer p-0">
+                {% block modalFooter %}
+                    {% include 'modals/partials/modal-footer.twig' %}
+                {% endblock %}
+            </div>
+            <!-- Modal Footer -->
+        </div>
+    </div>
+</div>

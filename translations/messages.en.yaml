@@ -1,0 +1,51 @@
+home:
+  title: "Home"
+  brand: "My Site"
+  link:
+    home: "Home"
+    features: "Features"
+    pricing: "Pricing"
+    about: "About"
+  header:
+    title: "Welcome to our site"
+    subtitle: "Discover our exceptional services"
+    cta: "Learn More"
+  content:
+    heading: "Our Services"
+    body: "Discover our high-quality services and our commitment to our customers."
+  sidebar:
+    title: "Featured"
+    item1: "Service 1"
+    item2: "Service 2"
+    item3: "Service 3"
+  footer:
+    text: "© 2024 My Site. All rights reserved."
+welcome: "Welcome"
+contact: "Contact Us"
+unsubscribe: "Unsubscribe"
+thank_you_for_participating: "Thank you for your participation"
+still_wish_to_unsubscribe: "Do you still wish to unsubscribe?"
+no_changed_my_mind: "No, I've changed my mind"
+yes_still_wish_to_unsubscribe: "Yes, I still wish to unsubscribe."
+exclusive_offers_title: "Take advantage of exclusive offers on our site"
+multi_step_form_title: "Multi-step Form"
+
+footer:
+  ready_for_offers: "Get ready to receive a ton of offers by using {{ companyName }}"
+  using_service_agreement: "By using this service, you agree to our"
+  terms_of_use: "Terms of Use"
+  privacy_policy: "Privacy Policy"
+  not_responsible: "{{ companyName }} is not responsible for content published by users of the site. Trademarks and logos mentioned belong to their respective owners. {{ companyName }} strives to keep the information on this site up to date and accurate, but does not guarantee its accuracy, reliability, and completeness."
+  questions_contact: "For any questions or concerns, please contact us at"
+  all_rights_reserved: "All rights reserved"
+  conditions: "Conditions"
+  privacy: "Privacy"
+  contact: "Contact"
+
+carousel:
+  one_time_deal: "one-time offer!"
+  yes_choose_this_offer: "Yes, I choose this offer"
+  no_i_want_to_unsubscribe: "No, I want to unsubscribe"
+  previous: "Previous"
+  next: "Next"
+  offer_label: "Offer"

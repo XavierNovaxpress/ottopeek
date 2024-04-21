@@ -1,0 +1,48 @@
+<script type="text/javascript">
+    $(document).ready(function() {
+        // Cette variable stocke l'ID de la dernière modale non-CGV ouverte
+        var lastModalOpened = null;
+
+        // Fonction pour changer la modale affichée
+        function changeModal(newModalId, isBackAction = false) {
+            // Cachez toutes les modales
+            const allModalIds = ['#{{ modalIds.modal1 }}', '#{{ modalIds.modal2 }}', '#{{ modalIds.modal3 }}', '#{{ modalIds.modal4 }}', '#{{ modalIds.modal5 }}'];
+            allModalIds.forEach(id => $(id).modal('hide'));
+
+            // Affichez la nouvelle modale
+            $(newModalId).modal('show');
+
+            // Mise à jour de la dernière modale ouverte, sauf si c'est une action de retour ou c'est la modale CGV
+            if (!isBackAction && newModalId !== '#modalCGV') {
+                lastModalOpened = newModalId;
+            }
+        }
+
+        // Boutons pour ouvrir les modales spécifiques
+        $('.showOffersBtn').click(function() { changeModal('#{{ modalIds.modal1 }}'); });
+        $('.showThankyouBtn').click(function() { changeModal('#{{ modalIds.modal3 }}'); });
+
+        $('.showTermsbtn').click(function() {
+            $('#{{ modalIds.modal4 }}').modal('show');
+        });
+
+        $('.showPrivacybtn').click(function() {
+            $('#{{ modalIds.modal5 }}').modal('show');
+        });
+
+        $('.showPrivacybtn').click(function() {
+            $('#{{ modalIds.modal5 }}').modal('show');
+        });
+
+        $('.showContactbtn').click(function() {
+            $('#{{ modalIds.modal6 }}').modal('show');
+        });
+
+        $('.backButton').click(function() {
+            // Ferme la modal courante dans laquelle se trouve le bouton
+            $(this).closest('.modal').modal('hide');
+        });
+
+    $('#{{ modalIds.modal2 }}').modal('show');
+    });
+</script>

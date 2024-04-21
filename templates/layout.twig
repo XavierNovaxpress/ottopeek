@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="{{ locale }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ 'home.title'|trans }}</title>
+    <link rel="stylesheet" href="{{ webrootURL }}/public/css/main.css">
+    <link rel="stylesheet" href="{{ webrootURL }}/public/css/index.css">
+    {% block stylesheets %}{% endblock %}
+</head>
+<body>
+{% block header %}
+    {% include 'partials/header.twig' %}
+{% endblock %}
+
+<main role="main" class="container">
+    {% block content %}
+    {% endblock %}
+</main>
+
+<section>
+    {% block modals %}{% endblock %}
+</section>
+
+{% block footer %}
+    {% include 'partials/footer.twig' %}
+{% endblock %}
+
+<!-- Inclure vos scripts JavaScript ici -->
+<script src="{{ webrootURL }}/public/js/main.js"></script>
+{% block scripts %}{% endblock %}
+</body>
+</html>

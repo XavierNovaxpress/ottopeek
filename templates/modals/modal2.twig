@@ -1,0 +1,17 @@
+{% extends 'modals/modal-layout.twig' %}
+
+{% block modalID %}{{ modalIds.modal2 }}{% endblock %}
+
+{% block modalLabel %}{{ modalIds.modal2 }}Label{% endblock %}
+
+{% block modalHeader %}
+    {% include 'modals/partials/modal-header.twig' with {'id': modalIds.modal2 ~ 'Label', 'title': "exclusive_offers_title"|trans} %}
+{% endblock %}
+
+{% block modalBody %}
+    {% include 'modals/carrousels/basecarrousel.twig'%}
+{% endblock %}
+
+{% block modalFooter %}
+  {{ parent() }}
+{% endblock %}

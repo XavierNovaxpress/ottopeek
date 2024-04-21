@@ -1,0 +1,17 @@
+{% extends 'modals/modal-layout.twig' %}
+
+{% block modalID %}{{ modalIds.modal1 }}{% endblock %}
+
+{% block modalLabel %}{{ modalIds.modal1 }}Label{% endblock %}
+
+{% block modalHeader %}
+    {% include 'modals/partials/modal-header.twig' with {'id': modalIds.modal1 ~ 'Label', 'title': "multi_step_form_title"|trans} %}
+{% endblock %}
+
+{% block modalBody %}
+    {% include 'modals/forms/survey-js-form.twig'%}
+{% endblock %}
+
+{% block modalFooter %}
+    {{ parent() }}
+{% endblock %}

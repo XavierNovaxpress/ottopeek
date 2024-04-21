@@ -1,0 +1,55 @@
+{% extends 'layout.twig' %}
+
+{% block title %}{{ 'home.title'|trans }} - {{ parent() }}{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{# contenu de demo - n'a pas vocation a rester dans le projet #}
+{% block header %}
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+    <div class="main-content-wrapper">
+        <header class="p-5 bg-image" style="background-image: url('https://via.placeholder.com/1920x1080');">
+            <div class="container py-5">
+                <h1 class="display-5 fw-bold text-white">{{ 'welcome'|trans }}</h1>
+                <p class="col-md-8 fs-4 text-white">{{ 'home.header.subtitle'|trans }} | {{ 'contact'|trans }}</p>
+                <button class="btn btn-primary btn-lg" type="button" data-bs-toggle="modal" data-bs-target="#{{ modalIds.modal1 }}">{{ 'unsubscribe'|trans }}</button>
+            </div>
+        </header>
+
+        <main role="main" class="container mt-4">
+            <div class="row">
+                <div class="col-md-8 mb-3">
+                    <h2>{{ 'home.content.heading'|trans }}</h2>
+                    <p>{{ 'home.content.body'|trans }}</p>
+                    <img src="https://via.placeholder.com/800x260" alt="Dummy Image" class="img-fluid">
+                </div>
+                <div class="col-md-4">
+                    <h3>{{ 'home.sidebar.title'|trans }}</h3>
+                    <ul class="list-unstyled">
+                        <li>{{ 'home.sidebar.item1'|trans }}</li>
+                        <li>{{ 'home.sidebar.item2'|trans }}</li>
+                        <li>{{ 'home.sidebar.item3'|trans }}</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+{% endblock %}
+
+{% block footer %}
+    {{ parent() }}
+{% endblock %}
+{# contenu de demo - n'a pas vocation a rester dans le projet #}
+
+{% block modals %}
+
+{% endblock %}
+
+{% block scripts %}
+    {{ parent() }}
+{% endblock %}

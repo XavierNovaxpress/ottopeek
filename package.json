@@ -1,0 +1,51 @@
+{
+  "name": "ottopeek-front",
+  "version": "1.0.0",
+  "description": "Ottopeek est une plateforme innovante qui offre des fonctionnalités avancées pour connaitre l'état de santé d'un véhicule. Que l'on soit vendeur ou acheteur avec Ottopeek impossible de faire une mauvaise affaire.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/Tipunch/ottopeek.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/Tipunch/ottopeek/issues"
+  },
+  "homepage": "https://gitlab.com/Tipunch/ottopeek#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "jquery": "^3.7.1",
+    "survey-angular": "^1.9.136",
+    "survey-jquery": "^1.9.136",
+    "survey-knockout": "^1.9.136",
+    "survey-react": "^1.9.136",
+    "survey-vue": "^1.9.136"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.3",
+    "@babel/preset-env": "^7.24.3",
+    "autoprefixer": "^10.4.19",
+    "babel-loader": "^9.1.3",
+    "copy-webpack-plugin": "^12.0.2",
+    "css-loader": "^6.10.0",
+    "expose-loader": "^5.0.0",
+    "glob": "^7.2.3",
+    "image-webpack-loader": "^8.1.0",
+    "mini-css-extract-plugin": "^2.8.1",
+    "postcss": "^8.4.38",
+    "postcss-loader": "^8.1.1",
+    "purgecss-webpack-plugin": "^6.0.0",
+    "sass": "^1.72.0",
+    "sass-loader": "^14.1.1",
+    "style-loader": "^3.3.4",
+    "terser-webpack-plugin": "^5.3.10",
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4"
+  }
+}

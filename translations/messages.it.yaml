@@ -1,0 +1,51 @@
+home:
+  title: "Home"
+  brand: "Il Mio Sito"
+  link:
+    home: "Home"
+    features: "Funzionalità"
+    pricing: "Prezzi"
+    about: "Chi Siamo"
+  header:
+    title: "Benvenuti sul nostro sito"
+    subtitle: "Scopri i nostri servizi eccezionali"
+    cta: "Scopri di più"
+  content:
+    heading: "I Nostri Servizi"
+    body: "Scopri i nostri servizi di alta qualità e il nostro impegno verso i clienti."
+  sidebar:
+    title: "In Evidenza"
+    item1: "Servizio 1"
+    item2: "Servizio 2"
+    item3: "Servizio 3"
+  footer:
+    text: "© 2024 Il Mio Sito. Tutti i diritti riservati."
+welcome: "Benvenuto"
+contact: "Contattaci"
+unsubscribe: "Disiscriviti"
+thank_you_for_participating: "Grazie per la tua partecipazione"
+still_wish_to_unsubscribe: "Vuoi ancora disiscriverti?"
+no_changed_my_mind: "No, ho cambiato idea"
+yes_still_wish_to_unsubscribe: "Sì, voglio ancora disiscrivermi."
+exclusive_offers_title: "Approfitta delle offerte esclusive sul nostro sito"
+multi_step_form_title: "Modulo multistep"
+
+footer:
+  ready_for_offers: "Preparati a ricevere un sacco di offerte utilizzando {{ companyName }}"
+  using_service_agreement: "Utilizzando questo servizio, accetti i nostri"
+  terms_of_use: "Termini di Utilizzo"
+  privacy_policy: "Politica sulla Privacy"
+  not_responsible: "{{ companyName }} non è responsabile per i contenuti pubblicati dagli utenti del sito. I marchi e i loghi menzionati appartengono ai rispettivi proprietari. {{ companyName }} si impegna a mantenere le informazioni sul sito aggiornate e accurate, ma non garantisce l'esattezza, l'affidabilità e la completezza di esse."
+  questions_contact: "Per qualsiasi domanda o preoccupazione, contattaci a"
+  all_rights_reserved: "Tutti i diritti riservati"
+  conditions: "Condizioni"
+  privacy: "Privacy"
+  contact: "Contatto"
+
+carousel:
+  one_time_deal: "offerta unica!"
+  yes_choose_this_offer: "Sì, scelgo questa offerta"
+  no_i_want_to_unsubscribe: "No, voglio disiscrivermi"
+  previous: "Precedente"
+  next: "Successivo"
+  offer_label: "Offerta"
