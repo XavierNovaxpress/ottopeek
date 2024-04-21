@@ -1,15 +1,19 @@
 # header
-navbar_logo_alt: "Logo"
-navbar_toggle_label: "Toggle navigation"
-navbar_home: "Home"
-navbar_price: "Prix"
-navbar_aide: "Aide"
-navbar_contact: "Contact"
-navbar_connexion: "Connexion"
+header:
+    titre: "%companyName% - Historique du Véhicule"
+    souscription: "Souscrivez à notre offre Pro et bénéficiez de 15 rapports par mois pour 29,99€ seulement."
+    logo:
+      alt: "Logo Ottopeek"
+    prix: "Prix"
+    aide: "Aide"
+    actualites: "Actualités"
+    contact: "Contact"
+    connexion: "Connexion"
+    langue: "FR"
 #header
 
 #footer
-footer_company_name: "{{ companyName }}"
+footer_company_name: "%companyName%"
 footer_expertise: "L'expertise au service de votre tranquillité automobile."
 footer_society: "Société"
 footer_home: "Home"
@@ -22,3 +26,95 @@ footer_legal_mentions: "Mentions légales"
 footer_cgv: "CGV"
 footer_cookie_policy: "Politique de cookies"
 #footer
+
+#homepage section 1
+section1:
+    titre: "Évitez les mauvaises affaires."
+    sous-titre: "Découvrez en un clic le kilométrage, les incidents passés, ainsi qu'une estimation de la valeur d'un véhicule et de sa fiabilité."
+    placeholder: "Saisissez votre plaque d'immatriculation ou VIN"
+    bouton: "Analyser le véhicule"
+    stats1: "95% des véhicules détectés"
+    stats2: "450 sources de données"
+    stats3: "4.5 étoiles - 2314 avis"
+    image:
+      alt: "Voiture jaune"
+#homepage section 1
+
+#homepage section 2
+section2:
+    titre: "La Confiance Véhiculaire en un Clic !"
+    sous-titre: "Accédez à un historique détaillé et précis pour sécuriser votre achat ou votre vente de voiture d'occasion."
+    feature1:
+      titre: "Vérification Facile"
+      description: "Commencez par entrer la plaque d'immatriculation pour lancer un diagnostic complet et instantané de l'historique du véhicule."
+    feature2:
+      titre: "Analyse Approfondie"
+      description: "Notre système analyse les données auprès de centaines de sources fiables pour vous fournir un rapport exhaustif sur l'état et l'historique du véhicule."
+    feature3:
+      titre: "Rapport Détaillé"
+      description: "Téléchargez un rapport détaillé et utilisez les informations fournies pour négocier efficacement ou confirmer la qualité du véhicule."
+    feature4:
+      titre: "Valeur Marché"
+      description: "Grâce à notre analyse du kilométrage et des incidents passés, vous obtiendrez une estimation précise et fiable de sa valeur marchande."
+#homepage section 2
+
+#homepage section 3
+section3:
+    titre: "Vous voulez acheter ?"
+    description: "Nous analysons minutieusement chaque véhicule pour garantir votre sécurité et votre satisfaction."
+    image:
+      alt: "Placeholder pour image"
+    item1:
+      titre: "Dommages et accidents"
+      description: "Détectez les problèmes cachés et évitez les coûts inattendus."
+    item2:
+      titre: "Historique de kilométrage"
+      description: "Assurez-vous que le kilométrage est authentique et fiable."
+    item3:
+      titre: "Historique des propriétaires"
+      description: "Comprenez le passé du véhicule pour mieux anticiper son avenir."
+    item4:
+      titre: "Alertes de rappel"
+      description: "Soyez informé des rappels de sécurité pour éviter les risques."
+#homepage section 3
+
+#homepage section 4
+section4:
+    titre: "Vous voulez vendre ?"
+    sous-titre: "Ne sous-estimez pas votre véhicule."
+    description: "Un rapport complet %companyName% montre la véritable histoire de votre véhicule et renforce la confiance des acheteurs."
+    image:
+      alt: "Placeholder pour image"
+    item1:
+      titre: "Un historique complet"
+      description: "Un historique complet qui valorise la qualité de votre véhicule."
+    item2:
+      titre: "Transparence = confiance"
+      description: "Un rapport détaillé peut rassurer les acheteurs et faciliter la vente."
+    item3:
+      titre: "Vente plus rapide"
+      description: "Un véhicule avec un historique clair et transparent se vend plus vite."
+    item4:
+      titre: "Avantage dans les négociations"
+      description: "Un bon historique vous permettra de justifier un meilleur prix."
+#homepage section 4
+
+#homepage section 5
+section5:
+    titre: "Découvrez l'historique d'un véhicule en un Clic !"
+    description: "Que vous souhaitiez acheter, vendre, ou en savoir plus sur votre véhicule, notre rapport complet vous offre une transparence totale."
+    placeholder: "Ex: AA-123-AA"
+    bouton: "Analyser le véhicule"
+    image:
+      alt: "Placeholder pour voiture"
+    logo1:
+      alt: "Logo 1"
+    logo2:
+      alt: "Logo 2"
+    logo3:
+      alt: "Logo 3"
+    logo4:
+      alt: "Logo 4"
+    logo5:
+      alt: "Logo 5"
+#homepage section 5

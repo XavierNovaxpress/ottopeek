@@ -1,0 +1,20 @@
+<section class="container my-5">
+    <div class="row align-items-center">
+        <div class="col-md-6">
+            <h2 class="text-primary">{{ 'section5.titre'|trans }}</h2>
+            <p>{{ 'section5.description'|trans }}</p>
+            <input type="text" class="form-control w-50" placeholder="{{ 'section5.placeholder'|trans }}">
+            <button class="btn btn-warning mt-3">{{ 'section5.bouton'|trans }}</button>
+        </div>
+        <div class="col-md-6 d-flex justify-content-end">
+            <img src="https://place-hold.it/500" alt="{{ 'section5.image.alt'|trans }}" class="img-fluid">
+        </div>
+    </div>
+    <div class="row justify-content-center mt-5 py-5">
+        {% for i in 0..6 %}
+            <div class="col-auto">
+                <img src="https://place-hold.it/150" alt="{{ 'section5.logo'~ i ~'.alt'|trans }}" class="img-fluid">
+            </div>
+        {% endfor %}
+    </div>
+</section>
