@@ -6,48 +6,152 @@
     {{ parent() }}
 {% endblock %}
 
-{# contenu de demo - n'a pas vocation a rester dans le projet #}
 {% block header %}
     {{ parent() }}
 {% endblock %}
 
 {% block content %}
-    <div class="main-content-wrapper">
-        <header class="p-5 bg-image" style="background-image: url('https://via.placeholder.com/1920x1080');">
-            <div class="container py-5">
-                <h1 class="display-5 fw-bold text-white">{{ 'welcome'|trans }}</h1>
-                <p class="col-md-8 fs-4 text-white">{{ 'home.header.subtitle'|trans }} | {{ 'contact'|trans }}</p>
-                <button class="btn btn-primary btn-lg" type="button" data-bs-toggle="modal" data-bs-target="#{{ modalIds.modal1 }}">{{ 'unsubscribe'|trans }}</button>
-            </div>
-        </header>
+<div class="container my-5 text-center">
+    <h1>Vous voulez vendre ?</h1>
+    <p>Ne sous-estimez pas votre véhicule.</p>
+    <a href="#analyser" class="btn btn-warning">Analyser le véhicule</a>
+</div>
 
-        <main role="main" class="container mt-4">
-            <div class="row">
-                <div class="col-md-8 mb-3">
-                    <h2>{{ 'home.content.heading'|trans }}</h2>
-                    <p>{{ 'home.content.body'|trans }}</p>
-                    <img src="https://via.placeholder.com/800x260" alt="Dummy Image" class="img-fluid">
-                </div>
-                <div class="col-md-4">
-                    <h3>{{ 'home.sidebar.title'|trans }}</h3>
-                    <ul class="list-unstyled">
-                        <li>{{ 'home.sidebar.item1'|trans }}</li>
-                        <li>{{ 'home.sidebar.item2'|trans }}</li>
-                        <li>{{ 'home.sidebar.item3'|trans }}</li>
-                    </ul>
+<div class="container my-5 text-center">
+    <h2>Pourquoi nous choisir?</h2>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Dommages et accidents</h5>
+                    <p>Détectez les problèmes cachés et évitez les coûts inattendus.</p>
                 </div>
             </div>
-        </main>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Historique de kilométrage</h5>
+                    <p>Assurez-vous que le kilométrage est authentique et fiable.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Historique des propriétaires</h5>
+                    <p>Comprenez le passé du véhicule pour mieux anticiper son avenir.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Alertes de rappel</h5>
+                    <p>Soyez informé des rappels de sécurité pour éviter les risques.</p>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
+
+<div class="container my-5 text-center">
+    <h2>Pourquoi nous choisir?</h2>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Dommages et accidents</h5>
+                    <p>Détectez les problèmes cachés et évitez les coûts inattendus.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Historique de kilométrage</h5>
+                    <p>Assurez-vous que le kilométrage est authentique et fiable.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Historique des propriétaires</h5>
+                    <p>Comprenez le passé du véhicule pour mieux anticiper son avenir.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Alertes de rappel</h5>
+                    <p>Soyez informé des rappels de sécurité pour éviter les risques.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container my-5 text-center">
+    <h1>Découvrez l'historique d'un véhicule en toute confiance.</h1>
+    <p>Que vous souhaitiez acheter, vendre ou simplement en savoir plus sur votre véhicule, notre rapport complet vous offre une transparence totale.</p>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Vérification facile</h5>
+                    <p>Commencez par entrer la plaque d'immatriculation pour lancer un diagnostic complet.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Rapport détaillé</h5>
+                    <p>Téléchargez un rapport détaillé et utilisez les informations pour négocier efficacement ou confirmer la qualité du véhicule.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container my-5 text-center">
+    <h1>Vous voulez vendre ?</h1>
+    <p>Ne sous-estimez pas votre véhicule.</p>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Un historique complet</h5>
+                    <p>Un historique complet valorise la qualité de votre véhicule.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Transparence = confiance</h5>
+                    <p>Un rapport détaillé peut rassurer les acheteurs et faciliter la vente.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container my-5 text-center">
+    <h2>Évitez les mauvaises affaires.</h2>
+    <p>Découvrez en un clic le kilométrage, les incidents passés, ainsi qu'une estimation de la valeur d'un véhicule et de sa fiabilité.</p>
+    <a href="#analyse" class="btn btn-warning">Analyser le véhicule</a>
+</div>
+
 {% endblock %}
 
 {% block footer %}
     {{ parent() }}
 {% endblock %}
-{# contenu de demo - n'a pas vocation a rester dans le projet #}
 
 {% block modals %}
-
 {% endblock %}
 
 {% block scripts %}

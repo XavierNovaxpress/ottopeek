@@ -1,52 +1,24 @@
-# translations/messages.fr.yaml
-home:
-  title: "Accueil"
-  brand: "Mon Site"
-  link:
-    home: "Accueil"
-    features: "Fonctionnalités"
-    pricing: "Tarification"
-    about: "À propos"
-  header:
-    title: "Bienvenue sur notre site"
-    subtitle: "Découvrez nos services exceptionnels"
-    cta: "En savoir plus"
-  content:
-    heading: "Nos Services"
-    body: "Découvrez nos services de haute qualité et notre engagement envers nos clients."
-  sidebar:
-    title: "À la Une"
-    item1: "Service 1"
-    item2: "Service 2"
-    item3: "Service 3"
-  footer:
-    text: "© 2024 Mon Site. Tous droits réservés."
-welcome: "Bienvenue"
-contact: "Contactez-nous"
-unsubscribe: "Se désabonner"
-thank_you_for_participating: "Merci de votre participation"
-still_wish_to_unsubscribe: "Souhaitez-vous toujours vous désinscrire ?"
-no_changed_my_mind: "Non finalement j'ai changé d'avis"
-yes_still_wish_to_unsubscribe: "Oui je souhaite toujours me désinscrire."
-exclusive_offers_title: "Profitez d'offres exclusives à notre site"
-multi_step_form_title: "Formulaire multi-step"
+# header
+navbar_logo_alt: "Logo"
+navbar_toggle_label: "Toggle navigation"
+navbar_home: "Home"
+navbar_price: "Prix"
+navbar_aide: "Aide"
+navbar_contact: "Contact"
+navbar_connexion: "Connexion"
+#header
 
-footer:
-  ready_for_offers: "Préparez-vous à recevoir une tonne d'offres en utilisant {{ companyName }}"
-  using_service_agreement: "En utilisant ce service, vous acceptez nos"
-  terms_of_use: "Termes d'Utilisation"
-  privacy_policy: "Politique de Confidentialité"
-  not_responsible: "{{ companyName }} n'est pas responsable des contenus publiés par les utilisateurs du site. Les marques et logos mentionnés appartiennent à leurs propriétaires respectifs. {{ companyName }} s'efforce de maintenir l'information sur ce site à jour et exacte, mais ne garantit pas l'exactitude, la fiabilité, et l'exhaustivité de celle-ci."
-  questions_contact: "Pour toute question ou préoccupation, veuillez nous contacter à"
-  all_rights_reserved: "Tous droits réservés"
-  conditions: "Conditions"
-  privacy: "Vie privée"
-  contact: "Contact"
-
-carousel:
-  one_time_deal: "offre unique !"
-  yes_choose_this_offer: "Oui, je choisis cette offre"
-  no_i_want_to_unsubscribe: "Non, je souhaite me désabonner"
-  previous: "Précédent"
-  next: "Suivant"
-  offer_label: "Offre"
+#footer
+footer_company_name: "{{ companyName }}"
+footer_expertise: "L'expertise au service de votre tranquillité automobile."
+footer_society: "Société"
+footer_home: "Home"
+footer_prix: "Prix"
+footer_aide: "Aide"
+footer_contact: "Contact"
+footer_legal: "Légal"
+footer_confidentiality: "Politique de confidentialité"
+footer_legal_mentions: "Mentions légales"
+footer_cgv: "CGV"
+footer_cookie_policy: "Politique de cookies"
+#footer
