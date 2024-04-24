@@ -32,7 +32,7 @@ $translator->addResource('yaml', __DIR__ . '/translations/messages.it.yaml', 'it
 $translator->addResource('yaml', __DIR__ . '/translations/messages.es.yaml', 'es');
 $translator->addResource('yaml', __DIR__ . '/translations/messages.de.yaml', 'de');
 
-$twig->getEnvironment()->addExtension(new TranslationExtension($translator));
+$twig->getEnvironment()->addExtension(new TranslationExtension($translator)); 
 
 // Middleware pour la gestion de la locale
 $localeMiddleware = function ($request, $handler) use ($translator, $twig, $defaultLocale) {
