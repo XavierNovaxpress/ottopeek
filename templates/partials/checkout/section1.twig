@@ -1,22 +1,32 @@
-<section class="container my-5">
-      <div class="row">
-        <div class="col-md-6">
-            <img src="https://place-hold.it/460x570" alt="{{ 'checkout.section1.image.alt'|trans }}" class="img-fluid rounded">
+ <section class="container my-5">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <img src="https://place-hold.it/565x660" alt="{{ 'checkout.section1.image.alt'|trans }}" class="img-fluid rounded">
+            </div>
+            <div class="col-md-6">
+                <h3>{{ 'checkout.section1.offre'|trans }}</h3>
+                <div>
+                    <h2>{{ 'checkout.section1.prix'|trans }}</h2>
+                    <span class="text-muted">{{ 'checkout.section1.ancien_prix'|trans }}</span>
+                    <span class="badge bg-success">{{ 'checkout.section1.stock'|trans }}</span>
+                    <span class="badge bg-danger">{{ 'checkout.section1.promotion'|trans }}</span>
+                </div>
+                <div>
+                    <h4>{{ 'checkout.section1.rapports'|trans }}</h4>
+                    <select class="form-select">
+                        <option>{{ 'checkout.section1.rapports_option'|trans }}</option>
+                    </select>
+                </div>
+                <div class="my-3">
+                    <label for="quantite">{{ 'checkout.section1.quantite'|trans }}</label>
+                    <input type="number" min="1" value="2" class="form-control" id="quantite">
+                </div>
+                <button class="btn btn-warning">{{ 'checkout.section1.bouton'|trans }}</button>
+                <ul>
+                    <li>{{ 'checkout.section1.livraison'|trans }}</li>
+                    <li>{{ 'checkout.section1.garantie'|trans }}</li>
+                    <li>{{ 'checkout.section1.assistance'|trans }}</li>
+                </ul>
+            </div>
         </div>
-          <div class="col-md-6">
-              <h2 class="text-primary">{{ 'checkout.section1.titre'|trans }}</h2>
-              <p>{{ 'checkout.section1.description'|trans }}</p>
-              <ul class="list-unstyled">
-                  <li>
-                      <i class="bi bi-car-crash text-primary me-2"></i> {{ 'checkout.section1.item1'|trans }}
-                  </li>
-                  <li>
-                      <i class="bi bi-people-fill text-primary me-2"></i> {{ 'checkout.section1.item2'|trans }}
-                  </li>
-                  <li>
-                      <i class="bi bi-currency-euro text-primary me-2"></i> {{ 'checkout.section1.item3'|trans }}
-                  </li>
-              </ul>
-          </div>
-      </div>
-  </section>
+    </section>

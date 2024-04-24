@@ -11,8 +11,9 @@
 {% endblock %}
 
 {% block content %}
-        {% include 'partials/checkout/section1.twig' %}
-        {% include 'partials/checkout/section2.twig' %}
+    {% for i in 1..4 %}
+      {% include 'partials/checkout/section'~ i ~'.twig' %}
+    {% endfor %}
 {% endblock %}
 
 {% block footer %}
