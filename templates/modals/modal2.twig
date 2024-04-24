@@ -1,17 +1,24 @@
 {% extends 'modals/modal-layout.twig' %}
 
-{% block modalID %}{{ modalIds.modal2 }}{% endblock %}
+{% block modalID %}{{ modalIds.modal5 }}{% endblock %}
 
-{% block modalLabel %}{{ modalIds.modal2 }}Label{% endblock %}
+{% block modalLabel %}{{ modalIds.modal5 }}Label{% endblock %}
 
 {% block modalHeader %}
-    {% include 'modals/partials/modal-header.twig' with {'id': modalIds.modal2 ~ 'Label', 'title': "exclusive_offers_title"|trans} %}
+    <div class="col-10">
+        {% include 'modals/partials/modal-header.twig' with {'id': modalIds.modal5 ~ 'Label', 'title': "Politique de Confidentialité de {{ companyName }} Introduction"} %}
+    </div>
+    <div class="col-2 text-end"> <!-- Utiliser "float-end" pour le flottement -->
+        <button class="backButton btn btn-info text-light " data-dismiss="modal">Retour</button>
+    </div>
 {% endblock %}
 
 {% block modalBody %}
-    {% include 'modals/carrousels/basecarrousel.twig'%}
+    {% include 'modals/legals/modal-privacy-section.twig'%}
 {% endblock %}
 
 {% block modalFooter %}
-  {{ parent() }}
+    <div class="col-2 text-end"> <!-- Utiliser "float-end" pour le flottement -->
+        <button class="backButton btn btn-info text-light " data-dismiss="modal">Retour</button>
+    </div>
 {% endblock %}

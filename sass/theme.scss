@@ -1,0 +1,30 @@
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$background-color: #f8f9fa;
+
+body {
+    background-color: $background-color;
+}
+
+header {
+    background-color: $primary-color;
+    color: white;
+}
+
+footer {
+    background-color: black;
+    color: white;
+}
+
+h1, h2, h3 {
+    color: $primary-color;
+}
+
+.list-group-item {
+    background-color: $background-color;
+    color: $secondary-color;
+}
+
+img {
+    border-radius: 8px;
+}

@@ -1,17 +1,25 @@
 {% extends 'modals/modal-layout.twig' %}
 
-{% block modalID %}{{ modalIds.modal1 }}{% endblock %}
+{% block modalID %}{{ modalIds.modal4 }}{% endblock %}
 
-{% block modalLabel %}{{ modalIds.modal1 }}Label{% endblock %}
+{% block modalLabel %}{{ modalIds.modal4 }}Label{% endblock %}
 
 {% block modalHeader %}
-    {% include 'modals/partials/modal-header.twig' with {'id': modalIds.modal1 ~ 'Label', 'title': "multi_step_form_title"|trans} %}
+    <div class="col-10">
+        {% include 'modals/partials/modal-header.twig' with {'id': modalIds.modal4 ~ 'Label', 'title': "Conditions générales de vente" } %}
+    </div>
+    <div class="col-2 text-end"> <!-- Utiliser "float-end" pour le flottement -->
+        <button class="backButton btn btn-info text-light " data-dismiss="modal">Retour</button>
+    </div>
 {% endblock %}
 
+
 {% block modalBody %}
-    {% include 'modals/forms/survey-js-form.twig'%}
+    {% include 'modals/legals/modal-cgv-section.twig'%}
 {% endblock %}
 
 {% block modalFooter %}
-    {{ parent() }}
+    <div class="col-2 text-end"> <!-- Utiliser "float-end" pour le flottement -->
+        <button class="backButton btn btn-info text-light " data-dismiss="modal">Retour</button>
+    </div>
 {% endblock %}
