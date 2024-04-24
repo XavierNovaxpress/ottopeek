@@ -53,7 +53,7 @@ $localeMiddleware = function ($request, $handler) use ($translator, $twig, $defa
 $app->add($localeMiddleware);
 $app->add(TwigMiddleware::create($app, $twig));
 
-
+// ROUTING
 $app->get('/', function ($request, $response, $args) use ($twig, $translator) {
     $parsedown = new Parsedown();
     $currentLocale = substr($translator->getLocale(), 0, 2); // Extrait le code de langue (ex. 'fr')
@@ -87,7 +87,7 @@ $app->get('/', function ($request, $response, $args) use ($twig, $translator) {
     );
     $privacyContent = $parsedown->text($privacyContent);
 
-    return $twig->render($response, 'index.twig', [
+    return $twig->render($response, '_index.twig', [
         'webrootURL' => $webrootURL,
         'companyName' => $companyName,
         'contactEmail' => $contactEmail,
@@ -98,7 +98,6 @@ $app->get('/', function ($request, $response, $args) use ($twig, $translator) {
         'privacyContent' => $privacyContent,
     ]);
 });
-
 
 $app->get('/pricing', function ($request, $response, $args) use ($twig, $translator) {
     $parsedown = new Parsedown();
@@ -133,7 +132,7 @@ $app->get('/pricing', function ($request, $response, $args) use ($twig, $transla
     );
     $privacyContent = $parsedown->text($privacyContent);
 
-    return $twig->render($response, 'pricing.twig', [
+    return $twig->render($response, '_pricing.twig', [
         'webrootURL' => $webrootURL,
         'companyName' => $companyName,
         'contactEmail' => $contactEmail,
