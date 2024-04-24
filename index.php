@@ -32,7 +32,7 @@ $translator->addResource('yaml', __DIR__ . '/translations/messages.it.yaml', 'it
 $translator->addResource('yaml', __DIR__ . '/translations/messages.es.yaml', 'es');
 $translator->addResource('yaml', __DIR__ . '/translations/messages.de.yaml', 'de');
 
-$twig->getEnvironment()->addExtension(new TranslationExtension($translator)); 
+$twig->getEnvironment()->addExtension(new TranslationExtension($translator));
 
 // Middleware pour la gestion de la locale
 $localeMiddleware = function ($request, $handler) use ($translator, $twig, $defaultLocale) {
@@ -133,6 +133,52 @@ $app->get('/pricing', function ($request, $response, $args) use ($twig, $transla
     $privacyContent = $parsedown->text($privacyContent);
 
     return $twig->render($response, '_pricing.twig', [
+        'webrootURL' => $webrootURL,
+        'companyName' => $companyName,
+        'contactEmail' => $contactEmail,
+        'companyPhone' => $companyPhone,
+        'companyAdress' => $companyAdress,
+        'surveyJsLocale' => $currentLocale,
+        'cgvContent' => $cgvContent,
+        'privacyContent' => $privacyContent,
+    ]);
+});
+
+
+$app->get('/checkout', function ($request, $response, $args) use ($twig, $translator) {
+    $parsedown = new Parsedown();
+    $currentLocale = substr($translator->getLocale(), 0, 2); // Extrait le code de langue (ex. 'fr')
+
+    // Détermination des chemins des fichiers Markdown
+    $cgvPath = __DIR__ . "/translations/markdown/cgv-{$currentLocale}.md";
+    $privacyPath = __DIR__ . "/translations/markdown/privacy-{$currentLocale}.md";
+
+    // Définition des variables
+    $webrootURL = (strpos(__DIR__, 'mamp') !== false) ? "https://ottopeek-front.mamp:8890" : "";
+    $companyName = $_ENV['COMPANY_NAME'] ?? 'Ottopeek';
+    $contactEmail = $_ENV['CONTACT_EMAIL'] ?? 'contact@ottopeek.com';
+    $companyAdress = $_ENV['COMPANY_ADRESS'] ?? '1801 STEVENS AVE EAST PALO ALTO CA 94303-1264 USA';
+    $companyPhone = $_ENV['COMPANY_PHONE'] ?? '(279) 987-1701';
+
+    // Prétraitement et conversion du Markdown pour les CGV
+    $cgvContent = file_exists($cgvPath) ? file_get_contents($cgvPath) : 'Contenu non disponible';
+    $cgvContent = str_replace(
+        ['{{ companyName }}', '{{ contactEmail }}', '{{ companyPhone }}', '{{ companyAdress }}'],
+        [$companyName, $contactEmail, $companyPhone, $companyAdress],
+        $cgvContent
+    );
+    $cgvContent = $parsedown->text($cgvContent);
+
+    // Prétraitement et conversion du Markdown pour la politique de confidentialité
+    $privacyContent = file_exists($privacyPath) ? file_get_contents($privacyPath) : 'Contenu non disponible';
+    $privacyContent = str_replace(
+        ['{{ companyName }}', '{{ contactEmail }}', '{{ companyPhone }}', '{{ companyAdress }}'],
+        [$companyName, $contactEmail, $companyPhone, $companyAdress],
+        $privacyContent
+    );
+    $privacyContent = $parsedown->text($privacyContent);
+
+    return $twig->render($response, '_checkout.twig', [
         'webrootURL' => $webrootURL,
         'companyName' => $companyName,
         'contactEmail' => $contactEmail,

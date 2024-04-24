@@ -1,17 +1,17 @@
 <section class=" py-5 bg-white">
     <div class="container">
-        <h2 class="text-center">{{ 'section9.titre'|trans }}</h2>
+        <h2 class="text-center">{{ 'pricing.section4.titre'|trans }}</h2>
         <div class="accordion" id="faqAccordion">
         {% for i in 1..7 %}
             <div class="accordion-item">
                 <h2 class="accordion-header" id="heading{{ i }}">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ i }}" aria-expanded="false" aria-controls="collapse{{ i }}">
-                        {{ ('section9.question' ~ i) | trans }}
+                        {{ ('pricing.section4.question' ~ i) | trans }}
                     </button>
                 </h2>
                 <div id="collapse{{ i }}" class="accordion-collapse collapse" aria-labelledby="heading{{ i }}" data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                        {{ ('section9.reponse' ~ i) | trans }}
+                        {{ ('pricing.section4.reponse' ~ i) | trans }}
                     </div>
                 </div>
             </div>
