@@ -1,8 +1,8 @@
 <div class="container my-5">
     <div class="row justify-content-center align-items-center">
-        {% for i in 0..6 %}
-            <div class="col-auto py-1">
-                <img src="https://place-hold.it/150" alt="{{ 'home.section5.logo' ~ i ~ '.alt'|trans }}" class="img-fluid">
+        {% for i in 1..7 %}
+            <div class="col-auto">
+                <img src="{{ webrootURL }}/public/media/bottom-icon{{ i }}.png" alt="{{ 'home.section5.logo' ~ i ~ '.alt'|trans }}" class="img-fluid">
             </div>
         {% endfor %}
     </div>

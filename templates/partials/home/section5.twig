@@ -7,13 +7,13 @@
             <button class="btn btn-warning mt-3">{{ 'home.section5.bouton'|trans }}</button>
         </div>
         <div class="col-md-6 d-flex justify-content-end">
-            <img src="https://place-hold.it/500" alt="{{ 'home.section5.image.alt'|trans }}" class="img-fluid">
+            <img src="{{ webrootURL }}/public/media/peugeot-e-208.png" alt="{{ 'home.section5.image.alt'|trans }}" class="img-fluid">
         </div>
     </div>
     <div class="row justify-content-center mt-5 py-5">
-        {% for i in 0..6 %}
+        {% for i in 1..8 %}
             <div class="col-auto">
-                <img src="https://place-hold.it/150" alt="{{ 'home.section5.logo'~ i ~'.alt'|trans }}" class="img-fluid">
+                <img src="{{ webrootURL }}/public/media/logocar{{i}}.png" alt="{{ 'home.section5.logo'~ i ~'.alt'|trans }}" class="img-fluid">
             </div>
         {% endfor %}
     </div>
