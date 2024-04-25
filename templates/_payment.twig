@@ -3,7 +3,7 @@
 {% block title %}{{ 'payment.title'|trans }} - {{ parent() }}{% endblock %}
 
 {% block content %}
-    {% for i in 1..4 %}
+    {% for i in 1 %}
       {% include 'partials/payment/section'~ i ~'.twig' %}
     {% endfor %}
 {% endblock %}

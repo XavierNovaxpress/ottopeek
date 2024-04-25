@@ -125,4 +125,9 @@ $app->get('/payment', function ($request, $response, $args) use ($twig, $transla
   return $twig->render($response, '_payment.twig', $globalData);
 });
 
+$app->get('/legals', function ($request, $response, $args) use ($twig, $translator) {
+  $globalData = getGlobalData($translator);
+  return $twig->render($response, '_legals.twig', $globalData);
+});
+
 $app->run();

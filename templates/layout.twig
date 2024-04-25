@@ -9,12 +9,12 @@
     <link rel="stylesheet" href="{{ webrootURL }}/public/css/index.css">
     {% block stylesheets %}{% endblock %}
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
 {% block header %}
     {% include 'partials/header.twig' %}
 {% endblock %}
 
-<main role="main">
+<main role="main" class="flex-grow-1">
 
     {% block content %}
     {% endblock %}
@@ -27,7 +27,7 @@
     {% endblock %}
 
 </section>
-zd
+
 {% block footer %}
     {% include 'partials/footer.twig' %}
 {% endblock %}

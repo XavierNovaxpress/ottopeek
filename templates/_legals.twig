@@ -1,0 +1,8 @@
+{% extends 'layout.twig' %}
+
+{% block title %}{{ 'pricing.title'|trans }} - {{ parent() }}{% endblock %}
+
+{% block content %}
+    {% include 'partials/legals/section1.twig' %}
+    {% include 'partials/legals/section2.twig' %}
+{% endblock %}
