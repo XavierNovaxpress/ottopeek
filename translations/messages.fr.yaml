@@ -12,18 +12,34 @@ header:
   langue: "FR"
 
 # Footer
-footer_company_name: "%companyName%"
-footer_expertise: "L'expertise au service de votre tranquillité automobile."
-footer_society: "Société"
-footer_home: "Home"
-footer_prix: "Prix"
-footer_aide: "Aide"
-footer_contact: "Contact"
-footer_legal: "Légal"
-footer_confidentiality: "Politique de confidentialité"
-footer_legal_mentions: "Mentions légales"
-footer_cgv: "CGV"
-footer_cookie_policy: "Politique de cookies"
+footer:
+  societe:
+    logo: "%companyName%"
+    description: "%companyName% : l'expertise au service de votre tranquillité automobile."
+    social_media:
+      twitter: "Twitter"
+      instagram: "Instagram"
+      youtube: "YouTube"
+
+  sections:
+    societe:
+      titre: Société
+      home: "Home"
+      prix: "Prix"
+      aide: "Aide"
+      contact: "Contact"
+    legal:
+      titre: Légal
+      confidentialite: "Politique de confidentialité"
+      mentions_legales: "Mentions légales"
+      cgv: "CGV"
+      cookies: "Politique de cookies"
+    newsletter:
+      inscription: "Inscrivez-vous à la Newsletter"
+      entrez_email: "Entrez votre email"
+      inscrire_bouton: "Inscrivez-vous"
+
+  copyright: "Copyright © %year% %companyName%"
 
 # Homepage
 home:
@@ -221,3 +237,18 @@ checkout:
     description: "Munissez-vous de données fiables pour négocier avec assurance. Ottopeek vous donne le pouvoir de connaître la vraie valeur du véhicule et de déterminer le juste prix. Avec des informations précises sur la valeur estimée du véhicule, vous entrez dans la négociation armé de faits solides, prêt à obtenir le meilleur accord possible. Transformez les données en pouvoir de négociation et prenez l'avantage."
     paragraph2: "Ne laissez plus la valeur de votre véhicule être une énigme. Nos rapports détaillés offrent une évaluation basée sur des données actuelles du marché, vous permettant d'aborder les discussions de prix avec une confiance inébranlable. Prenez le contrôle des négociations et assurez-vous de ne jamais surpayer ou sous-vendre."
     image_alt: "Deux personnes échangeant des clés de voiture"
+  section5:
+    titre: "Satisfaction garantie ou argent remis sous 30 jours"
+    description: "Pas de souci ! Si vous n'êtes pas satisfait, nous vous rembourserons intégralement conformément à nos conditions générales de vente."
+    image_alt: "Icône d'un bouclier avec un symbole de coche"
+  section6:
+    garantie:
+      titre: "Satisfaction garantie ou argent remis sous 30 jours"
+      description: "Pas de souci ! Si vous n'êtes pas satisfait, nous vous rembourserons intégralement conformément à nos conditions générales de vente."
+
+    service_client:
+      titre_principal: "Nous sommes disponibles pour le"
+      titre_secondaire: "Service Client"
+      contact_telephone: "Vous pouvez nous joindre à tout moment par téléphone (au tarif d’un appel local) au"
+      numero_telephone: "+1 123 456 7890"
+      horaires_dispo: "Nous sommes disponibles du lundi au vendredi de 9h30 à 18h30 et le samedi de 9h30 à 13h30. Vous pouvez également nous contacter via notre formulaire de contact. Nous répondons aux emails et aux messages sur Facebook également 24h/24."

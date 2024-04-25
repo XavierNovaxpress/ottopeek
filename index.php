@@ -11,6 +11,57 @@ use Symfony\Bridge\Twig\Extension\TranslationExtension;
 use Parsedown;
 use Dotenv\Dotenv;
 
+// VARIABLES GLOBALES POUR LE PROJET
+function getGlobalData(Translator $translator)
+{
+    $parsedown = new Parsedown();
+    $currentLocale = substr($translator->getLocale(), 0, 2); // Extrait le code de langue (ex. 'fr')
+
+    // Détermination des chemins des fichiers Markdown
+    $cgvPath = __DIR__ . "/translations/markdown/cgv-{$currentLocale}.md";
+    $privacyPath = __DIR__ . "/translations/markdown/privacy-{$currentLocale}.md";
+
+    // Définition des variables
+    $webrootURL = (strpos(__DIR__, 'mamp') !== false) ? "https://ottopeek-front.mamp:8890" : "";
+    $companyName = $_ENV['COMPANY_NAME'] ?? 'Ottopeek';
+    $contactEmail = $_ENV['CONTACT_EMAIL'] ?? 'contact@ottopeek.com';
+    $companyAdress = $_ENV['COMPANY_ADRESS'] ?? '1801 STEVENS AVE EAST PALO ALTO CA 94303-1264 USA';
+    $companyPhone = $_ENV['COMPANY_PHONE'] ?? '(279) 987-1701';
+    $year = date("Y");
+
+    // Prétraitement et conversion du Markdown pour les CGV
+    $cgvContent = file_exists($cgvPath) ? file_get_contents($cgvPath) : 'Contenu non disponible';
+    $cgvContent = str_replace(
+        ['{{ companyName }}', '{{ contactEmail }}', '{{ companyPhone }}', '{{ companyAdress }}'],
+        [$companyName, $contactEmail, $companyPhone, $companyAdress],
+        $cgvContent
+    );
+    $cgvContent = $parsedown->text($cgvContent);
+
+    // Prétraitement et conversion du Markdown pour la politique de confidentialité
+    $privacyContent = file_exists($privacyPath) ? file_get_contents($privacyPath) : 'Contenu non disponible';
+    $privacyContent = str_replace(
+        ['{{ companyName }}', '{{ contactEmail }}', '{{ companyPhone }}', '{{ companyAdress }}'],
+        [$companyName, $contactEmail, $companyPhone, $companyAdress],
+        $privacyContent
+    );
+    $privacyContent = $parsedown->text($privacyContent);
+
+    // Retourne les données
+    return [
+        'webrootURL' => $webrootURL,
+        'companyName' => $companyName,
+        'contactEmail' => $contactEmail,
+        'companyPhone' => $companyPhone,
+        'companyAdress' => $companyAdress,
+        'surveyJsLocale' => $currentLocale,
+        'cgvContent' => $cgvContent,
+        'privacyContent' => $privacyContent,
+        'year' => $year,
+    ];
+}
+// VARIABLES GLOBALES POUR LE PROJET
+
 // Chargement des variables d'environnement depuis le fichier .env
 if (file_exists(__DIR__ . '/.env')) {
     $dotenv = Dotenv::createImmutable(__DIR__);
@@ -55,139 +106,23 @@ $app->add(TwigMiddleware::create($app, $twig));
 
 // ROUTING
 $app->get('/', function ($request, $response, $args) use ($twig, $translator) {
-    $parsedown = new Parsedown();
-    $currentLocale = substr($translator->getLocale(), 0, 2); // Extrait le code de langue (ex. 'fr')
-
-    // Détermination des chemins des fichiers Markdown
-    $cgvPath = __DIR__ . "/translations/markdown/cgv-{$currentLocale}.md";
-    $privacyPath = __DIR__ . "/translations/markdown/privacy-{$currentLocale}.md";
-
-    // Définition des variables
-    $webrootURL = (strpos(__DIR__, 'mamp') !== false) ? "https://ottopeek-front.mamp:8890" : "";
-    $companyName = $_ENV['COMPANY_NAME'] ?? 'Ottopeek';
-    $contactEmail = $_ENV['CONTACT_EMAIL'] ?? 'contact@ottopeek.com';
-    $companyAdress = $_ENV['COMPANY_ADRESS'] ?? '1801 STEVENS AVE EAST PALO ALTO CA 94303-1264 USA';
-    $companyPhone = $_ENV['COMPANY_PHONE'] ?? '(279) 987-1701';
-
-    // Prétraitement et conversion du Markdown pour les CGV
-    $cgvContent = file_exists($cgvPath) ? file_get_contents($cgvPath) : 'Contenu non disponible';
-    $cgvContent = str_replace(
-        ['{{ companyName }}', '{{ contactEmail }}', '{{ companyPhone }}', '{{ companyAdress }}'],
-        [$companyName, $contactEmail, $companyPhone, $companyAdress],
-        $cgvContent
-    );
-    $cgvContent = $parsedown->text($cgvContent);
-
-    // Prétraitement et conversion du Markdown pour la politique de confidentialité
-    $privacyContent = file_exists($privacyPath) ? file_get_contents($privacyPath) : 'Contenu non disponible';
-    $privacyContent = str_replace(
-        ['{{ companyName }}', '{{ contactEmail }}', '{{ companyPhone }}', '{{ companyAdress }}'],
-        [$companyName, $contactEmail, $companyPhone, $companyAdress],
-        $privacyContent
-    );
-    $privacyContent = $parsedown->text($privacyContent);
-
-    return $twig->render($response, '_index.twig', [
-        'webrootURL' => $webrootURL,
-        'companyName' => $companyName,
-        'contactEmail' => $contactEmail,
-        'companyPhone' => $companyPhone,
-        'companyAdress' => $companyAdress,
-        'surveyJsLocale' => $currentLocale,
-        'cgvContent' => $cgvContent,
-        'privacyContent' => $privacyContent,
-    ]);
+  $globalData = getGlobalData($translator);
+  return $twig->render($response, '_index.twig', $globalData);
 });
 
 $app->get('/pricing', function ($request, $response, $args) use ($twig, $translator) {
-    $parsedown = new Parsedown();
-    $currentLocale = substr($translator->getLocale(), 0, 2); // Extrait le code de langue (ex. 'fr')
-
-    // Détermination des chemins des fichiers Markdown
-    $cgvPath = __DIR__ . "/translations/markdown/cgv-{$currentLocale}.md";
-    $privacyPath = __DIR__ . "/translations/markdown/privacy-{$currentLocale}.md";
-
-    // Définition des variables
-    $webrootURL = (strpos(__DIR__, 'mamp') !== false) ? "https://ottopeek-front.mamp:8890" : "";
-    $companyName = $_ENV['COMPANY_NAME'] ?? 'Ottopeek';
-    $contactEmail = $_ENV['CONTACT_EMAIL'] ?? 'contact@ottopeek.com';
-    $companyAdress = $_ENV['COMPANY_ADRESS'] ?? '1801 STEVENS AVE EAST PALO ALTO CA 94303-1264 USA';
-    $companyPhone = $_ENV['COMPANY_PHONE'] ?? '(279) 987-1701';
-
-    // Prétraitement et conversion du Markdown pour les CGV
-    $cgvContent = file_exists($cgvPath) ? file_get_contents($cgvPath) : 'Contenu non disponible';
-    $cgvContent = str_replace(
-        ['{{ companyName }}', '{{ contactEmail }}', '{{ companyPhone }}', '{{ companyAdress }}'],
-        [$companyName, $contactEmail, $companyPhone, $companyAdress],
-        $cgvContent
-    );
-    $cgvContent = $parsedown->text($cgvContent);
-
-    // Prétraitement et conversion du Markdown pour la politique de confidentialité
-    $privacyContent = file_exists($privacyPath) ? file_get_contents($privacyPath) : 'Contenu non disponible';
-    $privacyContent = str_replace(
-        ['{{ companyName }}', '{{ contactEmail }}', '{{ companyPhone }}', '{{ companyAdress }}'],
-        [$companyName, $contactEmail, $companyPhone, $companyAdress],
-        $privacyContent
-    );
-    $privacyContent = $parsedown->text($privacyContent);
-
-    return $twig->render($response, '_pricing.twig', [
-        'webrootURL' => $webrootURL,
-        'companyName' => $companyName,
-        'contactEmail' => $contactEmail,
-        'companyPhone' => $companyPhone,
-        'companyAdress' => $companyAdress,
-        'surveyJsLocale' => $currentLocale,
-        'cgvContent' => $cgvContent,
-        'privacyContent' => $privacyContent,
-    ]);
+  $globalData = getGlobalData($translator);
+  return $twig->render($response, '_pricing.twig', $globalData);
 });
 
-
 $app->get('/checkout', function ($request, $response, $args) use ($twig, $translator) {
-    $parsedown = new Parsedown();
-    $currentLocale = substr($translator->getLocale(), 0, 2); // Extrait le code de langue (ex. 'fr')
+  $globalData = getGlobalData($translator);
+  return $twig->render($response, '_checkout.twig', $globalData);
+});
 
-    // Détermination des chemins des fichiers Markdown
-    $cgvPath = __DIR__ . "/translations/markdown/cgv-{$currentLocale}.md";
-    $privacyPath = __DIR__ . "/translations/markdown/privacy-{$currentLocale}.md";
-
-    // Définition des variables
-    $webrootURL = (strpos(__DIR__, 'mamp') !== false) ? "https://ottopeek-front.mamp:8890" : "";
-    $companyName = $_ENV['COMPANY_NAME'] ?? 'Ottopeek';
-    $contactEmail = $_ENV['CONTACT_EMAIL'] ?? 'contact@ottopeek.com';
-    $companyAdress = $_ENV['COMPANY_ADRESS'] ?? '1801 STEVENS AVE EAST PALO ALTO CA 94303-1264 USA';
-    $companyPhone = $_ENV['COMPANY_PHONE'] ?? '(279) 987-1701';
-
-    // Prétraitement et conversion du Markdown pour les CGV
-    $cgvContent = file_exists($cgvPath) ? file_get_contents($cgvPath) : 'Contenu non disponible';
-    $cgvContent = str_replace(
-        ['{{ companyName }}', '{{ contactEmail }}', '{{ companyPhone }}', '{{ companyAdress }}'],
-        [$companyName, $contactEmail, $companyPhone, $companyAdress],
-        $cgvContent
-    );
-    $cgvContent = $parsedown->text($cgvContent);
-
-    // Prétraitement et conversion du Markdown pour la politique de confidentialité
-    $privacyContent = file_exists($privacyPath) ? file_get_contents($privacyPath) : 'Contenu non disponible';
-    $privacyContent = str_replace(
-        ['{{ companyName }}', '{{ contactEmail }}', '{{ companyPhone }}', '{{ companyAdress }}'],
-        [$companyName, $contactEmail, $companyPhone, $companyAdress],
-        $privacyContent
-    );
-    $privacyContent = $parsedown->text($privacyContent);
-
-    return $twig->render($response, '_checkout.twig', [
-        'webrootURL' => $webrootURL,
-        'companyName' => $companyName,
-        'contactEmail' => $contactEmail,
-        'companyPhone' => $companyPhone,
-        'companyAdress' => $companyAdress,
-        'surveyJsLocale' => $currentLocale,
-        'cgvContent' => $cgvContent,
-        'privacyContent' => $privacyContent,
-    ]);
+$app->get('/payment', function ($request, $response, $args) use ($twig, $translator) {
+  $globalData = getGlobalData($translator);
+  return $twig->render($response, '_payment.twig', $globalData);
 });
 
 $app->run();

@@ -1,28 +1,56 @@
-<footer class="bg-dark text-white py-4">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6">
-        <h5>{{ 'footer_company_name' | trans }}</h5>
-        <p>{{ 'footer_expertise' | trans }}</p>
-      </div>
-      <div class="col-md-3">
-        <h5>{{ 'footer_society' | trans }}</h5>
-        <ul class="list-unstyled">
-          <li><a href="#home" class="text-white">{{ 'footer_home' | trans }}</a></li>
-          <li><a href="#prix" class="text-white">{{ 'footer_prix' | trans }}</a></li>
-          <li><a href="#aide" class="text-white">{{ 'footer_aide' | trans }}</a></li>
-          <li><a href="#contact" class="text-white">{{ 'footer_contact' | trans }}</a></li>
-        </ul>
-      </div>
-      <div class="col-md-3">
-        <h5>{{ 'footer_legal' | trans }}</h5>
-        <ul class="list-unstyled">
-          <li><a href="#confidentialité" class="text-white">{{ 'footer_confidentiality' | trans }}</a></li>
-          <li><a href="#mentions_légales" class="text-white">{{ 'footer_legal_mentions' | trans }}</a></li>
-          <li><a href="#cgv" class="text-white">{{ 'footer_cgv' | trans }}</a></li>
-          <li><a href="#cookies" class="text-white">{{ 'footer_cookie_policy' | trans }}</a></li>
-        </ul>
-      </div>
+<footer class="bg-dark text-light pt-5 pb-3">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-md-3">
+                <div class="d-flex flex-column">
+                    <img class="w-50" src="https://place-hold.it/100x50" alt="{{ 'footer.societe.logo' | trans }}" class="mb-2">
+                    <p>{{ 'footer.societe.description' | trans({'%companyName%': companyName}) }}</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" aria-label="{{ 'footer.societe.social_media.twitter' | trans }}">
+                            <i class="bi bi-twitter text-light fs-3"></i>
+                        </a>
+                        <a href="#" aria-label="{{ 'footer.societe.social_media.instagram' | trans }}">
+                            <i class="bi bi-instagram text-light fs-3"></i>
+                        </a>
+                        <a href="#" aria-label="{{ 'footer.societe.social_media.youtube' | trans }}">
+                            <i class="bi bi-youtube text-light fs-3"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <h4>{{ 'footer.sections.societe.titre' | trans }}</h4>
+                <ul class="list-unstyled">
+                    <li>{{ 'footer.sections.societe.home' | trans }}</li>
+                    <li>{{ 'footer.sections.societe.prix' | trans }}</li>
+                    <li>{{ 'footer.sections.societe.aide' | trans }}</li>
+                    <li>{{ 'footer.sections.societe.contact' | trans }}</li>
+                </ul>
+            </div>
+
+            <div class="col-md-3">
+                <h4>{{ 'footer.sections.legal.titre' | trans }}</h4>
+                <ul class="list-unstyled">
+                    <li>{{ 'footer.sections.legal.confidentialite' | trans }}</li>
+                    <li>{{ 'footer.sections.legal.mentions_legales' | trans }}</li>
+                    <li>{{ 'footer.sections.legal.cgv' | trans }}</li>
+                    <li>{{ 'footer.sections.legal.cookies' | trans }}</li>
+                </ul>
+            </div>
+
+            <div class="col-md-3">
+                <h4>{{ 'footer.sections.newsletter.inscription' | trans }}</h4>
+                <form class="d-flex flex-column gap-2">
+                    <input type="email" placeholder="{{ 'footer.sections.newsletter.entrez_email' | trans }}" class="form-control">
+                    <button type="submit" class="btn btn-warning">{{ 'footer.sections.newsletter.inscrire_bouton' | trans }}</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <hr class="bg-light" />
+            <p>{{ 'footer.copyright' | trans({'%year%': year, '%companyName%': companyName }) }}</p>
+        </div>
     </div>
-  </div>
 </footer>

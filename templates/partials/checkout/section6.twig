@@ -1,0 +1,24 @@
+<div class="container my-5">
+    <div class="row justify-content-center align-items-center">
+        {% for i in 0..6 %}
+            <div class="col-auto py-1">
+                <img src="https://place-hold.it/150" alt="{{ 'home.section5.logo' ~ i ~ '.alt'|trans }}" class="img-fluid">
+            </div>
+        {% endfor %}
+    </div>
+
+    <div class="row mt-5">
+        <div class="col text-center">
+            <div class="card rounded shadow-sm p-4 text-center">
+                <h2 class="fw-bold">{{ 'checkout.section6.service_client.titre_principal' | trans }}</h2>
+                <h3 class="fw-bold text-primary">{{ 'checkout.section6.service_client.titre_secondaire' | trans }}</h3>
+                <p>{{ 'checkout.section6.service_client.contact_telephone' | trans }}</p>
+                <div class="d-flex justify-content-center align-items-center">
+                    <i class="bi bi-telephone-fill text-primary fs-3"></i>
+                    <span class="ms-2 fw-bold text-primary">{{ 'checkout.section6.service_client.numero_telephone' | trans }}</span>
+                </div>
+                <p class="text-muted mt-3">{{ 'checkout.section6.service_client.horaires_dispo' | trans }}</p>
+            </div>
+        </div>
+    </div>
+</div>

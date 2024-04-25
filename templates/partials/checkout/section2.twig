@@ -6,7 +6,7 @@
        </div>
        <div class="col-md-6">
            <h2 class="text-primary">{{ 'checkout.section2.titre'|trans }}</h2>
-           <p>{{ 'checkout.section2.description'|trans }}</p>
+           <p>{{ 'checkout.section2.description'|trans({'%companyName%': companyName}) }}</p>
            <ul>
                <li>
                    <i class="bi bi-check-circle-fill text-primary me-2"></i> {{ 'checkout.section2.point1'|trans }}
