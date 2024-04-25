@@ -2,27 +2,8 @@
 
 {% block title %}{{ 'home.title'|trans }} - {{ parent() }}{% endblock %}
 
-{% block stylesheets %}
-    {{ parent() }}
-{% endblock %}
-
-{% block header %}
-    {{ parent() }}
-{% endblock %}
-
 {% block content %}
     {% for i in 1..5 %}
         {% include 'partials/home/section'~ i ~ '.twig' %}
     {% endfor %}
-{% endblock %}
-
-{% block footer %}
-    {{ parent() }}
-{% endblock %}
-
-{% block modals %}
-{% endblock %}
-
-{% block scripts %}
-    {{ parent() }}
 {% endblock %}
