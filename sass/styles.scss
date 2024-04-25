@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+$font-family-base: 'Lexend Deca', sans-serif;
+$warning-color:#FFEB28;
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$background-color: #f8f9fa;
+
 // Importation des fichiers de Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
