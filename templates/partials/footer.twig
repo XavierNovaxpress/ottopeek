@@ -4,16 +4,16 @@
         <div class="row justify-content-between">
             <div class="col-md-3">
                 <div class="d-flex flex-column">
-                    <img class="w-50 my-2" src="{{ webrootURL }}/public/media/logo.png" alt="{{ 'footer.societe.logo' | trans }}" class="mb-2">
-                    <p>{{ 'footer.societe.description' | trans({'%companyName%': companyName}) }}</p>
+                    <img class="w-50 my-2" src="{{ webrootURL }}/public/media/{{ channel }}/logo.png" alt="{{ channel ~ '.footer.societe.logo' | trans }}" class="mb-2">
+                    <p>{{ channel ~ '.footer.societe.description' | trans({'%companyName%': companyName}) }}</p>
                     <div class="d-flex gap-3">
-                        <a href="#" aria-label="{{ 'footer.societe.social_media.twitter' | trans }}">
+                        <a href="#" aria-label="{{ channel ~ '.footer.societe.social_media.twitter' | trans }}">
                             <i class="bi bi-twitter text-light fs-3"></i>
                         </a>
-                        <a href="#" aria-label="{{ 'footer.societe.social_media.instagram' | trans }}">
+                        <a href="#" aria-label="{{ channel ~ '.footer.societe.social_media.instagram' | trans }}">
                             <i class="bi bi-instagram text-light fs-3"></i>
                         </a>
-                        <a href="#" aria-label="{{ 'footer.societe.social_media.youtube' | trans }}">
+                        <a href="#" aria-label="{{ channel ~ '.footer.societe.social_media.youtube' | trans }}">
                             <i class="bi bi-youtube text-light fs-3"></i>
                         </a>
                     </div>
@@ -21,37 +21,37 @@
             </div>
 
             <div class="col-md-3">
-                <h4>{{ 'footer.sections.societe.titre' | trans }}</h4>
+                <h4>{{ channel ~ '.footer.sections.societe.titre' | trans }}</h4>
                 <ul class="list-unstyled">
-                    <li>{{ 'footer.sections.societe.home' | trans }}</li>
-                    <li>{{ 'footer.sections.societe.prix' | trans }}</li>
-                    <li>{{ 'footer.sections.societe.aide' | trans }}</li>
-                    <li>{{ 'footer.sections.societe.contact' | trans }}</li>
+                    <li>{{ channel ~ '.footer.sections.societe.home' | trans }}</li>
+                    <li>{{ channel ~ '.footer.sections.societe.prix' | trans }}</li>
+                    <li>{{ channel ~ '.footer.sections.societe.aide' | trans }}</li>
+                    <li>{{ channel ~ '.footer.sections.societe.contact' | trans }}</li>
                 </ul>
             </div>
 
             <div class="col-md-3">
-                <h4>{{ 'footer.sections.legal.titre' | trans }}</h4>
+                <h4>{{ channel ~ '.footer.sections.legal.titre' | trans }}</h4>
                 <ul class="list-unstyled">
-                    <li>{{ 'footer.sections.legal.confidentialite' | trans }}</li>
-                    <li>{{ 'footer.sections.legal.mentions_legales' | trans }}</li>
-                    <li>{{ 'footer.sections.legal.cgv' | trans }}</li>
-                    <li>{{ 'footer.sections.legal.cookies' | trans }}</li>
+                    <li>{{ channel ~ '.footer.sections.legal.confidentialite' | trans }}</li>
+                    <li>{{ channel ~ '.footer.sections.legal.mentions_legales' | trans }}</li>
+                    <li>{{ channel ~ '.footer.sections.legal.cgv' | trans }}</li>
+                    <li>{{ channel ~ '.footer.sections.legal.cookies' | trans }}</li>
                 </ul>
             </div>
 
             <div class="col-md-3">
-                <h4>{{ 'footer.sections.newsletter.inscription' | trans }}</h4>
+                <h4>{{ channel ~ '.footer.sections.newsletter.inscription' | trans }}</h4>
                 <form class="d-flex flex-column gap-2">
-                    <input type="email" placeholder="{{ 'footer.sections.newsletter.entrez_email' | trans }}" class="form-control">
-                    <button type="submit" class="btn btn-warning">{{ 'footer.sections.newsletter.inscrire_bouton' | trans }}</button>
+                    <input type="email" placeholder="{{ channel ~ '.footer.sections.newsletter.entrez_email' | trans }}" class="form-control">
+                    <button type="submit" class="btn btn-warning">{{ channel ~ '.footer.sections.newsletter.inscrire_bouton' | trans }}</button>
                 </form>
             </div>
         </div>
 
         <div class="text-center mt-4">
             <hr class="bg-light" />
-            <p>{{ 'footer.copyright' | trans({'%year%': year, '%companyName%': companyName }) }}</p>
+            <p>{{ channel ~ '.footer.copyright' | trans({'%year%': year, '%companyName%': companyName }) }}</p>
         </div>
     </div>
 </footer>

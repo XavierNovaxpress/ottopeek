@@ -10,12 +10,20 @@ use Symfony\Component\Translation\Translator;
 use Symfony\Bridge\Twig\Extension\TranslationExtension;
 use Parsedown;
 use Dotenv\Dotenv;
+use Symfony\Component\Yaml\Yaml;
 
 // VARIABLES GLOBALES POUR LE PROJET
 function getGlobalData(Translator $translator)
 {
     $parsedown = new Parsedown();
     $currentLocale = substr($translator->getLocale(), 0, 2); // Extrait le code de langue (ex. 'fr')
+
+    // Récupérer le paramètre 'channel' de l'URL
+    $channel = $_GET['channel'] ?? 'default';
+
+    // Charger l'ordre des sections depuis le fichier YAML
+    $section_order = Yaml::parseFile(__DIR__ . '/config/section_order.yaml');
+
 
     // Détermination des chemins des fichiers Markdown
     $cgvPath = __DIR__ . "/translations/markdown/cgv-{$currentLocale}.md";
@@ -58,6 +66,7 @@ function getGlobalData(Translator $translator)
         'cgvContent' => $cgvContent,
         'privacyContent' => $privacyContent,
         'year' => $year,
+        'channel' => $channel,
     ];
 }
 // VARIABLES GLOBALES POUR LE PROJET

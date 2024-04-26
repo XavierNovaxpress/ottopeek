@@ -11,6 +11,8 @@ module.exports = {
   entry: {
     main: './src/index.js',
     index: './sass/index.scss',
+    default: './sass/default.theme.scss',
+    ottopeek: './sass/ottopeek.theme.scss',
   },
   output: {
     path: path.resolve(__dirname, 'public'),
