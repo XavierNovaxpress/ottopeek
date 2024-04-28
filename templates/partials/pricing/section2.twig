@@ -7,7 +7,7 @@
             {% for i in 1..3 %}
               <div class="col-md-3">
                   <div class="icon-box">
-                      <img src="{{ webrootURL }}/public/media/{{ channel }}/icon{{ i }}.svg" alt="" class="py-5">
+                      <img src="{{ webrootURL }}/public/media/{{ channel }}/icon{{ i }}.svg" alt="" class="py-5 lazyload">
                       <h4>{{ (channel ~ '.pricing.section2.advantage' ~ i ~ '.titre')|trans|raw }}</h4>
                       <p>{{ (channel ~ '.pricing.section2.advantage' ~ i ~ '.description')|trans|raw }}</p>
                   </div>
