@@ -14,5 +14,7 @@ node_modules
 # Ignore les fichiers de log
 /log/*.log
 
+/vendor/
+
 # Ignore les fichiers de sauvegarde
 *.bak
