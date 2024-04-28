@@ -2,11 +2,11 @@
     <div class="container">
         <div class="row">
             <div class="col-12 d-flex justify-content-center align-items-center py-5">
-                <img src="{{ webrootURL }}/public/media/{{ channel }}/shield.svg" alt="{{ 'checkout.section5.image_alt' | trans }}" class="img-fluid" />
+                <img src="{{ webrootURL }}/public/media/{{ channel }}/shield.svg" alt="{{ (channel ~ '.checkout.section5.image_alt' | trans }}" class="img-fluid" />
             </div>
             <div class="col-12 text-center align-items-center text-white pb-5">
-                <h1 class="fw-bold text-light">{{ 'checkout.section5.titre' | trans }}</h1>
-                <p class="text-white">{{ 'checkout.section5.description' | trans }}</p>
+                <h1 class="fw-bold text-light">{{ (channel ~ '.checkout.section5.titre' | trans }}</h1>
+                <p class="text-white">{{ (channel ~ '.checkout.section5.description' | trans }}</p>
             </div>
         </div>
     </div>

@@ -1,7 +1,7 @@
 
 <section class=" py-5 bg-white">
     <div class="container">
-        <h2 class="text-center">{{ 'pricing.section4.titre'|trans }}</h2>
+        <h2 class="text-center">{{ (channel ~ '.pricing.section4.titre')|trans|raw }}</h2>
         <div class="accordion" id="faqAccordion">
         {% for i in 1..7 %}
             <div class="accordion-item">

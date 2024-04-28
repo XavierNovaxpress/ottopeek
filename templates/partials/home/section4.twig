@@ -2,30 +2,30 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <h2 class="text-primary">{{ 'home.section4.titre'|trans }}</h2>
-                <h3 class="text-dark">{{ 'home.section4.sous-titre'|trans }}</h3>
-                <p>{{ 'home.section4.description'|trans({'%companyName%': companyName}) }}</p>
+                <h2 class="text-primary">{{ (channel ~ '.home.section4.titre')|trans|raw }}</h2>
+                <h3 class="text-dark">{{ (channel ~ '.home.section4.sous-titre')|trans|raw }}</h3>
+                <p>{{ (channel ~ '.home.section4.description')|trans|raw({'%companyName%': companyName}) }}</p>
                 <ul class="list-group">
                     <li class="list-group-item">
-                        <strong>{{ 'home.section4.item1.titre'|trans }}</strong>
-                        <p>{{ 'home.section4.item1.description'|trans }}</p>
+                        <strong>{{ (channel ~ '.home.section4.item1.titre')|trans|raw }}</strong>
+                        <p>{{ (channel ~ '.home.section4.item1.description')|trans|raw }}</p>
                     </li>
                     <li class="list-group-item">
-                        <strong>{{ 'home.section4.item2.titre'|trans }}</strong>
-                        <p>{{ 'home.section4.item2.description'|trans }}</p>
+                        <strong>{{ (channel ~ '.home.section4.item2.titre')|trans|raw }}</strong>
+                        <p>{{ (channel ~ '.home.section4.item2.description')|trans|raw }}</p>
                     </li>
                     <li class="list-group-item">
-                        <strong>{{ 'home.section4.item3.titre'|trans }}</strong>
-                        <p>{{ 'home.section4.item3.description'|trans }}</p>
+                        <strong>{{ (channel ~ '.home.section4.item3.titre')|trans|raw }}</strong>
+                        <p>{{ (channel ~ '.home.section4.item3.description')|trans|raw }}</p>
                     </li>
                     <li class="list-group-item">
-                        <strong>{{ 'home.section4.item4.titre'|trans }}</strong>
-                        <p>{{ 'home.section4.item4.description'|trans }}</p>
+                        <strong>{{ (channel ~ '.home.section4.item4.titre')|trans|raw }}</strong>
+                        <p>{{ (channel ~ '.home.section4.item4.description')|trans|raw }}</p>
                     </li>
                 </ul>
             </div>
             <div class="col-md-6 d-flex justify-content-end">
-                <img src="{{ webrootURL }}/public/media/{{ channel }}/image4.png" alt="{{ 'home.section4.image.alt'|trans }}" class="img-fluid rounded">
+                <img src="{{ webrootURL }}/public/media/{{ channel }}/image4.png" alt="{{ (channel ~ '.home.section4.image.alt')|trans|raw }}" class="img-fluid rounded">
             </div>
         </div>
     </div>

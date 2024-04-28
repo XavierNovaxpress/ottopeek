@@ -1,6 +1,6 @@
 {% extends 'layout.twig' %}
 
-{% block title %}{{ 'pricing.title'|trans }} - {{ parent() }}{% endblock %}
+{% block title %}{{ (channel ~ '.pricing.title')|trans|raw }} - {{ parent() }}{% endblock %}
 
 {% block content %}
     {% for i in 1..4 %}

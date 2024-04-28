@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ 'home.title'|trans }}</title>
+    <title>{{ (channel ~ '.home.title')|trans|raw }}</title>
     <link rel="stylesheet" href="{{ webrootURL }}/public/css/main.css">
     <link rel="stylesheet" href="{{ webrootURL }}/public/css/index.css">
     <link rel="stylesheet" href="{{ webrootURL }}/public/css/{{ channel }}.css">

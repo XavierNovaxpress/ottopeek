@@ -3,7 +3,7 @@
   <section class="d-flex justify-content-left justify-content-lg-between p-2 border-bottom">
     <!-- Left -->
     <div class="me-1 d-none d-lg-block">
-      <a class="text-reset fw-bold" href="#">{{ 'footer.ready_for_offers'|trans }}</a>
+      <a class="text-reset fw-bold" href="#">{{ (channel ~ '.footer.ready_for_offers')|trans|raw }}</a>
     </div>
     <!-- Left -->
   </section>
@@ -12,10 +12,10 @@
     <div class="container text-center text-md-start mt-1">
       <div class="row">
         <div class="me-3 col-auto">
-          {{ 'footer.using_service_agreement'|trans }} <a href="#" class="showTermsbtn">{{ 'footer.terms_of_use'|trans }}</a>
-          et notre <a href="#" class="showPrivacybtn">{{ 'footer.privacy_policy'|trans }}</a>.
-          {{ 'footer.not_responsible'|trans({'{{ companyName }}': companyName})|raw }}
-          {{ 'footer.questions_contact'|trans }} <a href="mailto:{{ contactEmail }}">{{ contactEmail }}</a>.
+          {{ (channel ~ '.footer.using_service_agreement')|trans|raw }} <a href="#" class="showTermsbtn">{{ (channel ~ '.footer.terms_of_use')|trans|raw }}</a>
+          et notre <a href="#" class="showPrivacybtn">{{ (channel ~ '.footer.privacy_policy')|trans|raw }}</a>.
+          {{ (channel ~ '.footer.not_responsible')|trans|raw({'{{ companyName }}': companyName})|raw }}
+          {{ (channel ~ '.footer.questions_contact')|trans|raw }} <a href="mailto:{{ contactEmail }}">{{ contactEmail }}</a>.
         </div>
       </div>
     </div>
@@ -23,10 +23,10 @@
 
   <div class="text-center p-2" style="background-color: rgba(0, 0, 0, 0.05);">
     {{ "now"|date("Y") }} <a class="text-reset fw-bold" href="#">{{ companyName }}</a>.
-    {{ 'footer.all_rights_reserved'|trans }}
-    | <a href="#" class="showTermsbtn"> {{ 'footer.conditions'|trans }}</a>
-    | <a href="#" class="showPrivacybtn"> {{ 'footer.privacy'|trans }}</a>
-    | <a href="#" class="showContactbtn">{{ 'footer.contact'|trans }}</a>
+    {{ (channel ~ '.footer.all_rights_reserved')|trans|raw }}
+    | <a href="#" class="showTermsbtn"> {{ (channel ~ '.footer.conditions')|trans|raw }}</a>
+    | <a href="#" class="showPrivacybtn"> {{ (channel ~ '.footer.privacy')|trans|raw }}</a>
+    | <a href="#" class="showContactbtn">{{ (channel ~ '.footer.contact')|trans|raw }}</a>
   </div>
 </footer>
 <!-- Footer -->

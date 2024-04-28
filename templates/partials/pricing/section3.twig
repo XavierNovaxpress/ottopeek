@@ -2,32 +2,32 @@
 <section class="container my-5">
     <div class="row align-items-center">
         <div class="col-md-6">
-            <img src="{{ webrootURL }}/public/media/{{ channel }}/image3.png" alt="{{ 'pricing.section3.image.alt'|trans }}" class="img-fluid rounded">
+            <img src="{{ webrootURL }}/public/media/{{ channel }}/image3.png" alt="{{ (channel ~ '.pricing.section3.image.alt')|trans|raw }}" class="img-fluid rounded">
         </div>
         <div class="col-md-6">
-            <h2 class="text-primary">{{ 'pricing.section3.titre'|trans }}</h2>
-            <p>{{ 'pricing.section3.description'|trans({'%companyName%': companyName}) }}</p>
+            <h2 class="text-primary">{{ (channel ~ '.pricing.section3.titre')|trans|raw }}</h2>
+            <p>{{ (channel ~ '.pricing.section3.description')|trans|raw({'%companyName%': companyName}) }}</p>
             <ul class="list-unstyled">
                 <li>
-                    <i class="bi bi-check-circle-fill text-primary me-2"></i> {{ 'pricing.section3.item2'|trans }}
+                    <i class="bi bi-check-circle-fill text-primary me-2"></i> {{ (channel ~ '.pricing.section3.item2')|trans|raw }}
                 </li>
                 <li>
-                    <i class="bi bi-check-circle-fill text-primary me-2"></i> {{ 'pricing.section3.item3'|trans }}
+                    <i class="bi bi-check-circle-fill text-primary me-2"></i> {{ (channel ~ '.pricing.section3.item3')|trans|raw }}
                 </li>
                 <li>
-                    <i class="bi bi-check-circle-fill text-primary me-2"></i> {{ 'pricing.section3.item4'|trans }}
+                    <i class="bi bi-check-circle-fill text-primary me-2"></i> {{ (channel ~ '.pricing.section3.item4')|trans|raw }}
                 </li>
                 <li>
-                    <i class="bi bi-check-circle-fill text-primary me-2"></i> {{ 'pricing.section3.item5'|trans }}
+                    <i class="bi bi-check-circle-fill text-primary me-2"></i> {{ (channel ~ '.pricing.section3.item5')|trans|raw }}
                 </li>
                 <li>
-                    <i class="bi bi-check-circle-fill text-primary me-2"></i> {{ 'pricing.section3.item6'|trans }}
+                    <i class="bi bi-check-circle-fill text-primary me-2"></i> {{ (channel ~ '.pricing.section3.item6')|trans|raw }}
                 </li>
                 <li>
-                    <i class="bi bi-check-circle-fill text-primary me-2"></i> {{ 'pricing.section3.item7'|trans }}
+                    <i class="bi bi-check-circle-fill text-primary me-2"></i> {{ (channel ~ '.pricing.section3.item7')|trans|raw }}
                 </li>
                 <li>
-                    <i class="bi bi-check-circle-fill text-primary me-2"></i> {{ 'pricing.section3.item8'|trans }}
+                    <i class="bi bi-check-circle-fill text-primary me-2"></i> {{ (channel ~ '.pricing.section3.item8')|trans|raw }}
                 </li>
             </ul>
         </div>

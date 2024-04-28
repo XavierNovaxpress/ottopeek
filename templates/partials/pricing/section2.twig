@@ -1,28 +1,28 @@
 
 <section class="my-5 text-center bg-white py-5">
     <div class="container">
-        <h2 class="text-primary">{{ 'pricing.section2.titre'|trans }}</h2>
-        <p>{{ 'pricing.section2.sous-titre'|trans }}</p>
+        <h2 class="text-primary">{{ (channel ~ '.pricing.section2.titre')|trans|raw }}</h2>
+        <p>{{ (channel ~ '.pricing.section2.sous-titre')|trans|raw }}</p>
         <div class="row justify-content-center">
             <div class="col-md-3">
                 <div class="icon-box">
                     <img src="{{ webrootURL }}/public/media/{{ channel }}/icon1.svg" alt="" class="py-5">
-                    <h4>{{ 'pricing.section2.advantage1.titre'|trans }}</h4>
-                    <p>{{ 'pricing.section2.advantage1.description'|trans }}</p>
+                    <h4>{{ (channel ~ '.pricing.section2.advantage1.titre')|trans|raw }}</h4>
+                    <p>{{ (channel ~ '.pricing.section2.advantage1.description')|trans|raw }}</p>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="icon-box">
                     <img src="{{ webrootURL }}/public/media/{{ channel }}/icon2.svg" alt="" class="py-5">
-                    <h4>{{ 'pricing.section2.advantage2.titre'|trans }}</h4>
-                    <p>{{ 'pricing.section2.advantage2.description'|trans }}</p>
+                    <h4>{{ (channel ~ '.pricing.section2.advantage2.titre')|trans|raw }}</h4>
+                    <p>{{ (channel ~ '.pricing.section2.advantage2.description')|trans|raw }}</p>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="icon-box">
                     <img src="{{ webrootURL }}/public/media/{{ channel }}/icon3.svg" alt="" class="py-5">
-                    <h4>{{ 'pricing.section2.advantage3.titre'|trans }}</h4>
-                    <p>{{ 'pricing.section2.advantage3.description'|trans }}</p>
+                    <h4>{{ (channel ~ '.pricing.section2.advantage3.titre')|trans|raw }}</h4>
+                    <p>{{ (channel ~ '.pricing.section2.advantage3.description')|trans|raw }}</p>
                 </div>
             </div>
         </div>

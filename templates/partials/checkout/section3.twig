@@ -1,13 +1,13 @@
 <section class="container my-5">
      <div class="row">
          <div class="col-md-6 d-flex flex-column justify-content-center">
-             <h2 class="text-primary">{{ 'checkout.section3.titre'|trans }}</h2>
-             <p>{{ 'checkout.section3.description'|trans({'%companyName%': companyName}) }}</p>
-             <p>{{ 'checkout.section3.paragraph1'|trans }} <strong>{{ 'checkout.section3.important1'|trans }}</strong>.</p>
-             <p>{{ 'checkout.section3.paragraph2'|trans({'%companyName%': companyName}) }} <strong>{{ 'checkout.section3.important2'|trans }}</strong>.</p>
+             <h2 class="text-primary">{{ (channel ~ '.checkout.section3.titre')|trans|raw }}</h2>
+             <p>{{ (channel ~ '.checkout.section3.description')|trans|raw({'%companyName%': companyName}) }}</p>
+             <p>{{ (channel ~ '.checkout.section3.paragraph1')|trans|raw }} <strong>{{ (channel ~ '.checkout.section3.important1')|trans|raw }}</strong>.</p>
+             <p>{{ (channel ~ '.checkout.section3.paragraph2')|trans|raw({'%companyName%': companyName}) }} <strong>{{ (channel ~ '.checkout.section3.important2')|trans|raw }}</strong>.</p>
          </div>
          <div class="col-md-6  d-flex justify-content-end">
-             <img src="{{ webrootURL }}/public/media/{{ channel }}/image1.png" alt="{{ 'checkout.section3.image.alt'|trans }}" class="img-fluid rounded">
+             <img src="{{ webrootURL }}/public/media/{{ channel }}/image1.png" alt="{{ (channel ~ '.checkout.section3.image.alt')|trans|raw }}" class="img-fluid rounded">
          </div>
      </div>
 </section>

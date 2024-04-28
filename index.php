@@ -81,18 +81,19 @@ $app = AppFactory::create();
 $twig = Twig::create(__DIR__ . '/templates');
 
 // Configuration de la localisation
-$defaultLocale = $_ENV['LOCALE'] ?? 'fr_FR';
+$defaultLocale = $_ENV['LOCALE'] ?? 'fr';
 $translator = new Translator($defaultLocale);
 $translator->addLoader('yaml', new YamlFileLoader());
 
 // Chargement des ressources de traduction
-$translator->addResource('yaml', __DIR__ . '/translations/messages.fr.yaml', 'fr_FR');
+$translator->addResource('yaml', __DIR__ . '/translations/messages.fr.yaml', 'fr');
 $translator->addResource('yaml', __DIR__ . '/translations/messages.en.yaml', 'en');
 $translator->addResource('yaml', __DIR__ . '/translations/messages.it.yaml', 'it');
 $translator->addResource('yaml', __DIR__ . '/translations/messages.es.yaml', 'es');
 $translator->addResource('yaml', __DIR__ . '/translations/messages.de.yaml', 'de');
 
 $twig->getEnvironment()->addExtension(new TranslationExtension($translator));
+
 
 // Middleware pour la gestion de la locale
 $localeMiddleware = function ($request, $handler) use ($translator, $twig, $defaultLocale) {

@@ -1,13 +1,15 @@
 <header class="bg-white">
+
     <div class="alert bg-primary py-1 border-0 rounded-0">
         <div class="container text-center">
-            <span>{{ channel ~ '.header.souscription'|trans }}</span>
+            <span>{{ (channel ~ '.header.souscription')|trans|raw }}</span>
         </div>
     </div>
+
     <div class="container d-flex justify-content-between align-items-center py-2">
         <nav class="navbar navbar-expand-lg navbar-light">
                 <a class="navbar-brand" href="#">
-                    <img src="{{ webrootURL }}/public/media/{{ channel }}/logo.png" alt="{{ channel ~ '.header.logo.alt'|trans }}" class="img-fluid">
+                    <img src="{{ webrootURL }}/public/media/{{ channel }}/logo.png" alt="{{ (channel ~ '.header.logo')|trans|raw }}" class="img-fluid">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -15,23 +17,24 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" href="#">{{ channel ~ '.header.prix'|trans }}</a>
+                            <a class="nav-link text-dark" href="#">{{ (channel ~ '.header.prix')|trans|raw }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" href="#">{{ channel ~ '.header.aide'|trans }}</a>
+                            <a class="nav-link text-dark" href="#">{{ (channel ~ '.header.aide')|trans|raw }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" href="#">{{ channel ~ '.header.actualites'|trans }}</a>
+                            <a class="nav-link text-dark" href="#">{{ (channel ~ '.header.actualites')|trans|raw }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" href="#">{{ channel ~ '.header.contact'|trans }}</a>
+                            <a class="nav-link text-dark" href="#">{{ (channel ~ '.header.contact')|trans|raw }}</a>
                         </li>
                     </ul>
                 </div>
             </nav>
         <div>
-            <button class="btn btn-warning">{{ channel ~ '.header.connexion'|trans }}</button>
-            <span class="text-dark">{{ channel ~ '.header.langue'|trans }}</span>
+            <button class="btn btn-warning">{{ (channel ~ '.header.connexion')|trans|raw }}</button>
+            <span class="text-dark">{{ (channel ~ '.header.langue')|trans|raw }}</span>
         </div>
     </div>
+
 </header>

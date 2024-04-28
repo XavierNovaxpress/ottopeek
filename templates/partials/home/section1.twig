@@ -2,23 +2,23 @@
    <div class="container">
        <div class="d-flex justify-content-center mb-4">
            <div class="me-3 text-muted">
-               {{ 'home.section1.stats1'|trans }}
+               {{ (channel ~ '.home.section1.stats1')|trans|raw }}
            </div>
            <div class="me-3 text-muted">
-               {{ 'home.section1.stats2'|trans }}
+               {{ (channel ~ '.home.section1.stats2')|trans|raw }}
            </div>
            <div class="text-muted">
-               {{ 'home.section1.stats3'|trans }}
+               {{ (channel ~ '.home.section1.stats3')|trans|raw }}
            </div>
        </div>
-       <h1 class="text-primary">{{ 'home.section1.titre'|trans }}</h1>
-       <p class="lead">{{ 'home.section1.sous-titre'|trans }}</p>
+       <h1 class="text-primary">{{ (channel ~ '.home.section1.titre')|trans|raw }}</h1>
+       <p class="lead">{{ (channel ~ '.home.section1.sous-titre')|trans|raw }}</p>
        <div class="my-4">
-           <input type="text" class="form-control w-50 mx-auto" placeholder="{{ 'home.section1.placeholder'|trans }}">
+           <input type="text" class="form-control w-50 mx-auto" placeholder="{{ (channel ~ '.home.section1.placeholder')|trans|raw }}">
        </div>
-       <button class="btn btn-warning btn-lg">{{ 'home.section1.bouton'|trans }}</button>
+       <button class="btn btn-warning btn-lg">{{ (channel ~ '.home.section1.bouton')|trans|raw }}</button>
        <div class="mt-4">
-           <img src="{{ webrootURL }}/public/media/{{ channel }}/car1.png" alt="{{ 'home.section1.image.alt'|trans }}" class="img-fluid">
+           <img src="{{ webrootURL }}/public/media/{{ channel }}/car1.png" alt="{{ (channel ~ '.home.section1.image.alt')|trans|raw }}" class="img-fluid">
        </div>
    </div>
 </section>
