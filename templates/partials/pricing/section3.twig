@@ -6,29 +6,13 @@
         </div>
         <div class="col-md-6">
             <h2 class="text-primary">{{ (channel ~ '.pricing.section3.titre')|trans|raw }}</h2>
-            <p>{{ (channel ~ '.pricing.section3.description')|trans|raw({'%companyName%': companyName}) }}</p>
+            <p>{{ (channel ~ '.pricing.section3.description')|trans({'%companyName%': companyName})|raw }}</p>
             <ul class="list-unstyled">
+              {% for i in 1..8 %}
                 <li>
-                    <i class="bi bi-check-circle-fill text-primary me-2"></i> {{ (channel ~ '.pricing.section3.item2')|trans|raw }}
+                    <i class="bi bi-check-circle-fill text-primary me-2"></i> {{ (channel ~ '.pricing.section3.item' ~ i )|trans|raw }}
                 </li>
-                <li>
-                    <i class="bi bi-check-circle-fill text-primary me-2"></i> {{ (channel ~ '.pricing.section3.item3')|trans|raw }}
-                </li>
-                <li>
-                    <i class="bi bi-check-circle-fill text-primary me-2"></i> {{ (channel ~ '.pricing.section3.item4')|trans|raw }}
-                </li>
-                <li>
-                    <i class="bi bi-check-circle-fill text-primary me-2"></i> {{ (channel ~ '.pricing.section3.item5')|trans|raw }}
-                </li>
-                <li>
-                    <i class="bi bi-check-circle-fill text-primary me-2"></i> {{ (channel ~ '.pricing.section3.item6')|trans|raw }}
-                </li>
-                <li>
-                    <i class="bi bi-check-circle-fill text-primary me-2"></i> {{ (channel ~ '.pricing.section3.item7')|trans|raw }}
-                </li>
-                <li>
-                    <i class="bi bi-check-circle-fill text-primary me-2"></i> {{ (channel ~ '.pricing.section3.item8')|trans|raw }}
-                </li>
+              {% endfor %}
             </ul>
         </div>
     </div>

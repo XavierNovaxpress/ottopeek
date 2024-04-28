@@ -19,20 +19,6 @@ function getGlobalData(Translator $translator)
     $parsedown = new Parsedown();
     $currentLocale = substr($translator->getLocale(), 0, 2);
 
-    // Récupérer le paramètre 'channel' et 'page' de l'URL
-    $channel = $_GET['channel'] ?? 'default';
-    $page = $_GET['page'] ?? 'home'; // Assurez-vous que "page" est correctement défini
-
-    // Charger l'ordre des sections depuis le fichier YAML
-    try {
-        $section_order = Yaml::parseFile(__DIR__ . '/config/section_order.yaml');
-    } catch (Exception $e) {
-        $section_order = []; // Définit un fallback
-    }
-
-    // Obtenir l'ordre des sections pour le "channel" et la page
-    $order = $section_order['channels'][$channel][$page] ?? [];
-
     // Détermination des chemins des fichiers Markdown
     $cgvPath = __DIR__ . "/translations/markdown/cgv-{$currentLocale}.md";
     $privacyPath = __DIR__ . "/translations/markdown/privacy-{$currentLocale}.md";
@@ -62,6 +48,18 @@ function getGlobalData(Translator $translator)
         $privacyContent
     );
     $privacyContent = $parsedown->text($privacyContent);
+
+
+    // Récupérer le paramètre 'channel' et 'page' de l'URL
+    $channel = $_GET['channel'] ?? 'default';
+    $page = $_GET['page'] ?? 'home'; // Assurez-vous que "page" est correctement défini
+
+    // Charger l'ordre des sections depuis le fichier YAML
+    $section_order = Yaml::parseFile(__DIR__ . '/config/section_order.yaml');
+
+    // Obtenir l'ordre des sections pour le "channel" et la page
+    $order = $section_order['channels'][$channel][$page] ?? [];
+
 
     // Retourne les données
     return [
