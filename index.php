@@ -21,7 +21,7 @@ function getGlobalData(Translator $translator)
 
     // Récupérer le paramètre 'channel' et 'page' de l'URL
     $channel = $_GET['channel'] ?? 'default';
-    $page = $_GET['page'] ?? 'index'; // Assurez-vous que "page" est correctement défini
+    $page = $_GET['page'] ?? 'home'; // Assurez-vous que "page" est correctement défini
 
     // Charger l'ordre des sections depuis le fichier YAML
     try {
@@ -128,7 +128,7 @@ $app->add(TwigMiddleware::create($app, $twig));
 $app->get('/{page}', function ($request, $response, $args) use ($twig, $translator) {
   $queryParams = $request->getQueryParams();
   $channel = $queryParams['channel'] ?? 'default';
-  $page = $args['page'] ?? 'index'; // Utilisez un fallback approprié
+  $page = $args['page'] ?? 'home'; // Utilisez un fallback approprié
   // Obtenir les données globales
   $globalData = getGlobalData($translator, $channel, $page);
   return $twig->render($response, "_{$page}.twig", $globalData);
