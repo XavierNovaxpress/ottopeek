@@ -10,14 +10,14 @@
     <div class="row mt-5">
         <div class="col text-center">
             <div class="card rounded shadow-sm p-4 text-center">
-                <h2 class="fw-bold">{{ (channel ~ '.checkout.section6.service_client.titre_principal' | trans }}</h2>
-                <h3 class="fw-bold text-primary">{{ (channel ~ '.checkout.section6.service_client.titre_secondaire' | trans }}</h3>
-                <p>{{ (channel ~ '.checkout.section6.service_client.contact_telephone' | trans }}</p>
+                <h2 class="fw-bold">{{ (channel ~ '.checkout.section6.service_client.titre_principal')|trans|raw }}</h2>
+                <h3 class="fw-bold text-primary">{{ (channel ~ '.checkout.section6.service_client.titre_secondaire')|trans|raw }}</h3>
+                <p>{{ (channel ~ '.checkout.section6.service_client.contact_telephone')|trans|raw }}</p>
                 <div class="d-flex justify-content-center align-items-center">
                     <i class="bi bi-telephone-fill text-primary fs-3"></i>
-                    <span class="ms-2 fw-bold text-primary">{{ (channel ~ '.checkout.section6.service_client.numero_telephone' | trans }}</span>
+                    <span class="ms-2 fw-bold text-primary">{{ (channel ~ '.checkout.section6.service_client.numero_telephone')|trans|raw }}</span>
                 </div>
-                <p class="text-muted mt-3">{{ (channel ~ '.checkout.section6.service_client.horaires_dispo' | trans }}</p>
+                <p class="text-muted mt-3">{{ (channel ~ '.checkout.section6.service_client.horaires_dispo')|trans|raw }}</p>
             </div>
         </div>
     </div>

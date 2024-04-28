@@ -1,9 +1,0 @@
-{% extends 'layout.twig' %}
-
-{% block title %}{{ (channel ~ '.home.title')|trans|raw }} - {{ parent() }}{% endblock %}
-
-{% block content %}
-    {% for i in 1..5 %}
-        {% include 'partials/home/section'~ i ~ '.twig' %}
-    {% endfor %}
-{% endblock %}

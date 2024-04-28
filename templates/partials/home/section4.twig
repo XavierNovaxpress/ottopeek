@@ -4,7 +4,7 @@
             <div class="col-md-6">
                 <h2 class="text-primary">{{ (channel ~ '.home.section4.titre')|trans|raw }}</h2>
                 <h3 class="text-dark">{{ (channel ~ '.home.section4.sous-titre')|trans|raw }}</h3>
-                <p>{{ (channel ~ '.home.section4.description')|trans|raw({'%companyName%': companyName}) }}</p>
+                <p>{{ (channel ~ '.home.section4.description')|trans({'%companyName%': companyName})|raw }}</p>
                 <ul class="list-group">
                     <li class="list-group-item">
                         <strong>{{ (channel ~ '.home.section4.item1.titre')|trans|raw }}</strong>

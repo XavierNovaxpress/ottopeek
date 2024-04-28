@@ -15,21 +15,29 @@ use Symfony\Component\Yaml\Yaml;
 // VARIABLES GLOBALES POUR LE PROJET
 function getGlobalData(Translator $translator)
 {
-    $parsedown = new Parsedown();
-    $currentLocale = substr($translator->getLocale(), 0, 2); // Extrait le code de langue (ex. 'fr')
 
-    // Récupérer le paramètre 'channel' de l'URL
+    $parsedown = new Parsedown();
+    $currentLocale = substr($translator->getLocale(), 0, 2);
+
+    // Récupérer le paramètre 'channel' et 'page' de l'URL
     $channel = $_GET['channel'] ?? 'default';
+    $page = $_GET['page'] ?? 'index'; // Assurez-vous que "page" est correctement défini
 
     // Charger l'ordre des sections depuis le fichier YAML
-    $section_order = Yaml::parseFile(__DIR__ . '/config/section_order.yaml');
+    try {
+        $section_order = Yaml::parseFile(__DIR__ . '/config/section_order.yaml');
+    } catch (Exception $e) {
+        $section_order = []; // Définit un fallback
+    }
 
+    // Obtenir l'ordre des sections pour le "channel" et la page
+    $order = $section_order['channels'][$channel][$page] ?? [];
 
     // Détermination des chemins des fichiers Markdown
     $cgvPath = __DIR__ . "/translations/markdown/cgv-{$currentLocale}.md";
     $privacyPath = __DIR__ . "/translations/markdown/privacy-{$currentLocale}.md";
 
-    // Définition des variables
+    // Définition des variables globales
     $webrootURL = (strpos(__DIR__, 'mamp') !== false) ? "https://ottopeek-front.mamp:8890" : "";
     $companyName = $_ENV['COMPANY_NAME'] ?? 'Ottopeek';
     $contactEmail = $_ENV['CONTACT_EMAIL'] ?? 'contact@ottopeek.com';
@@ -67,6 +75,8 @@ function getGlobalData(Translator $translator)
         'privacyContent' => $privacyContent,
         'year' => $year,
         'channel' => $channel,
+        'order' => $order,
+        'page' => $page,
     ];
 }
 // VARIABLES GLOBALES POUR LE PROJET
@@ -115,29 +125,13 @@ $app->add($localeMiddleware);
 $app->add(TwigMiddleware::create($app, $twig));
 
 // ROUTING
-$app->get('/', function ($request, $response, $args) use ($twig, $translator) {
-  $globalData = getGlobalData($translator);
-  return $twig->render($response, '_index.twig', $globalData);
-});
-
-$app->get('/pricing', function ($request, $response, $args) use ($twig, $translator) {
-  $globalData = getGlobalData($translator);
-  return $twig->render($response, '_pricing.twig', $globalData);
-});
-
-$app->get('/checkout', function ($request, $response, $args) use ($twig, $translator) {
-  $globalData = getGlobalData($translator);
-  return $twig->render($response, '_checkout.twig', $globalData);
-});
-
-$app->get('/payment', function ($request, $response, $args) use ($twig, $translator) {
-  $globalData = getGlobalData($translator);
-  return $twig->render($response, '_payment.twig', $globalData);
-});
-
-$app->get('/legals', function ($request, $response, $args) use ($twig, $translator) {
-  $globalData = getGlobalData($translator);
-  return $twig->render($response, '_legals.twig', $globalData);
+$app->get('/{page}', function ($request, $response, $args) use ($twig, $translator) {
+  $queryParams = $request->getQueryParams();
+  $channel = $queryParams['channel'] ?? 'default';
+  $page = $args['page'] ?? 'index'; // Utilisez un fallback approprié
+  // Obtenir les données globales
+  $globalData = getGlobalData($translator, $channel, $page);
+  return $twig->render($response, "_{$page}.twig", $globalData);
 });
 
 $app->run();
