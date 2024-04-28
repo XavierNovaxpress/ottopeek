@@ -124,9 +124,11 @@ $app->add(TwigMiddleware::create($app, $twig));
 
 // ROUTING
 $app->get('/{page}', function ($request, $response, $args) use ($twig, $translator) {
+
   $queryParams = $request->getQueryParams();
   $channel = $queryParams['channel'] ?? 'default';
   $page = $args['page'] ?? 'home'; // Utilisez un fallback approprié
+
   // Obtenir les données globales
   $globalData = getGlobalData($translator, $channel, $page);
   return $twig->render($response, "_{$page}.twig", $globalData);

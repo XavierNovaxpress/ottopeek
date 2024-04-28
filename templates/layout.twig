@@ -8,7 +8,12 @@
     <link rel="stylesheet" href="{{ webrootURL }}/public/css/main.css">
     <link rel="stylesheet" href="{{ webrootURL }}/public/css/index.css">
     <link rel="stylesheet" href="{{ webrootURL }}/public/css/{{ channel }}.css">
-    {% block stylesheets %}{% endblock %}
+    {% block stylesheets %}
+    {% endblock %}
+
+    {% include 'partials/trackers/analytics.twig' %}
+
+    {% include 'partials/trackers/gtag.twig' %}
 </head>
 <body class="d-flex flex-column min-vh-100">
 {% block header %}
@@ -22,12 +27,9 @@
 
 </main>
 
-<section>
+{% block modals %}
+{% endblock %}
 
-    {% block modals %}
-    {% endblock %}
-
-</section>
 
 {% block footer %}
     {% include 'partials/footer.twig' %}
