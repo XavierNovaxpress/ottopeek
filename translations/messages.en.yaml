@@ -1,0 +1,129 @@
+# Default content -------------------------------------------------------------------------------
+
+# Header
+default:
+  header:
+    titre: "%companyName% - Vehicle History"
+    souscription: "Subscribe to our Pro offer and benefit from 15 reports per month for only €29.99."
+    logo:
+      alt: "Logo %companyName%"
+    prix: "Price"
+    aide: "Help"
+    actualites: "News"
+    contact: "Contact"
+    connexion: "Login"
+    langue: "EN"
+
+  # Footer
+  footer:
+    societe:
+      logo: "%companyName%"
+      description: "%companyName%: expertise at the service of your automotive peace of mind."
+      social_media:
+        twitter: "Twitter"
+        instagram: "Instagram"
+        youtube: "YouTube"
+
+    sections:
+      societe:
+        titre: "Company"
+        home: "Home"
+        prix: "Price"
+        aide: "Help"
+        contact: "Contact"
+      legal:
+        titre: "Legal"
+        confidentialite: "Confidentiality Policy"
+        mentions_legales: "Legal Information"
+        cgv: "Terms and Conditions"
+        cookies: "Cookie Policy"
+      newsletter:
+        inscription: "Sign up for the Newsletter"
+        entrez_email: "Enter your email"
+        inscrire_bouton: "Sign Up"
+
+    copyright: "Copyright © %year% %companyName%"
+
+  # Homepage
+  home:
+    section1:
+      titre: "Avoid Bad Deals."
+      sous-titre: "Find out in one click the mileage, past incidents, and an estimate of a vehicle's value and reliability."
+      placeholder: "Enter your license plate or VIN"
+      bouton: "Analyze the Vehicle"
+      stats1: "95% of vehicles detected"
+      stats2: "450 data sources"
+      stats3: "4.5 stars - 2314 reviews"
+      image:
+        alt: "Yellow car"
+
+    section2:
+      titre: "Vehicle Confidence in One Click!"
+      sous-titre: "Access a detailed and accurate history to secure your used car purchase or sale."
+      feature1:
+        titre: "Easy Check"
+        description: "Start by entering the license plate to launch a complete and instant vehicle history diagnosis."
+      feature2:
+        titre: "In-depth Analysis"
+        description: "Our system analyzes data from hundreds of reliable sources to provide you with a comprehensive report on the vehicle's condition and history."
+      feature3:
+        titre: "Detailed Report"
+        description: "Download a detailed report and use the information provided to negotiate effectively or confirm the vehicle's quality."
+      feature4:
+        titre: "Market Value"
+        description: "Thanks to our analysis of mileage and past incidents, you will get an accurate and reliable estimate of its market value."
+
+    section3:
+      titre: "Want to Buy?"
+      description: "We carefully analyze each vehicle to guarantee your safety and satisfaction."
+      image:
+        alt: "Placeholder for image"
+      item1:
+        titre: "Damage and Accidents"
+        description: "Detect hidden problems and avoid unexpected costs."
+      item2:
+        titre: "Mileage History"
+        description: "Ensure that your mileage is authentic and reliable."
+      item3:
+        titre: "Ownership History"
+        description: "Understand the vehicle's past to better anticipate its future."
+      item4:
+        titre: "Recall Alerts"
+        description: "Be informed of safety recalls to avoid risks."
+
+    section4:
+      titre: "Want to Sell?"
+      sous-titre: "Don't underestimate your vehicle."
+      description: "A full %companyName% report shows the real story behind your vehicle and builds buyer confidence."
+      image:
+        alt: "Placeholder for image"
+      item1:
+        titre: "A Complete History"
+        description: "A complete history that enhances the quality of your vehicle."
+      item2:
+        titre: "Transparency = Trust"
+        description: "A detailed report can reassure buyers and facilitate the sale."
+      item3:
+        titre: "Faster Sales"
+        description: "A vehicle with a clear and transparent history sells faster."
+      item4:
+        titre: "Advantage in Negotiations"
+        description: "A good history will allow you to justify a better price."
+
+    section5:
+      titre: "Discover a Vehicle's History at the Click of a Button!"
+      description: "Whether you want to buy, sell, or learn more about your vehicle, our comprehensive report offers total transparency."
+      placeholder: "Ex: AA-123-AA"
+      bouton: "Analyze the Vehicle"
+      image:
+        alt: "Placeholder for car"
+      logo1:
+        alt: "Logo 1"
+      logo2:
+        alt: "Logo 2"
+      logo3:
+        alt: "Logo 3"
+      logo4:
+        alt: "Logo 4"
+      logo5:
+        alt: "Logo 5"

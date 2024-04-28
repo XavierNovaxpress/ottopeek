@@ -1,0 +1,129 @@
+# Default content -------------------------------------------------------------------------------
+
+# Header
+default:
+  header:
+    titre: "%companyName% - Historia del Vehículo"
+    souscription: "Suscríbase a nuestra oferta Pro y obtenga 15 informes por mes por solo 29,99€."
+    logo:
+      alt: "Logo %companyName%"
+    prix: "Precio"
+    aide: "Ayuda"
+    actualites: "Noticias"
+    contact: "Contacto"
+    connexion: "Iniciar Sesión"
+    langue: "ES"
+
+  # Footer
+  footer:
+    societe:
+      logo: "%companyName%"
+      description: "%companyName%: experiencia al servicio de su tranquilidad automotriz."
+      social_media:
+        twitter: "Twitter"
+        instagram: "Instagram"
+        youtube: "YouTube"
+
+    sections:
+      societe:
+        titre: "Compañía"
+        home: "Inicio"
+        prix: "Precio"
+        aide: "Ayuda"
+        contact: "Contacto"
+      legal:
+        titre: "Legal"
+        confidentialite: "Política de Privacidad"
+        mentions_legales: "Información Legal"
+        cgv: "Términos y Condiciones"
+        cookies: "Política de Cookies"
+      newsletter:
+        inscription: "Suscríbete al Boletín"
+        entrez_email: "Introduce tu correo electrónico"
+        inscrire_bouton: "Suscribirse"
+
+    copyright: "Copyright © %year% %companyName%"
+
+  # Homepage
+  home:
+    section1:
+      titre: "Evita los Malos Tratos."
+      sous-titre: "Descubre en un clic el kilometraje, incidentes pasados y una estimación del valor y la fiabilidad de un vehículo."
+      placeholder: "Ingresa tu placa o VIN"
+      bouton: "Analizar el Vehículo"
+      stats1: "95% de vehículos detectados"
+      stats2: "450 fuentes de datos"
+      stats3: "4.5 estrellas - 2314 reseñas"
+      image:
+        alt: "Coche amarillo"
+
+    section2:
+      titre: "Confianza Vehicular en un Clic!"
+      sous-titre: "Accede a un historial detallado y preciso para asegurar tu compra o venta de coche de segunda mano."
+      feature1:
+        titre: "Comprobación Fácil"
+        description: "Comienza introduciendo la placa para lanzar un diagnóstico completo e instantáneo del historial del vehículo."
+      feature2:
+        titre: "Análisis Profundo"
+        description: "Nuestro sistema analiza datos de cientos de fuentes confiables para proporcionarte un informe completo sobre el estado y la historia del vehículo."
+      feature3:
+        titre: "Informe Detallado"
+        description: "Descarga un informe detallado y utiliza la información para negociar con eficacia o confirmar la calidad del vehículo."
+      feature4:
+        titre: "Valor de Mercado"
+        description: "Gracias a nuestro análisis de kilometraje y de incidentes pasados, obtendrás una estimación precisa y confiable de su valor de mercado."
+
+    section3:
+      titre: "¿Quieres Comprar?"
+      description: "Analizamos cuidadosamente cada vehículo para garantizar tu seguridad y satisfacción."
+      image:
+        alt: "Marcador de imagen"
+      item1:
+        titre: "Daños y Accidentes"
+        description: "Detecta problemas ocultos y evita costes inesperados."
+      item2:
+        titre: "Historial de Kilometraje"
+        description: "Asegúrate de que el kilometraje es auténtico y confiable."
+      item3:
+        titre: "Historial de Propiedad"
+        description: "Entiende el pasado del vehículo para anticipar mejor su futuro."
+      item4:
+        titre: "Alertas de Retiro"
+        description: "Estar informado sobre retiradas de seguridad para evitar riesgos."
+
+    section4:
+      titre: "¿Quieres Vender?"
+      sous-titre: "No subestimes tu vehículo."
+      description: "Un informe completo de %companyName% muestra la verdadera historia detrás de tu vehículo y construye confianza en los compradores."
+      image:
+        alt: "Marcador de imagen"
+      item1:
+        titre: "Una Historia Completa"
+        description: "Una historia completa que aumenta la calidad de tu vehículo."
+      item2:
+        titre: "Transparencia = Confianza"
+        description: "Un informe detallado puede tranquilizar a los compradores y facilitar la venta."
+      item3:
+        titre: "Ventas Más Rápidas"
+        description: "Un vehículo con una historia clara y transparente se vende más rápido."
+      item4:
+        titre: "Ventaja en las Negociaciones"
+        description: "Una buena historia te permitirá justificar un mejor precio."
+
+    section5:
+      titre: "Descubre la Historia de un Vehículo con un Clic!"
+      description: "Ya sea que quieras comprar, vender o saber más sobre tu vehículo, nuestro informe completo te ofrece total transparencia."
+      placeholder: "Ej: AA-123-AA"
+      bouton: "Analizar el Vehículo"
+      image:
+        alt: "Marcador para coche"
+      logo1:
+        alt: "Logo 1"
+      logo2:
+        alt: "Logo 2"
+      logo3:
+        alt: "Logo 3"
+      logo4:
+        alt: "Logo 4"
+      logo5:
+        alt: "Logo 5"

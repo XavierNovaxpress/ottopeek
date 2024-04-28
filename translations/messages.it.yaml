@@ -1,0 +1,129 @@
+# Default content -------------------------------------------------------------------------------
+
+# Header
+default:
+  header:
+    titre: "%companyName% - Storia del Veicolo"
+    souscription: "Abbonati alla nostra offerta Pro e ottieni 15 rapporti al mese per soli 29,99€."
+    logo:
+      alt: "Logo %companyName%"
+    prix: "Prezzo"
+    aide: "Aiuto"
+    actualites: "Notizie"
+    contact: "Contatto"
+    connexion: "Accesso"
+    langue: "IT"
+
+  # Footer
+  footer:
+    societe:
+      logo: "%companyName%"
+      description: "%companyName%: competenza al servizio della tua tranquillità automobilistica."
+      social_media:
+        twitter: "Twitter"
+        instagram: "Instagram"
+        youtube: "YouTube"
+
+    sections:
+      societe:
+        titre: "Società"
+        home: "Home"
+        prix: "Prezzo"
+        aide: "Aiuto"
+        contact: "Contatto"
+      legal:
+        titre: "Legale"
+        confidentialite: "Politica sulla privacy"
+        mentions_legales: "Informazioni legali"
+        cgv: "Termini e condizioni"
+        cookies: "Politica sui cookie"
+      newsletter:
+        inscription: "Iscriviti alla newsletter"
+        entrez_email: "Inserisci il tuo indirizzo email"
+        inscrire_bouton: "Iscriviti"
+
+    copyright: "Copyright © %year% %companyName%"
+
+  # Homepage
+  home:
+    section1:
+      titre: "Evita i cattivi affari."
+      sous-titre: "Scopri in un clic il chilometraggio, gli incidenti passati e una stima del valore e dell'affidabilità del veicolo."
+      placeholder: "Inserisci la tua targa o VIN"
+      bouton: "Analizza il Veicolo"
+      stats1: "95% dei veicoli rilevati"
+      stats2: "450 fonti di dati"
+      stats3: "4,5 stelle - 2314 recensioni"
+      image:
+        alt: "Auto gialla"
+
+    section2:
+      titre: "Fiducia nel Veicolo con un Clic!"
+      sous-titre: "Accedi a una storia dettagliata e accurata per assicurare il tuo acquisto o vendita di auto usata."
+      feature1:
+        titre: "Controllo Facile"
+        description: "Inizia inserendo la targa per avviare una diagnosi completa e istantanea della storia del veicolo."
+      feature2:
+        titre: "Analisi Approfondita"
+        description: "Il nostro sistema analizza i dati di centinaia di fonti affidabili per fornirti un rapporto completo sullo stato e la storia del veicolo."
+      feature3:
+        titre: "Rapporto Dettagliato"
+        description: "Scarica un rapporto dettagliato e utilizza le informazioni fornite per negoziare efficacemente o confermare la qualità del veicolo."
+      feature4:
+        titre: "Valore di Mercato"
+        description: "Grazie alla nostra analisi del chilometraggio e degli incidenti passati, otterrai una stima accurata e affidabile del suo valore di mercato."
+
+    section3:
+      titre: "Vuoi Acquistare?"
+      description: "Analizziamo attentamente ogni veicolo per garantire la tua sicurezza e soddisfazione."
+      image:
+        alt: "Segnaposto per immagine"
+      item1:
+        titre: "Danni e Incidenti"
+        description: "Rileva i problemi nascosti ed evita costi imprevisti."
+      item2:
+        titre: "Storia del Chilometraggio"
+        description: "Assicurati che il chilometraggio sia autentico e affidabile."
+      item3:
+        titre: "Storia di Proprietà"
+        description: "Comprendi il passato del veicolo per anticipare meglio il suo futuro."
+      item4:
+        titre: "Avvisi di Richiamo"
+        description: "Ricevi avvisi di sicurezza per evitare rischi."
+
+    section4:
+      titre: "Vuoi Vendere?"
+      sous-titre: "Non sottovalutare il tuo veicolo."
+      description: "Un rapporto completo di %companyName% mostra la vera storia dietro il tuo veicolo e crea fiducia negli acquirenti."
+      image:
+        alt: "Segnaposto per immagine"
+      item1:
+        titre: "Una Storia Completa"
+        description: "Una storia completa che aumenta la qualità del tuo veicolo."
+      item2:
+        titre: "Trasparenza = Fiducia"
+        description: "Un rapporto dettagliato può tranquillizzare gli acquirenti e facilitare la vendita."
+      item3:
+        titre: "Vendite più Veloci"
+        description: "Un veicolo con una storia chiara e trasparente si vende più rapidamente."
+      item4:
+        titre: "Vantaggio nelle Negoziazioni"
+        description: "Una buona storia ti permetterà di giustificare un prezzo migliore."
+
+    section5:
+      titre: "Scopri la Storia di un Veicolo con un Clic!"
+      description: "Che tu voglia acquistare, vendere o sapere di più sul tuo veicolo, il nostro rapporto completo offre totale trasparenza."
+      placeholder: "Es: AA-123-AA"
+      bouton: "Analizza il Veicolo"
+      image:
+        alt: "Segnaposto per auto"
+      logo1:
+        alt: "Logo 1"
+      logo2:
+        alt: "Logo 2"
+      logo3:
+        alt: "Logo 3"
+      logo4:
+        alt: "Logo 4"
+      logo5:
+        alt: "Logo 5"

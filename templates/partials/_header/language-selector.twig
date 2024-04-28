@@ -6,13 +6,13 @@
                           {% if (channel ~ '.header.langue') | trans | raw == "FR" %}
                               <img src="{{ webrootURL }}/public/media/french-flag.png" alt="French Flag" class="me-1" style="width: 20px;">
                           {% elseif (channel ~ '.header.langue') | trans | raw == "EN" %}
-                              <img src="path/to/english-flag.png" alt="English Flag" style="width: 20px;">
+                              <img src="{{ webrootURL }}/public/media/english-flag.png" alt="English Flag" style="width: 20px;">
                           {% elseif (channel ~ '.header.langue') | trans | raw == "ES" %}
-                              <img src="path/to/spanish-flag.png" alt="Spanish Flag" style="width: 20px;">
+                              <img src="{{ webrootURL }}/public/media/spanish-flag.png" alt="Spanish Flag" style="width: 20px;">
                           {% elseif (channel ~ '.header.langue') | trans | raw == "IT" %}
-                              <img src="path/to/italian-flag.png" alt="Italian Flag" style="width: 20px;">
+                              <img src="{{ webrootURL }}/public/media/italian-flag.png" alt="Italian Flag" style="width: 20px;">
                           {% elseif (channel ~ '.header.langue') | trans | raw == "DE" %}
-                              <img src="path/to/german-flag.png" alt="German Flag" style="width: 20px;">
+                              <img src="{{ webrootURL }}/public/media/german-flag.png" alt="German Flag" style="width: 20px;">
                           {% endif %}
                       </span>
                       {{ (channel ~ '.header.langue') | trans | raw }}
@@ -34,12 +34,12 @@
                           </a>
                       </li>
                       <li>
-                          <a class="dropdown-item d-flex align-items-center" href="?lang=es">
+                          <a class="dropdown-item d-flex align-items-center" href="?lang=it">
                               <img src="{{ webrootURL }}/public/media/italian-flag.png" alt="Italian Flag" class="me-1" style="width: 20px;"> IT
                           </a>
                       </li>
                       <li>
-                          <a class="dropdown-item d-flex align-items-center" href="?lang=es">
+                          <a class="dropdown-item d-flex align-items-center" href="?lang=de">
                               <img src="{{ webrootURL }}/public/media/german-flag.png" alt="German Flag" class="me-1" style="width: 20px;"> DE
                           </a>
                       </li>

@@ -1,0 +1,129 @@
+# Default content -------------------------------------------------------------------------------
+
+# Header
+default:
+  header:
+    titre: "%companyName% - Fahrzeughistorie"
+    souscription: "Abonnieren Sie unser Pro-Angebot und erhalten Sie 15 Berichte pro Monat für nur 29,99€."
+    logo:
+      alt: "Logo %companyName%"
+    prix: "Preis"
+    aide: "Hilfe"
+    actualites: "Neuigkeiten"
+    contact: "Kontakt"
+    connexion: "Anmelden"
+    langue: "DE"
+
+  # Footer
+  footer:
+    societe:
+      logo: "%companyName%"
+      description: "%companyName%: Expertise im Dienste Ihrer automobilen Gelassenheit."
+      social_media:
+        twitter: "Twitter"
+        instagram: "Instagram"
+        youtube: "YouTube"
+
+    sections:
+      societe:
+        titre: "Gesellschaft"
+        home: "Startseite"
+        prix: "Preis"
+        aide: "Hilfe"
+        contact: "Kontakt"
+      legal:
+        titre: "Rechtlich"
+        confidentialite: "Datenschutzrichtlinie"
+        mentions_legales: "Impressum"
+        cgv: "Allgemeine Geschäftsbedingungen"
+        cookies: "Cookie-Richtlinie"
+      newsletter:
+        inscription: "Abonnieren Sie den Newsletter"
+        entrez_email: "Geben Sie Ihre E-Mail-Adresse ein"
+        inscrire_bouton: "Abonnieren"
+
+    copyright: "Copyright © %year% %companyName%"
+
+  # Homepage
+  home:
+    section1:
+      titre: "Vermeiden Sie schlechte Geschäfte."
+      sous-titre: "Erfahren Sie mit einem Klick den Kilometerstand, vergangene Zwischenfälle und eine Schätzung des Fahrzeugwerts und der Zuverlässigkeit."
+      placeholder: "Geben Sie Ihr Nummernschild oder VIN ein"
+      bouton: "Fahrzeug analysieren"
+      stats1: "95% der Fahrzeuge erkannt"
+      stats2: "450 Datenquellen"
+      stats3: "4,5 Sterne - 2314 Bewertungen"
+      image:
+        alt: "Gelbes Auto"
+
+    section2:
+      titre: "Fahrzeugvertrauen mit einem Klick!"
+      sous-titre: "Greifen Sie auf eine detaillierte und genaue Historie zu, um Ihren Gebrauchtwagenkauf oder -verkauf abzusichern."
+      feature1:
+        titre: "Einfacher Check"
+        description: "Beginnen Sie, indem Sie das Nummernschild eingeben, um eine vollständige und sofortige Diagnose der Fahrzeughistorie zu starten."
+      feature2:
+        titre: "Tiefgründige Analyse"
+        description: "Unser System analysiert Daten aus Hunderten vertrauenswürdiger Quellen, um Ihnen einen umfassenden Bericht über den Zustand und die Geschichte des Fahrzeugs zu liefern."
+      feature3:
+        titre: "Detaillierter Bericht"
+        description: "Laden Sie einen detaillierten Bericht herunter und verwenden Sie die Informationen, um effektiv zu verhandeln oder die Qualität des Fahrzeugs zu bestätigen."
+      feature4:
+        titre: "Marktwert"
+        description: "Dank unserer Analyse des Kilometerstands und vergangener Zwischenfälle erhalten Sie eine genaue und zuverlässige Schätzung des Marktwerts."
+
+    section3:
+      titre: "Möchten Sie kaufen?"
+      description: "Wir analysieren jedes Fahrzeug sorgfältig, um Ihre Sicherheit und Zufriedenheit zu gewährleisten."
+      image:
+        alt: "Platzhalter für Bild"
+      item1:
+        titre: "Schäden und Unfälle"
+        description: "Verdeckte Probleme erkennen und unerwartete Kosten vermeiden."
+      item2:
+        titre: "Kilometerhistorie"
+        description: "Stellen Sie sicher, dass der Kilometerstand authentisch und zuverlässig ist."
+      item3:
+        titre: "Besitzerhistorie"
+        description: "Verstehen Sie die Vergangenheit des Fahrzeugs, um seine Zukunft besser vorherzusehen."
+      item4:
+        titre: "Rückrufwarnungen"
+        description: "Informieren Sie sich über Sicherheitsrückrufe, um Risiken zu vermeiden."
+
+    section4:
+      titre: "Möchten Sie verkaufen?"
+      sous-titre: "Unterschätzen Sie Ihr Fahrzeug nicht."
+      description: "Ein vollständiger Bericht von %companyName% zeigt die wahre Geschichte hinter Ihrem Fahrzeug und stärkt das Vertrauen der Käufer."
+      image:
+        alt: "Platzhalter für Bild"
+      item1:
+        titre: "Eine vollständige Historie"
+        description: "Eine vollständige Historie, die die Qualität Ihres Fahrzeugs steigert."
+      item2:
+        titre: "Transparenz = Vertrauen"
+        description: "Ein detaillierter Bericht kann Käufer beruhigen und den Verkauf erleichtern."
+      item3:
+        titre: "Schnellere Verkäufe"
+        description: "Ein Fahrzeug mit einer klaren und transparenten Historie wird schneller verkauft."
+      item4:
+        titre: "Vorteil bei Verhandlungen"
+        description: "Eine gute Historie ermöglicht es Ihnen, einen besseren Preis zu rechtfertigen."
+
+    section5:
+      titre: "Entdecken Sie die Geschichte eines Fahrzeugs mit einem Klick!"
+      description: "Egal, ob Sie kaufen, verkaufen oder mehr über Ihr Fahrzeug erfahren möchten, unser umfassender Bericht bietet totale Transparenz."
+      placeholder: "Zum Beispiel: AA-123-AA"
+      bouton: "Fahrzeug analysieren"
+      image:
+        alt: "Platzhalter für Auto"
+      logo1:
+        alt: "Logo 1"
+      logo2:
+        alt: "Logo 2"
+      logo3:
+        alt: "Logo 3"
+      logo4:
+        alt: "Logo 4"
+      logo5:
+        alt: "Logo 5"
