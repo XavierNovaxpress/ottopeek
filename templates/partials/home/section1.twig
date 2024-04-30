@@ -1,22 +1,38 @@
 <section class="text-center py-5 bg-light">
    <div class="container">
        <div class="d-flex justify-content-center mb-4">
-           <div class="me-3 text-muted">
+           <div class="me-3 text-muted bg-white px-3 py-1 rounded">
                {{ (channel ~ '.home.section1.stats1')|trans|raw }}
            </div>
-           <div class="me-3 text-muted">
+           <div class="me-3 text-muted bg-white px-3 py-1 rounded">
                {{ (channel ~ '.home.section1.stats2')|trans|raw }}
            </div>
-           <div class="text-muted">
+           <div class="text-muted bg-white px-3 py-1 rounded">
                {{ (channel ~ '.home.section1.stats3')|trans|raw }}
            </div>
        </div>
+
        <h1 class="text-primary">{{ (channel ~ '.home.section1.titre')|trans|raw }}</h1>
        <p class="lead">{{ (channel ~ '.home.section1.sous-titre')|trans|raw }}</p>
-       <div class="my-4">
-           <input type="text" class="form-control w-50 mx-auto" placeholder="{{ (channel ~ '.home.section1.placeholder')|trans|raw }}">
-       </div>
-       <button class="btn btn-warning btn-lg">{{ (channel ~ '.home.section1.bouton')|trans|raw }}</button>
+
+        <form class="" id="" name="" action="#" method="post">
+          <div class="row g-1 justify-content-center my-4">
+
+            <div class="col-12">
+              <label for="#" class="col-form-label">{{ (channel ~ '.home.section1.placeholder')|trans|raw }}</label>
+            </div>
+
+            <div class="col-md-3">
+                <input type="text" class="form-control" placeholder="">
+            </div>
+
+            <div class="col-auto">
+               <button class="btn btn-warning mx-2">{{ (channel ~ '.home.section1.bouton')|trans|raw }}</button>
+            </div>
+
+          </div>
+        </form>
+
        <div class="mt-4">
            <img src="{{ webrootURL }}/public/media/{{ channel }}/car1.webp" alt="{{ (channel ~ '.home.section1.image.alt')|trans|raw }}" class="img-fluid lazyload">
        </div>

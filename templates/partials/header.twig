@@ -5,13 +5,42 @@
 
     <div class="container d-flex justify-content-between align-items-center py-2">
 
-        {% include 'partials/_header/menu.twig' %}
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="/home?lang={{locale}}">
+            <img src="{{ webrootURL }}/public/media/{{ channel }}/logo.svg" alt="{{ (channel ~ '.header.logo')|trans|raw }}" class="img-fluid">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="/pricing?lang={{locale}}">{{ (channel ~ '.header.prix')|trans|raw }}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="#">{{ (channel ~ '.header.aide')|trans|raw }}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="#">{{ (channel ~ '.header.actualites')|trans|raw }}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="#">{{ (channel ~ '.header.contact')|trans|raw }}</a>
+                </li>
+            </ul>
+
+            <div class="d-block d-lg-none">
+              {% include 'partials/_header/connexion.twig' %}
+              {% include 'partials/_header/language-selector.twig' %}
+            </div>
+
+        </div>
+    </nav>
+
 
         <div class="row align-items-center">
+              {% include 'partials/_header/connexion.twig' %}
+              {% include 'partials/_header/language-selector.twig' %}
+        </div>
 
-          {% include 'partials/_header/connexion.twig' %}
-          {% include 'partials/_header/language-selector.twig' %}
-
-      </div>
     </div>
 </header>

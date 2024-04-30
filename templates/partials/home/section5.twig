@@ -1,20 +1,39 @@
-<section class="container my-5">
-    <div class="row align-items-center">
-        <div class="col-md-6">
-            <h2 class="text-primary">{{ (channel ~ '.home.section5.titre')|trans|raw }}</h2>
-            <p>{{ (channel ~ '.home.section5.description')|trans|raw }}</p>
-            <input type="text" class="form-control w-50" placeholder="{{ (channel ~ '.home.section5.placeholder')|trans|raw }}">
-            <button class="btn btn-warning mt-3">{{ (channel ~ '.home.section5.bouton')|trans|raw }}</button>
-        </div>
-        <div class="col-md-6 d-flex justify-content-end">
-            <img src="{{ webrootURL }}/public/media/{{ channel }}/car1-big.webp" alt="{{ (channel ~ '.home.section5.image.alt')|trans|raw }}" class="img-fluid lazyload">
-        </div>
-    </div>
-    <div class="row justify-content-center mt-5 py-5">
-        {% for i in 1..8 %}
-            <div class="col-auto">
-                <img src="{{ webrootURL }}/public/media/{{ channel }}/logocar{{i}}.webp" alt="{{ (channel ~ '.home.section5.logo'~ i ~'.alt')|trans|raw }}" class="img-fluid lazyload">
+<section class="bg-light">
+  <div class="container mt-5">
+        <div class="row align-items-center">
+            <div class="col-md-5">
+                <h2>{{ (channel ~ '.home.section5.titre')|trans|raw }}</h2>
+                <p>{{ (channel ~ '.home.section5.description')|trans|raw }}</p>
+
+                <form class="" id="" name="" action="#" method="post">
+                  <div class="row g-1 my-4">
+                    <div class="col-12">
+                      <label for="#" class="col-form-label">{{ (channel ~ '.home.section1.placeholder')|trans|raw }}</label>
+                    </div>
+
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" placeholder="">
+                    </div>
+
+                    <div class="col-auto">
+                       <button class="btn btn-warning mx-2">{{ (channel ~ '.home.section1.bouton')|trans|raw }}</button>
+                    </div>
+
+                  </div>
+                </form>
             </div>
-        {% endfor %}
-    </div>
+            <div class="col-md-7 d-flex justify-content-end">
+                <img src="{{ webrootURL }}/public/media/{{ channel }}/car1-big.webp" alt="{{ (channel ~ '.home.section5.image.alt')|trans|raw }}" class="img-fluid lazyload">
+            </div>
+        </div>
+
+        <div class="row justify-content-center mt-5 py-5">
+            {% for i in 1..8 %}
+                <div class="col-auto">
+                    <img src="{{ webrootURL }}/public/media/{{ channel }}/logocar{{i}}.webp" alt="{{ (channel ~ '.home.section5.logo'~ i ~'.alt')|trans|raw }}" class="img-fluid lazyload">
+                </div>
+            {% endfor %}
+        </div>
+      </div>
+
 </section>

@@ -12,9 +12,89 @@ use Parsedown;
 use Dotenv\Dotenv;
 use Symfony\Component\Yaml\Yaml;
 
-// VARIABLES GLOBALES POUR LE PROJET
-function getGlobalData(Translator $translator)
-{
+// Initialisation des services
+$dotenv = loadEnvironment();
+$translator = setupTranslator();
+$twig = setupTwig($translator);
+$app = setupSlim($twig);
+
+// Middleware pour la gestion de la locale
+$app->add(function ($request, $handler) use ($translator, $twig) {
+    return localeMiddleware($request, $handler, $translator, $twig);
+});
+
+// Routage
+setupRoutes($app, $twig, $translator);
+
+// Exécution de l'application
+$app->run();
+
+// Functions
+function loadEnvironment() {
+    if (file_exists(__DIR__ . '/.env')) {
+        $dotenv = Dotenv::createImmutable(__DIR__);
+        $dotenv->load();
+    }
+}
+
+function setupTranslator() {
+    $defaultLocale = $_ENV['LOCALE'] ?? 'fr';
+    $translator = new Translator($defaultLocale);
+    $translator->addLoader('yaml', new YamlFileLoader());
+
+    $locales = ['fr', 'en', 'it', 'es', 'de'];
+    foreach ($locales as $locale) {
+        $translator->addResource('yaml', __DIR__ . "/translations/messages.$locale.yaml", $locale);
+    }
+
+    return $translator;
+}
+
+function setupTwig($translator) {
+    $twig = Twig::create(__DIR__ . '/templates');
+    $twig->getEnvironment()->addExtension(new TranslationExtension($translator));
+    return $twig;
+}
+
+function setupSlim($twig) {
+    $app = AppFactory::create();
+    $app->add(TwigMiddleware::create($app, $twig));
+    return $app;
+}
+
+function localeMiddleware($request, $handler, $translator, $twig) {
+    $queryParams = $request->getQueryParams();
+    $locale = $queryParams['lang'] ?? $_ENV['LOCALE'] ?? 'fr';
+    $allowedLocales = ['fr', 'en', 'it', 'es', 'de'];
+
+    if (!in_array($locale, $allowedLocales)) {
+        $locale = $_ENV['LOCALE'] ?? 'fr';
+    }
+
+    $translator->setLocale($locale);
+    $twig->getEnvironment()->addGlobal('locale', $locale);
+
+    return $handler->handle($request);
+}
+
+function setupRoutes($app, $twig, $translator) {
+      // Redirection de la racine vers la page d'accueil
+    $app->get('/', function ($request, $response, $args) use ($app) {
+        return $response->withHeader('Location', '/home')->withStatus(302);
+    });
+
+    // Route pour les autres pages
+    $app->get('/{page}', function ($request, $response, $args) use ($twig, $translator) {
+        $queryParams = $request->getQueryParams();
+        $channel = $queryParams['channel'] ?? 'default';
+        $page = $args['page'] ?? 'home';
+
+        $globalData = getGlobalData($translator, $channel, $page);
+        return $twig->render($response, "_{$page}.twig", $globalData);
+    });
+}
+
+function getGlobalData($translator, $channel, $page) {
 
     $parsedown = new Parsedown();
     $currentLocale = substr($translator->getLocale(), 0, 2);
@@ -24,7 +104,10 @@ function getGlobalData(Translator $translator)
     $privacyPath = __DIR__ . "/translations/markdown/privacy-{$currentLocale}.md";
 
     // Définition des variables globales
-    $webrootURL = (strpos(__DIR__, 'mamp') !== false) ? "https://ottopeek-front.mamp:8890" : "";
+    // Récupération du nom de domaine
+    $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
+    $webrootURL = $protocol.$_SERVER['HTTP_HOST'];
+
     $companyName = $_ENV['COMPANY_NAME'] ?? 'Ottopeek';
     $contactEmail = $_ENV['CONTACT_EMAIL'] ?? 'contact@ottopeek.com';
     $companyAdress = $_ENV['COMPANY_ADRESS'] ?? '1801 STEVENS AVE EAST PALO ALTO CA 94303-1264 USA';
@@ -77,61 +160,3 @@ function getGlobalData(Translator $translator)
         'page' => $page,
     ];
 }
-// VARIABLES GLOBALES POUR LE PROJET
-
-// Chargement des variables d'environnement depuis le fichier .env
-if (file_exists(__DIR__ . '/.env')) {
-    $dotenv = Dotenv::createImmutable(__DIR__);
-    $dotenv->load();
-}
-
-$app = AppFactory::create();
-$twig = Twig::create(__DIR__ . '/templates');
-
-// Configuration de la localisation
-$defaultLocale = $_ENV['LOCALE'] ?? 'fr';
-$translator = new Translator($defaultLocale);
-$translator->addLoader('yaml', new YamlFileLoader());
-
-// Chargement des ressources de traduction
-$translator->addResource('yaml', __DIR__ . '/translations/messages.fr.yaml', 'fr');
-$translator->addResource('yaml', __DIR__ . '/translations/messages.en.yaml', 'en');
-$translator->addResource('yaml', __DIR__ . '/translations/messages.it.yaml', 'it');
-$translator->addResource('yaml', __DIR__ . '/translations/messages.es.yaml', 'es');
-$translator->addResource('yaml', __DIR__ . '/translations/messages.de.yaml', 'de');
-
-$twig->getEnvironment()->addExtension(new TranslationExtension($translator));
-
-
-// Middleware pour la gestion de la locale
-$localeMiddleware = function ($request, $handler) use ($translator, $twig, $defaultLocale) {
-    $queryParams = $request->getQueryParams();
-    $locale = $queryParams['lang'] ?? $defaultLocale;
-    $allowedLocales = ['fr', 'en', 'it', 'es', 'de'];
-
-    if (!in_array($locale, $allowedLocales)) {
-        $locale = $defaultLocale;
-    }
-
-    $translator->setLocale($locale);
-    $twig->getEnvironment()->addGlobal('locale', $locale);
-
-    return $handler->handle($request);
-};
-
-$app->add($localeMiddleware);
-$app->add(TwigMiddleware::create($app, $twig));
-
-// ROUTING
-$app->get('/{page}', function ($request, $response, $args) use ($twig, $translator) {
-
-  $queryParams = $request->getQueryParams();
-  $channel = $queryParams['channel'] ?? 'default';
-  $page = $args['page'] ?? 'home'; // Utilisez un fallback approprié
-
-  // Obtenir les données globales
-  $globalData = getGlobalData($translator, $channel, $page);
-  return $twig->render($response, "_{$page}.twig", $globalData);
-});
-
-$app->run();

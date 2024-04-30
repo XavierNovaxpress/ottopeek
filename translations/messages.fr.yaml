@@ -48,12 +48,12 @@ default:
   home:
     section1:
       titre: "Évitez les mauvaises affaires."
-      sous-titre: "Découvrez en un clic le kilométrage, les incidents passés, ainsi qu'une estimation de la valeur d'un véhicule et de sa fiabilité."
+      sous-titre: "Découvrez en un clic le kilométrage, les incidents passés, <br> ainsi qu'une estimation de la valeur d'un véhicule et de sa fiabilité."
       placeholder: "Saisissez votre plaque d'immatriculation ou VIN"
       bouton: "Analyser le véhicule"
-      stats1: "95% des véhicules détectés"
-      stats2: "450 sources de données"
-      stats3: "4.5 étoiles - 2314 avis"
+      stats1: "<span class='text-primary'>95%</span> des véhicules détectés"
+      stats2: "<span class='text-primary'>450</span> sources de données"
+      stats3: "4.5 étoiles - <span class='text-primary'>2314</span> avis"
       image:
         alt: "Voiture jaune"
 
@@ -75,6 +75,7 @@ default:
 
     section3:
       titre: "Vous voulez acheter ?"
+      sous-titre: "Ce que nous vérifions :"
       description: "Nous analysons minutieusement chaque véhicule pour garantir votre sécurité et votre satisfaction."
       image:
         alt: "Placeholder pour image"
@@ -111,8 +112,8 @@ default:
         description: "Un bon historique vous permettra de justifier un meilleur prix."
 
     section5:
-      titre: "Découvrez l'historique d'un véhicule en un Clic !"
-      description: "Que vous souhaitiez acheter, vendre, ou en savoir plus sur votre véhicule, notre rapport complet vous offre une transparence totale."
+      titre: "Découvrez <span  class='text-primary'>l'historique d'un véhicule</span> en toute confiance."
+      description: "Que vous souhaitiez acheter, vendre, ou en savoir plus sur votre véhicule, notre rapport complet vous offre une transparence totale.Découvrez en un clic le kilométrage, les incidents passés, et assurez-vous de la fiabilité de votre voiture."
       placeholder: "Ex: AA-123-AA"
       bouton: "Analyser le véhicule"
       image:

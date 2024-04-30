@@ -5,23 +5,36 @@
         </div>
         <div class="col-md-6">
             <h2 class="text-primary">{{ (channel ~ '.home.section3.titre')|trans|raw }}</h2>
+            <h3 class="text-dark">{{ (channel ~ '.home.section3.sous-titre')|trans|raw }}</h3>
             <p class="lead">{{ (channel ~ '.home.section3.description')|trans|raw }}</p>
             <ul class="list-group">
-                <li class="list-group-item">
-                    <strong>{{ (channel ~ '.home.section3.item1.titre')|trans|raw }}</strong>
-                    <p>{{ (channel ~ '.home.section3.item1.description')|trans|raw }}</p>
+                <li class="list-group-item d-flex align-items-start">
+                    <img src="{{ webrootURL }}/public/media/{{ channel }}/bullet.png" alt="" class="lazyload">
+                    <div class="px-3">
+                      <strong>{{ (channel ~ '.home.section3.item1.titre')|trans|raw }}</strong>
+                      <p>{{ (channel ~ '.home.section3.item1.description')|trans|raw }}</p>
+                    </div>
                 </li>
-                <li class="list-group-item">
-                    <strong>{{ (channel ~ '.home.section3.item2.titre')|trans|raw }}</strong>
-                    <p>{{ (channel ~ '.home.section3.item2.description')|trans|raw }}</p>
+                <li class="list-group-item  d-flex align-items-start">
+                    <img src="{{ webrootURL }}/public/media/{{ channel }}/bullet.png" alt="" class="lazyload">
+                    <div class="px-3">
+                      <strong>{{ (channel ~ '.home.section3.item2.titre')|trans|raw }}</strong>
+                      <p>{{ (channel ~ '.home.section3.item2.description')|trans|raw }}</p>
+                    </div>
                 </li>
-                <li class="list-group-item">
-                    <strong>{{ (channel ~ '.home.section3.item3.titre')|trans|raw }}</strong>
-                    <p>{{ (channel ~ '.home.section3.item3.description')|trans|raw }}</p>
+                <li class="list-group-item  d-flex align-items-start">
+                    <img src="{{ webrootURL }}/public/media/{{ channel }}/bullet.png" alt="" class="lazyload">
+                    <div class="px-3">
+                      <strong>{{ (channel ~ '.home.section3.item3.titre')|trans|raw }}</strong>
+                      <p>{{ (channel ~ '.home.section3.item3.description')|trans|raw }}</p>
+                  </div>
                 </li>
-                <li class="list-group-item">
-                    <strong>{{ (channel ~ '.home.section3.item4.titre')|trans|raw }}</strong>
-                    <p>{{ (channel ~ '.home.section3.item4.description')|trans|raw }}</p>
+                <li class="list-group-item  d-flex align-items-start">
+                    <img src="{{ webrootURL }}/public/media/{{ channel }}/bullet.png" alt="" class="lazyload">
+                    <div class="px-3">
+                      <strong>{{ (channel ~ '.home.section3.item4.titre')|trans|raw }}</strong>
+                      <p>{{ (channel ~ '.home.section3.item4.description')|trans|raw }}</p>
+                  </div>
                 </li>
             </ul>
         </div>
