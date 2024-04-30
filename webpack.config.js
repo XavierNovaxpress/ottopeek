@@ -10,9 +10,8 @@ module.exports = {
   mode: 'production',
   entry: {
     main: './src/index.js',
-    index: './sass/index.scss',
-    default: './sass/default.theme.scss',
-    ottopeek: './sass/ottopeek.theme.scss',
+    default: './sass/theme.default.scss',
+    ottopeek: './sass/theme.ottopeek.scss',
   },
   output: {
     path: path.resolve(__dirname, 'public'),

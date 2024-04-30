@@ -1,34 +1,36 @@
-<section class="container my-5">
-    <h2 class="text-primary text-center">{{ (channel ~ '.pricing.section1.titre')|trans|raw }}</h2>
+<section class="bg-light">
+  <div class="container py-4">
+        <h2 class="text-center my-5">{{ (channel ~ '.pricing.section1.titre')|trans|raw }}</h2>
 
-    <div class="row justify-content-center">
-        {% for i in 1..3 %}
-          <div class="col-md-3">
-              <div class="card text-center">
-                  <div class="card-body">
-                      <h3>{{ (channel ~ '.pricing.section1.plan'~ i ~'.titre')|trans|raw }}</h3>
-                      <p>{{ (channel ~ '.pricing.section1.plan'~ i ~'.prix')|trans|raw }}</p>
-                      <small>{{ (channel ~ '.pricing.section1.plan'~ i ~'.origine')|trans|raw }}</small>
-                      <br>
-                      <button class="btn btn-warning my-5">{{ (channel ~ '.pricing.section1.plan'~ i ~'.bouton')|trans|raw }}</button>
+        <div class="row justify-content-center">
+            {% for i in 1..3 %}
+              <div class="col-md-3">
+                  <div class="card text-center">
+                      <div class="card-body">
+                          <h3 class="my-4">{{ (channel ~ '.pricing.section1.plan'~ i ~'.titre')|trans|raw }}</h3>
+                          <p>{{ (channel ~ '.pricing.section1.plan'~ i ~'.prix')|trans|raw }}</p>
+                          <small>{{ (channel ~ '.pricing.section1.plan'~ i ~'.origine')|trans|raw }}</small>
+                          <br>
+                          <button class="btn btn-warning my-5">{{ (channel ~ '.pricing.section1.plan'~ i ~'.bouton')|trans|raw }}</button>
+                      </div>
                   </div>
               </div>
-          </div>
-        {% endfor %}
-    </div>
-
-    <div class="text-center mt-4">
-        <small>{{ (channel ~ '.pricing.section1.tva')|trans|raw }}</small>
-        <p>{{ (channel ~ '.pricing.section1.credits')|trans|raw }}</p>
-        <div class="d-flex justify-content-center">
-            <img src="{{ webrootURL }}/public/media/{{ channel }}/payment-logo1.webp" alt="{{ (channel ~ '.pricing.section1.visa')|trans|raw }}" class="me-3 rounded-0 lazyload">
-            <img src="{{ webrootURL }}/public/media/{{ channel }}/payment-logo2.webp" alt="{{ (channel ~ '.pricing.section1.mastercard')|trans|raw }}" class="me-3 rounded-0 lazyload">
-            <img src="{{ webrootURL }}/public/media/{{ channel }}/payment-logo3.webp" alt="{{ (channel ~ '.pricing.section1.amex')|trans|raw }}" class="me-3 rounded-0 lazyload">
-            <img src="{{ webrootURL }}/public/media/{{ channel }}/payment-logo4.webp" alt="{{ (channel ~ '.pricing.section1.discover')|trans|raw }}" class="me-3 rounded-0 lazyload">
-            <img src="{{ webrootURL }}/public/media/{{ channel }}/payment-logo5.webp" alt="{{ (channel ~ '.pricing.section1.banquepostale')|trans|raw }}" class="me-3 rounded-0 lazyload">
-            <img src="{{ webrootURL }}/public/media/{{ channel }}/payment-logo6.webp" alt="{{ (channel ~ '.pricing.section1.paypal')|trans|raw }}" class="me-3 rounded-0 lazyload">
-            <img src="{{ webrootURL }}/public/media/{{ channel }}/payment-logo7.webp" alt="{{ (channel ~ '.pricing.section1.revolut')|trans|raw }}" class="me-3 rounded-0 lazyload">
-            <img src="{{ webrootURL }}/public/media/{{ channel }}/payment-logo8.webp" alt="{{ (channel ~ '.pricing.section1.societegeneral')|trans|raw }}" class="me-3 rounded-0 lazyload">
+            {% endfor %}
         </div>
-    </div>
+
+        <div class="text-center my-5">
+            <small>{{ (channel ~ '.pricing.section1.tva')|trans|raw }}</small>
+            <p>{{ (channel ~ '.pricing.section1.credits')|trans|raw }}</p>
+            <div class="d-flex justify-content-center">
+                <img src="{{ webrootURL }}/public/media/{{ channel }}/payment-logo1.png" alt="{{ (channel ~ '.pricing.section1.visa')|trans|raw }}" class="me-3 rounded-0 lazyload">
+                <img src="{{ webrootURL }}/public/media/{{ channel }}/payment-logo2.png" alt="{{ (channel ~ '.pricing.section1.mastercard')|trans|raw }}" class="me-3 rounded-0 lazyload">
+                <img src="{{ webrootURL }}/public/media/{{ channel }}/payment-logo3.png" alt="{{ (channel ~ '.pricing.section1.amex')|trans|raw }}" class="me-3 rounded-0 lazyload">
+                <img src="{{ webrootURL }}/public/media/{{ channel }}/payment-logo4.png" alt="{{ (channel ~ '.pricing.section1.discover')|trans|raw }}" class="me-3 rounded-0 lazyload">
+                <img src="{{ webrootURL }}/public/media/{{ channel }}/payment-logo5.png" alt="{{ (channel ~ '.pricing.section1.banquepostale')|trans|raw }}" class="me-3 rounded-0 lazyload">
+                <img src="{{ webrootURL }}/public/media/{{ channel }}/payment-logo6.png" alt="{{ (channel ~ '.pricing.section1.paypal')|trans|raw }}" class="me-3 rounded-0 lazyload">
+                <img src="{{ webrootURL }}/public/media/{{ channel }}/payment-logo7.png" alt="{{ (channel ~ '.pricing.section1.revolut')|trans|raw }}" class="me-3 rounded-0 lazyload">
+                <img src="{{ webrootURL }}/public/media/{{ channel }}/payment-logo8.png" alt="{{ (channel ~ '.pricing.section1.societegeneral')|trans|raw }}" class="me-3 rounded-0 lazyload">
+            </div>
+        </div>
+      </div>
 </section>
