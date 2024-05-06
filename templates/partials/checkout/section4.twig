@@ -5,8 +5,8 @@
                 <img src="{{ webrootURL }}/public/media/{{ channel }}/image2.webp" alt="{{ (channel ~ '.checkout.section4.image.alt')|trans|raw }}" class="img-fluid rounded lazyload">
             </div>
             <div class="col-md-6 d-flex flex-column justify-content-center">
-                <h2 class="text-primary">{{ (channel ~ '.checkout.section4.titre')|trans|raw }}</h2>
-                <p>{{ (channel ~ '.checkout.section4.description')|trans|raw }}</p>
+                <h2>{{ (channel ~ '.checkout.section4.titre')|trans|raw }}</h2>
+                <p>{{ (channel ~ '.checkout.section4.description')|trans({'%companyName%': companyName})|raw  }}</p>
                 <p>{{ (channel ~ '.checkout.section4.paragraph2')|trans|raw }}</p>
             </div>
         </div>

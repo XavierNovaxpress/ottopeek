@@ -1,13 +1,72 @@
-<section class="my-5">
+<section class="my-5 container">
     <div class="container">
-        <div class="row  align-items-center">
-            <div class="col-md-6">
-                <h2 class="text-primary">{{ (channel ~ '.payment.section1.titre')|trans|raw }}</h2>
-                <h3 class="text-dark">{{ (channel ~ '.payment.section1.sous-titre')|trans|raw }}</h3>
-                <p>{{ (channel ~ '.payment.section1.description')|trans|raw({'%companyName%': companyName}) }}</p>
+        <div class="row my-4">
+            <div class="col-md-8">
+                <div class="alert alert-success" role="alert">
+                    {{ (channel ~ '.payment.free_shipping')|trans|raw }}
+                </div>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ (channel ~ '.payment.shipping_address.title')|trans|raw }}</h5>
+                        <p class="card-text">{{ (channel ~ '.payment.shipping_address.detail')|trans|raw }}</p>
+                        <p class="card-text">{{ (channel ~ '.payment.shipping_tracking')|trans|raw }}</p>
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ (channel ~ '.payment.secure_payment.title')|trans|raw }}</h5>
+
+                        <form>
+                            <div class="mb-3">
+                                <label for="cardName" class="form-label">{{ (channel ~ '.payment.payment_form.cardholder_name')|trans|raw }}</label>
+                                <input type="text" class="form-control" id="cardName">
+                            </div>
+                            <div class="mb-3">
+                                <label for="cardNumber" class="form-label">{{ (channel ~ '.payment.payment_form.card_number')|trans|raw }}</label>
+                                <input type="text" class="form-control" id="cardNumber">
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <label for="expiryDate" class="form-label">{{ (channel ~ '.payment.payment_form.expiry_date')|trans|raw }}</label>
+                                    <input type="text" class="form-control" id="expiryDate">
+                                </div>
+                                <div class="col">
+                                    <label for="cvv" class="form-label">{{ (channel ~ '.payment.payment_form.cvv')|trans|raw }}</label>
+                                    <input type="text" class="form-control" id="cvv">
+                                </div>
+                            </div>
+                            <div class="form-check my-3">
+                                <input class="form-check-input" type="checkbox" id="terms">
+                                <label class="form-check-label" for="terms">
+                                    {{ (channel ~ '.payment.payment_form.accept_terms')|trans|raw }}
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-warning">{{ (channel ~ '.payment.payment_form.submit')|trans|raw }}</button>
+                        </form>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-6">
-                <img src="https://place-hold.it/460x570" alt="{{ (channel ~ '.home.section1.image.alt')|trans|raw }}" class="img-fluid rounded lazyload">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ (channel ~ '.payment.customer_service.title')|trans|raw }}</h5>
+                        <p class="card-text">{{ (channel ~ '.payment.customer_service.detail')|trans|raw }}</p>
+                    </div>
+                </div>
+                <div class="card mt-3">
+                    <div class="card-body">
+                        <h6 class="card-title">{{ (channel ~ '.payment.order_summary.title')|trans|raw }}</h6>
+                        <ul class="list-unstyled">
+                        <li>{{ (channel ~ '.payment.order_summary.item1')|trans|raw }}</li>
+                        <li>{{ (channel ~ '.payment.order_summary.item2')|trans|raw }}</li>
+                        </ul>
+                        <p>{{ (channel ~ '.payment.order_summary.total')|trans|raw }}</p>
+                        <p>{{ (channel ~ '.payment.order_summary.tax')|trans|raw }}</p>
+                        <p>{{ (channel ~ '.payment.order_summary.discount')|trans|raw }}</p>
+                        <p>{{ (channel ~ '.payment.order_summary.shipping')|trans|raw }}</p>
+                        <p>{{ (channel ~ '.payment.order_summary.order_total')|trans|raw }}</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

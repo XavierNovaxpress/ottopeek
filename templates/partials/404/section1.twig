@@ -1,0 +1,33 @@
+<style>
+       .error-container {
+           text-align: center;
+           background-color: #fff;
+           border-radius: 10px;
+           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+           padding: 40px;
+           max-width: 500px;
+           width: 100%;
+       }
+       .error-code {
+           font-size: 72px;
+           font-weight: bold;
+           color: #dc3545;
+       }
+       .error-message {
+           font-size: 24px;
+           margin-bottom: 20px;
+       }
+       .btn-home {
+           margin-top: 20px;
+       }
+   </style>
+   
+<div class="error-container mx-auto mt-5">
+    <div class="error-code">404</div>
+    <div class="error-message">{{ (channel ~ '.404.message')|trans|raw }}</div>
+    <p>{{ (channel ~ '.404.explanation')|trans|raw }}</p>
+    <a href="/home?lang={{locale}}&channel={{ channel }}" class="btn btn-primary btn-home">{{ (channel ~ '.404.home_button')|trans|raw }}</a>
+    <p class="mt-4">
+        {{ (channel ~ '.404.sitemap_info')|trans|raw }} <a href="#">{{ (channel ~ '.404.sitemap')|trans|raw }}</a>.
+    </p>
+</div>

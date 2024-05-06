@@ -41,6 +41,8 @@ default:
         inscription: "Inscrivez-vous à la Newsletter"
         entrez_email: "Entrez votre email"
         inscrire_bouton: "Inscrivez-vous"
+      currency:
+          titre: Changer la devise
 
     copyright: "Copyright © %year% %companyName%"
 
@@ -135,18 +137,18 @@ default:
       titre: "Plans <span class='text-primary'>Tarifaires</span>"
       plan1:
         titre: "1 Rapport"
-        prix: "29,99 € / rapport"
+        prix: "<span class='fs-2 text-primary'>29,99 €</span> / rapport"
         origine: "Prix d'origine"
         bouton: "Acquérir le Rapport"
       plan2:
         titre: "2 Rapports"
-        prix: "17,99 € / rapport"
-        origine: "Vous payez 35,98 € au lieu de 59,98 €"
+        prix: "<span class='fs-2 text-primary'>17,99 €</span> / rapport"
+        origine: "Vous payez 35,98 € au lieu de <s class='text-danger'>59,98 €</s>"
         bouton: "Acquérir le Rapport"
       plan3:
         titre: "3 Rapports"
-        prix: "15,99 € / rapport"
-        origine: "Vous payez 47,97 € au lieu de 89,97 €"
+        prix: "<span class='fs-2 text-primary'>15,99 €</span> / rapport"
+        origine: "Vous payez 47,97 € au lieu de <s class='text-danger'>89,97 €</s>"
         bouton: "Acquérir le Rapport"
       tva: "La TVA peut être applicable"
       credits: "Possédez-vous des crédits sur votre compte? Connectez-vous pour les utiliser."
@@ -209,8 +211,8 @@ default:
       offre: "2 Rapports immatriculation"
       prix: "17,99 €"
       ancien_prix: "59,98 €"
-      stock: "En stock"
-      promotion: "-40%"
+      stock: "<i class='fa-solid fa-check'></i> En stock"
+      promotion: "Promo -40%"
       rapports: "2 Rapports"
       rapports_option: "2+2 Free Car vérifier"
       quantite: "Quantité"
@@ -219,7 +221,7 @@ default:
       garantie: "30 jours satisfait ou remboursé"
       assistance: "Assistance 24h/24 et 7j/7"
     section2:
-      titre: "Historique Approfondi pour une Confiance Totale"
+      titre: "<span class='text-primary'>Historique Approfondi</span> pour une Confiance Totale"
       description: "Soyez rassuré avec %companyName%. Chaque rapport offre un aperçu détaillé des antécédents du véhicule, du kilométrage aux réparations, pour garantir une transaction sans surprise. Avec nos rapports, prenez la route en toute sérénité, sachant que votre nouvelle acquisition est approuvée par notre expertise approfondie."
       point1: "Historique de dommages : Accident, sinistre et réparations."
       point2: "Vérification du kilométrage : Aucune fraude au compteur kilométrique."
@@ -228,7 +230,7 @@ default:
       image:
         alt: "Photo de vérification de véhicule"
     section3:
-      titre: "Protégez Votre Investissement"
+      titre: "<span class='text-primary'>Protégez</span> Votre Investissement"
       description: "Votre voiture n'est pas qu'un moyen de transport, c'est un investissement. %companyName% vérifie minutieusement chaque détail pour assurer la qualité et la longévité de votre véhicule."
       paragraph1: "Ne laissez pas les problèmes cachés menacer votre investissement et votre"
       important1: "sécurité"
@@ -237,8 +239,8 @@ default:
       image:
         alt: "Couple souriant dans une voiture"
     section4:
-      titre: "Négociation Éclairée pour le Juste Prix"
-      description: "Munissez-vous de données fiables pour négocier avec assurance. Ottopeek vous donne le pouvoir de connaître la vraie valeur du véhicule et de déterminer le juste prix. Avec des informations précises sur la valeur estimée du véhicule, vous entrez dans la négociation armé de faits solides, prêt à obtenir le meilleur accord possible. Transformez les données en pouvoir de négociation et prenez l'avantage."
+      titre: "Négociation Éclairée pour <span class='text-primary'>le Juste Prix</span>"
+      description: "Munissez-vous de données fiables pour négocier avec assurance. %companyName% vous donne le pouvoir de connaître la vraie valeur du véhicule et de déterminer le juste prix. Avec des informations précises sur la valeur estimée du véhicule, vous entrez dans la négociation armé de faits solides, prêt à obtenir le meilleur accord possible. Transformez les données en pouvoir de négociation et prenez l'avantage."
       paragraph2: "Ne laissez plus la valeur de votre véhicule être une énigme. Nos rapports détaillés offrent une évaluation basée sur des données actuelles du marché, vous permettant d'aborder les discussions de prix avec une confiance inébranlable. Prenez le contrôle des négociations et assurez-vous de ne jamais surpayer ou sous-vendre."
       image_alt: "Deux personnes échangeant des clés de voiture"
     section5:
@@ -256,266 +258,45 @@ default:
         contact_telephone: "Vous pouvez nous joindre à tout moment par téléphone (au tarif d’un appel local) au"
         numero_telephone: "+1 123 456 7890"
         horaires_dispo: "Nous sommes disponibles du lundi au vendredi de 9h30 à 18h30 et le samedi de 9h30 à 13h30. Vous pouvez également nous contacter via notre formulaire de contact. Nous répondons aux emails et aux messages sur Facebook également 24h/24."
+
+    #PAYMENT
+  payment:
+      free_shipping: "Incroyable! Vous avez la LIVRAISON GRATUITE"
+      shipping_address:
+        title: "Adresse de livraison"
+        detail: "Maurice Pappion 14 rue des bouviers 75014,Paris"
+      shipping_tracking: "Suivi d'expédition: le colis a été expédié avant le 26/04/2024"
+      secure_payment:
+        title: "Paiement 100% sécurisé"
+      payment_form:
+        cardholder_name: "Nom du titulaire de la carte"
+        card_number: "Numéro de la carte"
+        expiry_date: "Date d'expiration"
+        cvv: "CVV"
+        accept_terms: "J'accepte les Conditions générales de vente"
+        submit: "Valider et Payer"
+      customer_service:
+        title: "Nous sommes disponibles pour le Service Client"
+        detail: "Du lundi au vendredi de 9h30 à 18h30\nLe samedi de 9h30 à 13h30\nBesoin d'aide? Appelez-nous !"
+        phone_number: "+1 123 456 7890"
+      order_summary:
+        title: "Total :"
+        item1: "1x 2 Rapports immatriculation"
+        item2: "1x 2+2 Free Car vérifier"
+        total: "Total:"
+        tax: "Tva:"
+        discount: "Réduction:"
+        shipping: "Livraison:"
+        order_total: "Total de la commande:"
+        update_cart: "Mettre à jour le panier"
+
+    #404
+  404:
+     title: "Page non trouvé - 404"
+     message: "Oops! Page non trouvée"
+     explanation: "Il semble que la page que vous recherchez n'existe pas ou a été déplacée."
+     home_button: "Retour à l'accueil"
+     sitemap_info: "Visiter"
+     sitemap: "notre Sitemap"
 
 # Default content -------------------------------------------------------------------------------
-
-# Ottopeek content ------------------------------------------------------------------------------
-
-# Header
-ottopeek:
-  header:
-    titre: "%companyName% - Historique du Véhicule"
-    souscription: "Souscrivez à notre offre Pro et bénéficiez de 15 rapports par mois pour 29,99€ seulement."
-    logo:
-      alt: "Logo %companyName%"
-    prix: "Prix"
-    aide: "Aide"
-    actualites: "Actualités"
-    contact: "Contact"
-    connexion: "Connexion"
-    langue: "FR"
-
-  # Footer
-  footer:
-    societe:
-      logo: "%companyName%"
-      description: "%companyName% : l'expertise au service de votre tranquillité automobile."
-      social_media:
-        twitter: "Twitter"
-        instagram: "Instagram"
-        youtube: "YouTube"
-
-    sections:
-      societe:
-        titre: Société
-        home: "Home"
-        prix: "Prix"
-        aide: "Aide"
-        contact: "Contact"
-      legal:
-        titre: Légal
-        confidentialite: "Politique de confidentialité"
-        mentions_legales: "Mentions légales"
-        cgv: "CGV"
-        cookies: "Politique de cookies"
-      newsletter:
-        inscription: "Inscrivez-vous à la Newsletter"
-        entrez_email: "Entrez votre email"
-        inscrire_bouton: "Inscrivez-vous"
-
-    copyright: "Copyright © %year% %companyName%"
-
-  # Homepage
-  home:
-    section1:
-      titre: "Évitez les mauvaises affaires."
-      sous-titre: "Découvrez en un clic le kilométrage, les incidents passés, <br> ainsi qu'une estimation de la valeur d'un véhicule et de sa fiabilité."
-      placeholder: "Saisissez votre plaque d'immatriculation ou VIN"
-      bouton: "Analyser le véhicule"
-      stats1: "<span class='text-primary'>95%</span> des véhicules détectés"
-      stats2: "<span class='text-primary'>450</span> sources de données"
-      stats3: "4.5 étoiles - <span class='text-primary'>2314</span> avis"
-      image:
-        alt: "Voiture jaune"
-
-    section2:
-      titre: "La Confiance Véhiculaire <span class='text-primary'>en un Clic !</span>"
-      sous-titre: "Accédez à un historique détaillé et précis pour sécuriser votre achat ou votre vente de voiture d'occasion."
-      feature1:
-        titre: "Vérification Facile"
-        description: "Commencez par entrer la plaque d'immatriculation pour lancer un diagnostic complet et instantané de l'historique du véhicule."
-      feature2:
-        titre: "Analyse Approfondie"
-        description: "Notre système analyse les données auprès de centaines de sources fiables pour vous fournir un rapport exhaustif sur l'état et l'historique du véhicule."
-      feature3:
-        titre: "Rapport Détaillé"
-        description: "Téléchargez un rapport détaillé et utilisez les informations fournies pour négocier efficacement ou confirmer la qualité du véhicule."
-      feature4:
-        titre: "Valeur Marché"
-        description: "Grâce à notre analyse du kilométrage et des incidents passés, vous obtiendrez une estimation précise et fiable de sa valeur marchande."
-
-    section3:
-      titre: "Vous voulez acheter ?"
-      sous-titre: "Ce que nous vérifions :"
-      description: "Nous analysons minutieusement chaque véhicule pour garantir votre sécurité et votre satisfaction."
-      image:
-        alt: "Placeholder pour image"
-      item1:
-        titre: "Dommages et accidents"
-        description: "Détectez les problèmes cachés et évitez les coûts inattendus."
-      item2:
-        titre: "Historique de kilométrage"
-        description: "Assurez-vous que le kilométrage est authentique et fiable."
-      item3:
-        titre: "Historique des propriétaires"
-        description: "Comprenez le passé du véhicule pour mieux anticiper son avenir."
-      item4:
-        titre: "Alertes de rappel"
-        description: "Soyez informé des rappels de sécurité pour éviter les risques."
-
-    section4:
-      titre: "Vous voulez vendre ?"
-      sous-titre: "Ne sous-estimez pas votre véhicule."
-      description: "Un rapport complet %companyName% montre la véritable histoire de votre véhicule et renforce la confiance des acheteurs."
-      image:
-        alt: "Placeholder pour image"
-      item1:
-        titre: "Un historique complet"
-        description: "Un historique complet qui valorise la qualité de votre véhicule."
-      item2:
-        titre: "Transparence = confiance"
-        description: "Un rapport détaillé peut rassurer les acheteurs et faciliter la vente."
-      item3:
-        titre: "Vente plus rapide"
-        description: "Un véhicule avec un historique clair et transparent se vend plus vite."
-      item4:
-        titre: "Avantage dans les négociations"
-        description: "Un bon historique vous permettra de justifier un meilleur prix."
-
-    section5:
-      titre: "Découvrez <span  class='text-primary'>l'historique d'un véhicule</span> en toute confiance."
-      description: "Que vous souhaitiez acheter, vendre, ou en savoir plus sur votre véhicule, notre rapport complet vous offre une transparence totale.Découvrez en un clic le kilométrage, les incidents passés, et assurez-vous de la fiabilité de votre voiture."
-      placeholder: "Ex: AA-123-AA"
-      bouton: "Analyser le véhicule"
-      image:
-        alt: "Placeholder pour voiture"
-      logo1:
-        alt: "Logo 1"
-      logo2:
-        alt: "Logo 2"
-      logo3:
-        alt: "Logo 3"
-      logo4:
-        alt: "Logo 4"
-      logo5:
-        alt: "Logo 5"
-
-  # Pricing
-  pricing:
-    section1:
-      titre: "Plans <span class='text-primary'>Tarifaires</span>"
-      plan1:
-        titre: "1 Rapport"
-        prix: "29,99 € / rapport"
-        origine: "Prix d'origine"
-        bouton: "Acquérir le Rapport"
-      plan2:
-        titre: "2 Rapports"
-        prix: "17,99 € / rapport"
-        origine: "Vous payez 35,98 € au lieu de 59,98 €"
-        bouton: "Acquérir le Rapport"
-      plan3:
-        titre: "3 Rapports"
-        prix: "15,99 € / rapport"
-        origine: "Vous payez 47,97 € au lieu de 89,97 €"
-        bouton: "Acquérir le Rapport"
-      tva: "La TVA peut être applicable"
-      credits: "Possédez-vous des crédits sur votre compte? Connectez-vous pour les utiliser."
-      visa: "Logo Visa"
-      mastercard: "Logo MasterCard"
-      amex: "Logo American Express"
-      discover: "Logo Discover"
-      paypal: "Logo PayPal"
-
-    section2:
-      titre: "<span class='text-primary'>Vérifiez toujours un véhicule</span> avant de l'acheter."
-      sous-titre: "Nous analysons minutieusement chaque véhicule pour garantir votre sécurité et votre satisfaction."
-      advantage1:
-        titre: "Évitez les arnaques coûteuses"
-        description: "Vérifiez le kilométrage, l'historique d'accidents, et d'autres détails pour éviter les véhicules d'occasion de qualité médiocre."
-      advantage2:
-        titre: "Protégez-vous et votre famille"
-        description: "Optez pour un véhicule sûr avec un historique connu pour éviter des accidents mortels liés à des défauts cachés."
-      advantage3:
-        titre: "Économisez lors de votre achat"
-        description: "Obtenez un avantage lors des négociations en découvrant ce que le vendeur ignore ou dissimule."
-
-    section3:
-      titre: "Ce que nous examinons lors de la <span class='text-primary'>préparation d'un rapport</span>"
-      description: "%companyName% détient la plus vaste base de données mondiale sur les véhicules d'occasion, avec plus d'un milliard de données."
-      item1: "Changements de kilométrage"
-      item2: "Dégâts"
-      item3: "Images capturées"
-      item4: "Estimation de la valeur marchée"
-      item5: "Transferts de propriété"
-      item6: "Signalements de vol"
-      item7: "Autres informations utiles"
-      item8: "Alertes de sécurité"
-      image:
-        alt: "Personne préparant un rapport"
-
-    section4:
-      titre: "Foire aux questions"
-      question1: "Qu'est-ce qu'un VIN?"
-      reponse1: "Le VIN est un numéro d'identification de véhicule qui contient des détails importants sur le véhicule."
-      question2: "Quels types d'informations peuvent être incluses dans un rapport %companyName%?"
-      reponse2: "Un rapport %companyName% peut inclure des données telles que le kilométrage, l'historique des propriétaires, et les dommages signalés."
-      question3: "Qu'est-ce qui distingue un rapport %companyName% des autres services similaires?"
-      reponse3: "%companyName% utilise une large base de données pour fournir des rapports détaillés et fiables."
-      question4: "Est-ce que le rapport %companyName% peut être admis comme preuve légale devant un tribunal?"
-      reponse4: "Les rapports %companyName% sont largement reconnus mais il est préférable de consulter un conseiller juridique pour des questions légales."
-      question5: "D'où sont extraites les données?"
-      reponse5: "Les données proviennent de sources telles que les registres d'État, les compagnies d'assurance, et les ateliers de réparation."
-      question6: "Quels sont les moyens de paiement que vous acceptez?"
-      reponse6: "%companyName% accepte les paiements par carte de crédit, PayPal, et autres méthodes populaires."
-      question7: "Comment puis-je obtenir un rapport %companyName%?"
-      reponse7: "Vous pouvez obtenir un rapport en ligne sur le site d'%companyName% ou auprès de partenaires autorisés."
-
-  # Checkout
-  checkout:
-    section1:
-      titre: "Rapports d'immatriculation"
-      image:
-        alt: "Personne tenant un stylo et une tablette"
-      offre: "2 Rapports immatriculation"
-      prix: "17,99 €"
-      ancien_prix: "59,98 €"
-      stock: "En stock"
-      promotion: "-40%"
-      rapports: "2 Rapports"
-      rapports_option: "2+2 Free Car vérifier"
-      quantite: "Quantité"
-      bouton: "Je commande"
-      livraison: "Livraison Rapide (3 à 5 jours ouvrés)"
-      garantie: "30 jours satisfait ou remboursé"
-      assistance: "Assistance 24h/24 et 7j/7"
-    section2:
-      titre: "Historique Approfondi pour une Confiance Totale"
-      description: "Soyez rassuré avec %companyName%. Chaque rapport offre un aperçu détaillé des antécédents du véhicule, du kilométrage aux réparations, pour garantir une transaction sans surprise. Avec nos rapports, prenez la route en toute sérénité, sachant que votre nouvelle acquisition est approuvée par notre expertise approfondie."
-      point1: "Historique de dommages : Accident, sinistre et réparations."
-      point2: "Vérification du kilométrage : Aucune fraude au compteur kilométrique."
-      point3: "Historique des propriétaires : Nombre de propriétaires et durée de possession."
-      point4: "Alertes de rappel : Mises à jour sur les rappels de sécurité importants."
-      image:
-        alt: "Photo de vérification de véhicule"
-    section3:
-      titre: "Protégez Votre Investissement"
-      description: "Votre voiture n'est pas qu'un moyen de transport, c'est un investissement. %companyName% vérifie minutieusement chaque détail pour assurer la qualité et la longévité de votre véhicule."
-      paragraph1: "Ne laissez pas les problèmes cachés menacer votre investissement et votre"
-      important1: "sécurité"
-      paragraph2: "%companyName% vous aide à évaluer la vraie valeur de votre véhicule"
-      important2: "avant la vente"
-      image:
-        alt: "Couple souriant dans une voiture"
-    section4:
-      titre: "Négociation Éclairée pour le Juste Prix"
-      description: "Munissez-vous de données fiables pour négocier avec assurance. Ottopeek vous donne le pouvoir de connaître la vraie valeur du véhicule et de déterminer le juste prix. Avec des informations précises sur la valeur estimée du véhicule, vous entrez dans la négociation armé de faits solides, prêt à obtenir le meilleur accord possible. Transformez les données en pouvoir de négociation et prenez l'avantage."
-      paragraph2: "Ne laissez plus la valeur de votre véhicule être une énigme. Nos rapports détaillés offrent une évaluation basée sur des données actuelles du marché, vous permettant d'aborder les discussions de prix avec une confiance inébranlable. Prenez le contrôle des négociations et assurez-vous de ne jamais surpayer ou sous-vendre."
-      image_alt: "Deux personnes échangeant des clés de voiture"
-    section5:
-      titre: "Satisfaction garantie ou argent remis sous 30 jours"
-      description: "Pas de souci ! Si vous n'êtes pas satisfait, nous vous rembourserons intégralement conformément à nos conditions générales de vente."
-      image_alt: "Icône d'un bouclier avec un symbole de coche"
-    section6:
-      garantie:
-        titre: "Satisfaction garantie ou argent remis sous 30 jours"
-        description: "Pas de souci ! Si vous n'êtes pas satisfait, nous vous rembourserons intégralement conformément à nos conditions générales de vente."
-
-      service_client:
-        titre_principal: "Nous sommes disponibles pour le"
-        titre_secondaire: "Service Client"
-        contact_telephone: "Vous pouvez nous joindre à tout moment par téléphone (au tarif d’un appel local) au"
-        numero_telephone: "+1 123 456 7890"
-        horaires_dispo: "Nous sommes disponibles du lundi au vendredi de 9h30 à 18h30 et le samedi de 9h30 à 13h30. Vous pouvez également nous contacter via notre formulaire de contact. Nous répondons aux emails et aux messages sur Facebook également 24h/24."
-
-# Ottopeek content ------------------------------------------------------------------------------

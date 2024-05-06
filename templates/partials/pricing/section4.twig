@@ -4,9 +4,9 @@
         <h2 class="text-center mb-5">{{ (channel ~ '.pricing.section4.titre')|trans|raw }}</h2>
         <div class="accordion col-md-8 mx-auto" id="faqAccordion">
         {% for i in 1..7 %}
-            <div class="accordion-item">
+            <div class="accordion-item my-2 border-0">
                 <h2 class="accordion-header" id="heading{{ i }}">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ i }}" aria-expanded="false" aria-controls="collapse{{ i }}">
+                    <button class="accordion-button collapsed bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ i }}" aria-expanded="false" aria-controls="collapse{{ i }}">
                         {{ (channel ~ '.pricing.section4.question' ~ i) | trans({'%companyName%': companyName})|raw }}
                     </button>
                 </h2>

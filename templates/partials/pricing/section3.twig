@@ -8,13 +8,23 @@
           <div class="col-md-6">
               <h2>{{ (channel ~ '.pricing.section3.titre')|trans|raw }}</h2>
               <p>{{ (channel ~ '.pricing.section3.description')|trans({'%companyName%': companyName})|raw }}</p>
-              <ul class="list-unstyled">
-                {% for i in 1..8 %}
-                  <li>
-                      <i class="bi bi-check-circle-fill text-primary me-2"></i> {{ (channel ~ '.pricing.section3.item' ~ i )|trans|raw }}
-                  </li>
-                {% endfor %}
-              </ul>
+              <div class="row">
+                  <ul class="list-unstyled col-12 col-lg-6 my-0">
+                    {% for i in 1..4 %}
+                      <li class="my-2">
+                          <i class="fa-solid fa-circle-check text-primary me-2"></i> {{ (channel ~ '.pricing.section3.item' ~ i )|trans|raw }}
+                      </li>
+                    {% endfor %}
+                  </ul>
+                  <ul class="list-unstyled col-12 col-lg-6  my-0">
+                  {% for i in 5..8 %}
+                    <li class="my-2">
+                        <i class="fa-solid fa-circle-check text-primary me-2"></i> {{ (channel ~ '.pricing.section3.item' ~ i )|trans|raw }}
+                    </li>
+                  {% endfor %}
+                 </ul>
+              </div>
+
           </div>
       </div>
     </div>

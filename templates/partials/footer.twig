@@ -1,4 +1,3 @@
-
 <footer class="bg-dark text-light pt-5 pb-3">
     <div class="container">
         <div class="row justify-content-between">
@@ -46,6 +45,17 @@
                     <input type="email" placeholder="{{ (channel ~ '.footer.sections.newsletter.entrez_email')|trans|raw  }}" class="form-control">
                     <button type="submit" class="btn btn-warning">{{ (channel ~ '.footer.sections.newsletter.inscrire_bouton')|trans|raw  }}</button>
                 </form>
+
+                <div class="d-flex align-items-center mt-3">
+                    <h6 class="me-3">{{ (channel ~ '.footer.sections.currency.titre')|trans|raw  }}</h6>
+                    <select name="currency" class="form-select">
+                        <option value="usd">USD</option>
+                        <option value="eur">EUR</option>
+                        <option value="gbp">GBP</option>
+                        <option value="cad">CAD</option>
+                        <!-- Ajoutez d'autres devises au besoin -->
+                    </select>
+                </div>
             </div>
         </div>
 

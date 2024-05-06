@@ -9,9 +9,9 @@ const { PurgeCSSPlugin } = require('purgecss-webpack-plugin');
 module.exports = {
   mode: 'production',
   entry: {
-    main: './src/index.js',
-    default: './sass/theme.default.scss',
-    ottopeek: './sass/theme.ottopeek.scss',
+    main: ['./src/index.js', '@fortawesome/fontawesome-free/js/all.js'],
+    default: ['./sass/theme.default.scss'],
+    ottopeek: ['./sass/theme.ottopeek.scss'],
   },
   output: {
     path: path.resolve(__dirname, 'public'),
@@ -79,6 +79,13 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'fonts/[name].[hash][ext][query]',
+        }
+      },
     ],
   },
   plugins: [
@@ -103,7 +110,6 @@ module.exports = {
         },
       ],
     }),
-    // Placez PurgeCSSPlugin ici dans le tableau plugins
     new PurgeCSSPlugin({
       paths: glob.sync(`${path.join(__dirname, 'src')}/**/*`, { nodir: true }),
       only: ['bundle', 'vendor'],
