@@ -1,0 +1,7 @@
+{% extends 'layout.twig' %}
+
+{% block title %}{{ (channel ~ '.pricing.title')|trans|raw }} - {{ parent() }}{% endblock %}
+
+{% block content %}
+        {% include 'partials/reports/section1.twig' %}
+{% endblock %}

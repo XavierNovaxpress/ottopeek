@@ -299,4 +299,75 @@ default:
      sitemap_info: "Visiter"
      sitemap: "notre Sitemap"
 
+  reports:
+      # General
+        button:
+          view_report: "Voir rapport"
+          view_more: "Voir plus"
+          close: "Fermer"
+
+        # Vehicle Information
+        vehicle:
+          model: "RENAULT Megane Limited Energy TCe 115"
+          price: "3 500€"
+          year: "2019"
+          fuel_type: "Essence"
+          transmission: "Manuelle"
+
+        # Photos
+        photos:
+          title: "Photos du véhicule"
+          list:
+            - url: "path/to/photo1.jpg"
+              alt: "Vue avant"
+            - url: "path/to/photo2.jpg"
+              alt: "Vue latérale"
+            - url: "path/to/photo3.jpg"
+              alt: "Vue arrière"
+
+        # Sections
+        sections:
+          - title: "Utilisation"
+            description: "Informations sur l'utilisation du véhicule"
+            type: "usage"
+            content: "Ce véhicule a été utilisé comme voiture de fonction."
+          - title: "Kilométrage"
+            description: "Informations sur le kilométrage"
+            type: "chart"
+            chart_id: "kmChart"
+            chart_data:
+              labels: ["2019", "2020", "2021", "2022"]
+              label: "Kilométrage"
+              data: [10000, 20000, 30000, 40000]
+          - title: "Situation financière et légale"
+            description: "Informations financières et légales"
+            type: "table"
+            table:
+              headers: ["Critère", "Détail"]
+              rows:
+                - ["Situation financière", "Aucun crédit en cours"]
+                - ["Légal", "Aucun litige enregistré"]
+          - title: "État des dommages"
+            description: "Informations sur les dommages du véhicule"
+            type: "table"
+            table:
+              headers: ["Dommage", "Coût estimé"]
+              rows:
+                - ["Pare-chocs avant", "700€"]
+                - ["Portière arrière droite", "500€"]
+          - title: "Caractéristiques et équipements"
+            description: "Détails des caractéristiques techniques et des équipements"
+            type: "table"
+            table:
+              headers: ["Caractéristique", "Détail"]
+              rows:
+                - ["Transmission", "Manuelle"]
+                - ["Puissance", "115 ch"]
+                - ["Couleur", "Blanc"]
+
+        # Secure icons paths
+        secure_icons:
+          mastercard_securecode: "path/to/mastercard-securecode.png"
+          mcafee_secure: "path/to/mcafee-secure.png"
+          verified_by_visa: "path/to/verified-by-visa.png"
 # Default content -------------------------------------------------------------------------------

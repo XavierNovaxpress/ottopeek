@@ -1,0 +1,175 @@
+
+<style>
+    body {
+        background-color: #f8f9fa;
+        font-family: Arial, sans-serif;
+    }
+    .card {
+        border: none;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+    }
+    .card-title, .card-subtitle {
+        font-weight: bold;
+    }
+    .btn-warning {
+        background-color: #ffc107;
+        border: none;
+        font-weight: bold;
+    }
+    .btn-warning:hover {
+        background-color: #e0a800;
+    }
+</style>
+<div class="container my-5">
+
+    <div class="card mb-3">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="{{ (channel ~ '.reports.vehicle_image')|trans|raw }}" class="img-fluid rounded-start" alt="Image du véhicule">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">{{ (channel ~ '.reports.vehicle.model')|trans|raw }}</h5>
+                    <p class="card-text"><small class="text-muted">{{ (channel ~ '.reports.vehicle.price')|trans|raw }}</small></p>
+                    <p class="card-text">
+                        <span>{{ (channel ~ '.reports.vehicle.year')|trans|raw }}</span> |
+                        <span>{{ (channel ~ '.reports.vehicle.fuel_type')|trans|raw }}</span> |
+                        <span>{{ (channel ~ '.reports.vehicle.transmission')|trans|raw }}</span>
+                    </p>
+                    <a href="#" class="btn btn-warning">{{ (channel ~ '.reports.button.view_report')|trans|raw }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Photos du véhicule -->
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">{{ (channel ~ '.reports.photos.title')|trans|raw }}</h5>
+            <div class="row">
+                {% for photo in photos.list %}
+                <div class="col-md-4">
+                    <img src="{{ reports.photo.url }}" class="img-fluid" alt="{{ reports.photo.alt }}">
+                </div>
+                {% endfor %}
+            </div>
+            <a href="#" class="btn btn-warning mt-3">{{ reports.button.view_more }}</a>
+        </div>
+    </div>
+
+    <!-- Utilisation -->
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">{{ reports.usage.title }}</h5>
+            <p class="card-text">{{ reports.usage.warning }}</p>
+            <p>{{ reports.usage.details }}</p>
+            <a href="#" class="btn btn-warning mt-3">{{ reports.button.view_more }}</a>
+        </div>
+    </div>
+
+    <!-- Vol de véhicule -->
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">{{ reports.theft.title }}</h5>
+            <p class="card-text">{{ reports.theft.warning }}</p>
+            <div class="row">
+                {% for item in theft.items %}
+                <div class="col-md-4">
+                    <div class="alert alert-warning" role="alert">
+                        {{ reports.item }}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <a href="#" class="btn btn-warning mt-3">{{ reports.button.close }}</a>
+        </div>
+    </div>
+
+    <!-- Kilométrage -->
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">{{ reports.mileage.title }}</h5>
+            <p class="card-text">{{ reports.mileage.warning }}</p>
+            <canvas id="mileageChart"></canvas>
+            <script>
+                var ctx = document.getElementById('mileageChart').getContext('2d');
+                var myChart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: {{ reports.mileage.chart.labels }},
+                        datasets: [{
+                            label: '{{ reports.mileage.chart.label }}',
+                            data: {{ reports.mileage.chart.data }},
+                            backgroundColor: 'rgba(255, 159, 64, 0.2)',
+                            borderColor: 'rgba(255, 159, 64, 1)',
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            </script>
+            <a href="#" class="btn btn-warning mt-3">{{ reports.button.close }}</a>
+        </div>
+    </div>
+
+    <!-- Situation financière et légale -->
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">{{ reports.financial.title }}</h5>
+            <p class="card-text">{{ reports.financial.description }}</p>
+            <div class="row">
+                {% for item in financial.items %}
+                <div class="col-md-4">
+                    <div class="alert alert-info" role="alert">
+                        {{ reports.item }}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <a href="#" class="btn btn-warning mt-3">{{ reports.button.close }}</a>
+        </div>
+    </div>
+
+    <!-- État des dommages -->
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">{{ reports.damage.title }}</h5>
+            <p class="card-text">{{ reports.damage.description }}</p>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="path/to/car-damage-image.png" class="img-fluid" alt="Image des dommages">
+                </div>
+                <div class="col-md-6">
+                    <ul>
+                        {% for damage_item in damage.items %}
+                        <li>{{ reports.damage_item.part }}: {{ reports.damage_item.cost }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            <a href="#" class="btn btn-warning mt-3">{{ reports.button.close }}</a>
+        </div>
+    </div>
+
+    <!-- Caractéristiques et équipements -->
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">{{ reports.features.title }}</h5>
+            <ul>
+                {% for feature in features.list %}
+                <li>{{ reports.feature }}</li>
+                {% endfor %}
+            </ul>
+            <a href="#" class="btn btn-warning mt-3">{{ reports.button.close }}</a>
+        </div>
+    </div>
+
+</div>
