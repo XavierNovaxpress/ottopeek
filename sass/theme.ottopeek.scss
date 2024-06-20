@@ -1,23 +1,10 @@
-// Importation des polices
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
-
-// Définition des variables avant d'importer Bootstrap
 $font-family-base: 'Lexend Deca', sans-serif;
-$warning: #FFEB28;
-$primary: #548EFF;
-$secondary: #2A317F;
+$warning-color:#FFEB28;
+$primary-color: #007bff;
+$secondary-color: #6c757d;
 $background-color: #f8f9fa;
 
-// Importation des fichiers SCSS de Bootstrap
+// Importation des fichiers de Bootstrap
 @import '~bootstrap/scss/bootstrap';
 @import 'index.scss';
-
-
-.accordion-item {
-    border: none;
-    box-shadow: none;
-
-    .accordion-body {
-      font-weight:300;
-    }
-}

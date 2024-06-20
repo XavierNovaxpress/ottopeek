@@ -7,7 +7,7 @@
 {% block content %}
     {% if order is iterable %}
         {% for section_num in order %}
-            {% include 'partials/home/section' ~ section_num ~ '.twig' %}
+            {% include 'partials/home/' ~ channel ~ '/section' ~ section_num ~ '.twig' %}
         {% endfor %}
     {% else %}
         <p>Les sections ne sont pas définies ou le format de l'ordre est incorrect.</p>
