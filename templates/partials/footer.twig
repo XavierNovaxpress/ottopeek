@@ -1,67 +1,16 @@
-<footer class="bg-dark text-light pt-5 pb-3">
-    <div class="container">
-        <div class="row justify-content-between">
-            <div class="col-md-3">
-                <div class="d-flex flex-column">
-                    <img class="w-50 my-2" src="{{ webrootURL }}/public/media/{{ channel }}/logo_footer.svg" alt="{{ (channel ~ '.footer.societe.logo')|trans|raw  }}" class="mb-2">
-                    <p>{{ (channel ~ '.footer.societe.description')|trans({'%companyName%': companyName})|raw  }}</p>
-                    <div class="d-flex gap-3">
-                        <a href="#" aria-label="{{ (channel ~ '.footer.societe.social_media.twitter')|trans|raw  }}">
-                            <i class="bi bi-twitter text-light fs-3"></i>
-                        </a>
-                        <a href="#" aria-label="{{ (channel ~ '.footer.societe.social_media.instagram')|trans|raw  }}">
-                            <i class="bi bi-instagram text-light fs-3"></i>
-                        </a>
-                        <a href="#" aria-label="{{ (channel ~ '.footer.societe.social_media.youtube')|trans|raw  }}">
-                            <i class="bi bi-youtube text-light fs-3"></i>
-                        </a>
-                    </div>
-                </div>
+{% if channel == 'ottopeek' or channel == 'default' %}
+<div class="bg-dark">
+{% else %}
+<div class="bg-light">
+{% endif %}
+    <footer class="pt-5 pb-3">
+        <div class="container">
+            <div class="row">
+                {% include 'partials/_footer/' ~ channel ~  '/company_details.twig' %}
+                {% include 'partials/_footer/' ~ channel ~  '/footer_menu.twig' %}
+                {% include 'partials/_footer/' ~ channel ~  '/company_newsletter.twig' %}
             </div>
-
-            <div class="col-md-3">
-                <h4>{{ (channel ~ '.footer.sections.societe.titre')|trans|raw  }}</h4>
-                <ul class="list-unstyled">
-                    <li>{{ (channel ~ '.footer.sections.societe.home')|trans|raw  }}</li>
-                    <li>{{ (channel ~ '.footer.sections.societe.prix')|trans|raw  }}</li>
-                    <li>{{ (channel ~ '.footer.sections.societe.aide')|trans|raw  }}</li>
-                    <li>{{ (channel ~ '.footer.sections.societe.contact')|trans|raw  }}</li>
-                </ul>
-            </div>
-
-            <div class="col-md-3">
-                <h4>{{ (channel ~ '.footer.sections.legal.titre')|trans|raw  }}</h4>
-                <ul class="list-unstyled">
-                    <li>{{ (channel ~ '.footer.sections.legal.confidentialite')|trans|raw  }}</li>
-                    <li>{{ (channel ~ '.footer.sections.legal.mentions_legales')|trans|raw  }}</li>
-                    <li>{{ (channel ~ '.footer.sections.legal.cgv')|trans|raw  }}</li>
-                    <li>{{ (channel ~ '.footer.sections.legal.cookies')|trans|raw  }}</li>
-                </ul>
-            </div>
-
-            <div class="col-md-3">
-                <h4>{{ (channel ~ '.footer.sections.newsletter.inscription')|trans|raw  }}</h4>
-                <form class="d-flex flex-column gap-2">
-                    <input type="email" placeholder="{{ (channel ~ '.footer.sections.newsletter.entrez_email')|trans|raw  }}" class="form-control">
-                    <button type="submit" class="btn btn-warning">{{ (channel ~ '.footer.sections.newsletter.inscrire_bouton')|trans|raw  }}</button>
-                </form>
-
-                <div class="d-flex align-items-center mt-3">
-                    <h6 class="me-3">{{ (channel ~ '.footer.sections.currency.titre')|trans|raw  }}</h6>
-                    <select name="currency" class="form-select">
-                        <option value="usd">USD</option>
-                        <option value="eur">EUR</option>
-                        <option value="gbp">GBP</option>
-                        <option value="cad">CAD</option>
-                        <!-- Ajoutez d'autres devises au besoin -->
-                    </select>
-                </div>
-            </div>
+            {% include 'partials/_footer/' ~ channel ~  '/footer_bottom.twig' %}
         </div>
-
-        <div class="text-center mt-4">
-            <hr class="bg-light" />
-            <p>{{ (channel ~ '.footer.copyright')|trans({'%year%': year, '%companyName%': companyName })|raw  }}</p>
-        </div>
-    </div>
-</footer>
+    </footer>
+</div>

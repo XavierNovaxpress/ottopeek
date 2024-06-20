@@ -1,0 +1,9 @@
+<div class="col-md-3 text-light ">
+    <h4>{{ (channel ~ '.footer.sections.newsletter.inscription')|trans|raw  }}</h4>
+    <form class="d-flex flex-column gap-2">
+        <input type="email" placeholder="{{ (channel ~ '.footer.sections.newsletter.entrez_email')|trans|raw  }}" class="form-control">
+        <button type="submit" class="btn btn-warning">{{ (channel ~ '.footer.sections.newsletter.inscrire_bouton')|trans|raw  }}</button>
+    </form>
+    
+    {% include 'partials/_footer/' ~ channel ~  '/currency_selector.twig' %}
+</div>

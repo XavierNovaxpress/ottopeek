@@ -1,0 +1,17 @@
+<div class="col-md-6 text-dark">
+    <div class="d-flex flex-column">
+        <img class="w-50 my-2" src="{{ webrootURL }}/public/media/{{ channel }}/logo_footer.svg" alt="{{ (channel ~ '.footer.societe.logo')|trans|raw  }}" class="mb-2">
+        <p>{{ (channel ~ '.footer.societe.description')|trans({'%companyName%': companyName})|raw  }}</p>
+        <div class="d-flex gap-3">
+            <a href="#" aria-label="{{ (channel ~ '.footer.societe.social_media.twitter')|trans|raw  }}">
+                <i class="bi bi-twitter text-light fs-3"></i>
+            </a>
+            <a href="#" aria-label="{{ (channel ~ '.footer.societe.social_media.instagram')|trans|raw  }}">
+                <i class="bi bi-instagram text-light fs-3"></i>
+            </a>
+            <a href="#" aria-label="{{ (channel ~ '.footer.societe.social_media.youtube')|trans|raw  }}">
+                <i class="bi bi-youtube text-light fs-3"></i>
+            </a>
+        </div>
+    </div>
+</div>
