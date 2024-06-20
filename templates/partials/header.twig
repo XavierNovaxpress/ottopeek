@@ -1,14 +1,8 @@
-
+{% if channel == 'ottopeek' %}
 <header class="bg-white border-bottom">
-
     {% include 'partials/_header/alert.twig' %}
-
     <div class="container d-flex justify-content-between align-items-center py-2">
-
-
         {% include 'partials/_header/menu.twig' %}
-
-
         <div class="row align-items-center">
           <div class="d-none d-lg-block col auto">
               {% include 'partials/_header/connexion.twig' %}
@@ -17,6 +11,24 @@
               {% include 'partials/_header/language-selector.twig' %}
           </div>
         </div>
-
     </div>
 </header>
+{% endif %}
+
+
+{% if channel == 'voiroto' %}
+<header class="bg-white border-bottom">
+    {% include 'partials/_header/alert.twig' %}
+    <div class="container d-flex justify-content-between align-items-center py-2">
+        {% include 'partials/_header/menu.twig' %}
+        <div class="row align-items-center">
+          <div class="d-none d-lg-block col auto">
+              {% include 'partials/_header/connexion.twig' %}
+          </div>
+            <div class="d-none d-lg-block col auto">
+              {% include 'partials/_header/language-selector.twig' %}
+          </div>
+        </div>
+    </div>
+</header>
+{% endif %}

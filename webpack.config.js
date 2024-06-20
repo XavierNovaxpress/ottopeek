@@ -12,6 +12,7 @@ module.exports = {
     main: ['./src/index.js', '@fortawesome/fontawesome-free/js/all.js'],
     default: ['./sass/theme.default.scss'],
     ottopeek: ['./sass/theme.ottopeek.scss'],
+    voiroto: ['./sass/theme.voiroto.scss'],
   },
   output: {
     path: path.resolve(__dirname, 'public'),
