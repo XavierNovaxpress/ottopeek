@@ -108,7 +108,7 @@ function getGlobalData($translator, $channel, $page) {
     $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
     $webrootURL = $protocol.$_SERVER['HTTP_HOST'];
 
-    $companyName = $_ENV['COMPANY_NAME'] ?? 'Ottopeek';
+    $companyName = $_ENV['COMPANY_NAME'] ?? $_GET['channel'];
     $contactEmail = $_ENV['CONTACT_EMAIL'] ?? 'contact@ottopeek.com';
     $companyAdress = $_ENV['COMPANY_ADRESS'] ?? '1801 STEVENS AVE EAST PALO ALTO CA 94303-1264 USA';
     $companyPhone = $_ENV['COMPANY_PHONE'] ?? '(279) 987-1701';
@@ -144,6 +144,11 @@ function getGlobalData($translator, $channel, $page) {
     $order = $section_order['channels'][$channel][$page] ?? [];
 
 
+    // Mélanger les indices des logos
+    $logoIndices = range(1, 8);
+    shuffle($logoIndices);
+
+
     // Retourne les données
     return [
         'webrootURL' => $webrootURL,
@@ -158,5 +163,6 @@ function getGlobalData($translator, $channel, $page) {
         'channel' => $channel,
         'order' => $order,
         'page' => $page,
+        'logoIndices' => $logoIndices
     ];
 }

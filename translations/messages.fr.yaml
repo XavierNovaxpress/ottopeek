@@ -872,7 +872,7 @@ voiroto:
         description: "Un bon historique vous permettra de justifier un meilleur prix."
 
     section5:
-      titre: "Découvrez <span  class='text-primary'>l'historique d'un véhicule</span> en toute confiance."
+      titre: "Découvrez l'historique d'un véhicule en toute confiance."
       description: "Que vous souhaitiez acheter, vendre, ou en savoir plus sur votre véhicule, notre rapport complet vous offre une transparence totale.Découvrez en un clic le kilométrage, les incidents passés, et assurez-vous de la fiabilité de votre voiture."
       placeholder: "Ex: AA-123-AA"
       bouton: "Analyser le véhicule"

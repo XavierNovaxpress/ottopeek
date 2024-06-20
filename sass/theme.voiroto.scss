@@ -100,12 +100,15 @@ $background-light-overlay: rgba(255, 255, 255, 0.3);
   }
 
   .stats-row {
-    .col-4 {
-      border-right: 1px solid #ddd;
-
+    .col-lg-4 {
       &:last-child {
         border-right: none;
       }
     }
   }
+}
+
+
+.stats-row {
+    top:2rem;
 }
