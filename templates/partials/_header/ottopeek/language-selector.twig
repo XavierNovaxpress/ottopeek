@@ -1,0 +1,49 @@
+          {# language selector #}
+          <div class="col-12 col-md-4">
+              <div class="dropdown w-100">
+                  <a class="dropdown-toggle d-flex align-items-center justify-content-center" href="#" role="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                      <span class="me-2">
+                          {% if (channel ~ '.header.langue') | trans | raw == "FR" %}
+                              <img src="{{ webrootURL }}/public/media/french-flag.png" alt="French Flag" class="me-1" style="width: 20px;">
+                          {% elseif (channel ~ '.header.langue') | trans | raw == "EN" %}
+                              <img src="{{ webrootURL }}/public/media/english-flag.png" alt="English Flag" style="width: 20px;">
+                          {% elseif (channel ~ '.header.langue') | trans | raw == "ES" %}
+                              <img src="{{ webrootURL }}/public/media/spanish-flag.png" alt="Spanish Flag" style="width: 20px;">
+                          {% elseif (channel ~ '.header.langue') | trans | raw == "IT" %}
+                              <img src="{{ webrootURL }}/public/media/italian-flag.png" alt="Italian Flag" style="width: 20px;">
+                          {% elseif (channel ~ '.header.langue') | trans | raw == "DE" %}
+                              <img src="{{ webrootURL }}/public/media/german-flag.png" alt="German Flag" style="width: 20px;">
+                          {% endif %}
+                      </span>
+                      {{ (channel ~ '.header.langue') | trans | raw }}
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                      <li>
+                          <a class="dropdown-item d-flex align-items-center" href="?lang=fr&channel={{ channel }}">
+                              <img src="{{ webrootURL }}/public/media/french-flag.png" alt="French Flag" class="me-1" style="width: 20px;"> FR
+                          </a>
+                      </li>
+                      <li>
+                          <a class="dropdown-item d-flex align-items-center" href="?lang=en&channel={{ channel }}">
+                              <img src="{{ webrootURL }}/public/media/english-flag.png" alt="English Flag" class="me-1" style="width: 20px;"> EN
+                          </a>
+                      </li>
+                      <li>
+                          <a class="dropdown-item d-flex align-items-center" href="?lang=es&channel={{ channel }}">
+                              <img src="{{ webrootURL }}/public/media/spanish-flag.png" alt="Spanish Flag" class="me-1" style="width: 20px;"> ES
+                          </a>
+                      </li>
+                      <li>
+                          <a class="dropdown-item d-flex align-items-center" href="?lang=it&channel={{ channel }}">
+                              <img src="{{ webrootURL }}/public/media/italian-flag.png" alt="Italian Flag" class="me-1" style="width: 20px;"> IT
+                          </a>
+                      </li>
+                      <li>
+                          <a class="dropdown-item d-flex align-items-center" href="?lang=de&channel={{ channel }}">
+                              <img src="{{ webrootURL }}/public/media/german-flag.png" alt="German Flag" class="me-1" style="width: 20px;"> DE
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+          {# language selector #}
