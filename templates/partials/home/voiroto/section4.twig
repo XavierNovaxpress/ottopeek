@@ -1,45 +1,25 @@
-<section class="my-5 bg-white py-5">
+<section class="py-5 bg-white">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <h2 class="text-primary">{{ (channel ~ '.home.section4.titre')|trans|raw }}</h2>
-                <h3 class="text-dark">{{ (channel ~ '.home.section4.sous-titre')|trans|raw }}</h3>
-                <p>{{ (channel ~ '.home.section4.description')|trans({'%companyName%': companyName})|raw }}</p>
                 <ul class="list-group">
-                    <li class="list-group-item border-0 d-flex align-items-start">
-                        <img src="{{ webrootURL }}/public/media/{{ channel }}/bullet.png" alt="" class="lazyload">
-
-                        <div class="px-3">
-                          <strong>{{ (channel ~ '.home.section4.item1.titre')|trans|raw }}</strong>
-                          <p>{{ (channel ~ '.home.section4.item1.description')|trans|raw }}</p>
+                    {% for i  in 1..4 %}
+                    <li class="list-group-item border-0 d-flex align-items-start bg-light border-bottom">
+                        <img src="{{ webrootURL }}/public/media/{{ channel }}/bullet.png" alt="" class="lazyload pt-3">
+                        <div class="p-3">
+                          <strong>{{ (channel ~ '.home.section4.item' ~ i ~ '.titre')|trans|raw }}</strong>
+                          <p class="pb-0">{{ (channel ~ '.home.section4.item' ~ i ~ '.description')|trans|raw }}</p>
                         </div>
                     </li>
-                    <li class="list-group-item border-0 d-flex align-items-start">
-                        <img src="{{ webrootURL }}/public/media/{{ channel }}/bullet.png" alt="" class="lazyload">
-
-                        <div class="px-3">
-                          <strong>{{ (channel ~ '.home.section4.item2.titre')|trans|raw }}</strong>
-                          <p>{{ (channel ~ '.home.section4.item2.description')|trans|raw }}</p>
-                        </div>
-                    </li>
-                    <li class="list-group-item border-0 d-flex align-items-start">
-                        <img src="{{ webrootURL }}/public/media/{{ channel }}/bullet.png" alt="" class="lazyload">
-                        <div class="px-3">
-                          <strong>{{ (channel ~ '.home.section4.item3.titre')|trans|raw }}</strong>
-                          <p>{{ (channel ~ '.home.section4.item3.description')|trans|raw }}</p>
-                        </div>
-                    </li>
-                    <li class="list-group-item border-0 d-flex align-items-start">
-                        <img src="{{ webrootURL }}/public/media/{{ channel }}/bullet.png" alt="" class="lazyload">
-                        <div class="px-3">
-                          <strong>{{ (channel ~ '.home.section4.item4.titre')|trans|raw }}</strong>
-                          <p>{{ (channel ~ '.home.section4.item4.description')|trans|raw }}</p>
-                        </div>
-                    </li>
+                    {% endfor %}
                 </ul>
             </div>
-            <div class="col-md-6 d-flex justify-content-end">
-                <img src="{{ webrootURL }}/public/media/{{ channel }}/image4.webp" alt="{{ (channel ~ '.home.section4.image.alt')|trans|raw }}" class="img-fluid rounded lazyload">
+            <div class="col-md-6 justify-content-center d-flex align-items-center">
+                <div class="">
+                    <h2 class="text-primary">{{ (channel ~ '.home.section4.titre')|trans|raw }}</h2>
+                    <h3 class="text-dark">{{ (channel ~ '.home.section4.sous-titre')|trans|raw }}</h3>
+                    <p>{{ (channel ~ '.home.section4.description')|trans|raw }}</p>
+                </div>
             </div>
         </div>
     </div>

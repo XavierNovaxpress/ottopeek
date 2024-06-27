@@ -1,33 +1,32 @@
-<section class="bg-white text-center py-5">
+<section class="bg-white py-5">
     <div class="container">
-        <h2>{{ (channel ~ '.home.section2.titre')|trans|raw }}</h2>
-        <p class="text-muted">{{ (channel ~ '.home.section2.sous-titre')|trans|raw }}</p>
+        <h2 class="text-center">{{ (channel ~ '.home.section2.titre')|trans|raw }}</h2>
+        <p class="text-muted text-center">{{ (channel ~ '.home.section2.sous-titre')|trans|raw }}</p>
         <div class="row my-4">
-            <div class="col-md-3">
-                <div class="icon-box">
-                  <img src="{{ webrootURL }}/public/media/{{ channel }}/icon8.png" alt="" class="lazyload my-4">
+            <div class="col-md-6 mb-4">
+                <div class="icon-box p-4 h-100 border">
+                    <img src="{{ webrootURL }}/public/media/{{ channel }}/icon8.png" alt="" class="lazyload my-4">
                     <h4 class="my-2">{{ (channel ~ '.home.section2.feature1.titre')|trans|raw }}</h4>
                     <p>{{ (channel ~ '.home.section2.feature1.description')|trans|raw }}</p>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="icon-box">
-                    <i class="bi bi-speedometer2"></i>
-                      <img src="{{ webrootURL }}/public/media/{{ channel }}/icon7.png" alt="" class="lazyload my-4">
+            <div class="col-md-6 mb-4">
+                <div class="icon-box p-4 h-100 border">
+                    <img src="{{ webrootURL }}/public/media/{{ channel }}/icon7.png" alt="" class="lazyload my-4">
                     <h4 class="my-2">{{ (channel ~ '.home.section2.feature2.titre')|trans|raw }}</h4>
                     <p>{{ (channel ~ '.home.section2.feature2.description')|trans|raw }}</p>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="icon-box">
-                  <img src="{{ webrootURL }}/public/media/{{ channel }}/icon6.png" alt="" class="lazyload my-4">
+            <div class="col-md-6 mb-4 mb-md-0">
+                <div class="icon-box p-4 h-100 border">
+                    <img src="{{ webrootURL }}/public/media/{{ channel }}/icon6.png" alt="" class="lazyload my-4">
                     <h4 class="my-2">{{ (channel ~ '.home.section2.feature3.titre')|trans|raw }}</h4>
                     <p>{{ (channel ~ '.home.section2.feature3.description')|trans|raw }}</p>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="icon-box">
-                  <img src="{{ webrootURL }}/public/media/{{ channel }}/icon5.png" alt="" class="lazyload my-4">
+            <div class="col-md-6">
+                <div class="icon-box p-4 h-100 border">
+                    <img src="{{ webrootURL }}/public/media/{{ channel }}/icon5.png" alt="" class="lazyload my-4">
                     <h4 class="my-2">{{ (channel ~ '.home.section2.feature4.titre')|trans|raw }}</h4>
                     <p>{{ (channel ~ '.home.section2.feature4.description')|trans|raw }}</p>
                 </div>
